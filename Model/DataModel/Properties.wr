@@ -1,15 +1,15 @@
 <DataModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email">
+  <Entity id="User" name="User" duration="persistent" gr:x="10" gr:y="20" gr:hideAttributes="false" attributeOrder="userOID userName password email">
     <Attribute name="oid" id="userOID" type="integer" key="true"/>
     <Attribute name="userName" id="userName" type="string"/>
     <Attribute name="password" id="password" type="password"/>
     <Attribute name="email" id="email" type="string"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="178" gr:hideAttributes="false" attributeOrder="groupOID groupName">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="240" gr:y="40" gr:hideAttributes="false" attributeOrder="groupOID groupName">
     <Attribute name="oid" id="groupOID" type="integer" key="true"/>
     <Attribute name="groupName" id="groupName" type="string"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="472" gr:y="167" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="460" gr:y="25" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
     <Attribute name="oid" id="moduleOID" type="integer" key="true"/>
     <Attribute name="moduleID" id="moduleID" type="string"/>
     <Attribute name="moduleName" id="moduleName" type="string"/>
@@ -30,4 +30,16 @@
     <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"/>
     <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
   </Relationship>
+  <Entity gr:x="85" gr:y="230" id="ent1" name="Publication" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
+    <Attribute id="ent1#att1" key="true" name="oid" type="integer"/>
+    <Attribute id="ent1#att2" name="title" type="string"/>
+    <Attribute id="ent1#att3" name="venue" type="string"/>
+    <Attribute id="ent1#att4" name="year" type="integer"/>
+    <Attribute id="ent1#att5" name="abstract" type="string"/>
+    <Attribute id="ent1#att6" name="file" type="url"/>
+  </Entity>
+  <Entity gr:x="315" gr:y="230" id="ent2" name="Author" duration="persistent" attributeOrder="ent2#att7 ent2#att8">
+    <Attribute id="ent2#att7" key="true" name="oid" type="integer"/>
+    <Attribute id="ent2#att8" name="name" type="string"/>
+  </Entity>
 </DataModel>
