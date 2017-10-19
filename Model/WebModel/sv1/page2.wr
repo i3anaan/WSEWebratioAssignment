@@ -1,7 +1,15 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="85" gr:y="325" id="sv1#page2" name="Researcher" linkOrder="sv1#page2#ln1">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="715" gr:y="585" id="sv1#page2" name="Home" linkOrder="sv1#page2#ln1 sv1#page2#ln5" linkVisibilityPolicy="inactive" layout:frameLayout="Multiflex/Default" customURLName="researcher">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv1#page2#inu2" name="Publications" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6"/>
-    <IndexUnit gr:x="0" gr:y="85" id="sv1#page2#inu3" name="Collections" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23"/>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#page2#inu2" name="Publications" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#page2#inu2#ln8">
+      <Link id="sv1#page2#inu2#ln8" name="Show" to="sv1#page7#dau1" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+    <IndexUnit gr:x="0" gr:y="85" id="sv1#page2#inu3" name="Collections" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#page2#inu3#ln20">
+      <Link id="sv1#page2#inu3#ln20" name="Show" to="sv1#page9#dau2" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+    <EntryUnit gr:x="0" gr:y="175" id="sv1#page2#enu8" name="Search Pub" entity="ent1" linkOrder="sv1#page2#enu8#ln21">
+      <Field id="sv1#page2#enu8#fld22" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Link id="sv1#page2#enu8#ln21" name="Zoeken" to="sv1#page11#inu4" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -13,6 +21,7 @@
           <layout:Attribute attribute="ent1#att4"/>
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att6"/>
+          <layout:Link link="sv1#page2#inu2#ln8"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -33,6 +42,26 @@
           <layout:Attribute attribute="ent7#att21"/>
           <layout:Attribute attribute="ent7#att22"/>
           <layout:Attribute attribute="ent7#att23"/>
+          <layout:Link link="sv1#page2#inu3#ln20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page2#enu8">
+          <layout:Field field="sv1#page2#enu8#fld22"/>
+          <layout:Link link="sv1#page2#enu8#ln21"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -48,5 +77,6 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv1#page2#ln1" name="Flow1" to="sv1#page3" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv1#page2#ln1" name="Create Publication" to="sv1#page3" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv1#page2#ln5" name="Create Collection" to="sv1#page6" automaticCoupling="true" type="normal" validate="true"/>
 </Page>
