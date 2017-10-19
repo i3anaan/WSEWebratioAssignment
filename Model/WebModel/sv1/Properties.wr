@@ -1,5 +1,5 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Page1" homePage="sv1#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Researcher" protected="true">
   <OperationUnits>
-    <CreateUnit gr:x="555" gr:y="225" id="sv1#cru1" name="Create1" entity="ent1"/>
+    <CreateUnit gr:x="475" gr:y="325" id="sv1#cru2" name="Publication" entity="ent1"/>
   </OperationUnits>
 </SiteView>
