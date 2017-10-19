@@ -1,0 +1,34 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="665" gr:y="220" id="mov1#opm2" name="Register">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm2#icu2" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm2#icu2#icp4" name="email"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp5" name="password"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp6" name="userName"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp7" name="name"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp8" name="university"/>
+      <OKLink id="mov1#opm2#icu2#oln10" name="Flow8" to="mov1#opm2#cru1">
+        <LinkParameter id="mov1#opm2#icu2#oln10#par52" name="name_PASSING" source="mov1#opm2#icu2#icp7" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln10#par53" name="university_PASSING" source="mov1#opm2#icu2#icp8" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln10#par54" name="userName" source="mov1#opm2#icu2#icp6" target="mov1#opm2#cru1.userName"/>
+        <LinkParameter id="mov1#opm2#icu2#oln10#par55" name="password" source="mov1#opm2#icu2#icp5" target="mov1#opm2#cru1.password"/>
+        <LinkParameter id="mov1#opm2#icu2#oln10#par56" name="email" source="mov1#opm2#icu2#icp4" target="mov1#opm2#cru1.email"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="300" gr:y="105" id="mov1#opm2#cru1" name="Create User" entity="User">
+      <OKLink id="mov1#opm2#cru1#oln7" name="Flow9" to="mov1#opm2#cru3">
+        <LinkParameter id="mov1#opm2#cru1#oln7#par42" name="university" target="mov1#opm2#cru3.ent3#att11" sourceLinkParameter="mov1#opm2#icu2#oln10#par53"/>
+        <LinkParameter id="mov1#opm2#cru1#oln7#par43" name="name" target="mov1#opm2#cru3.ent3#att10" sourceLinkParameter="mov1#opm2#icu2#oln10#par52"/>
+        <LinkParameter id="mov1#opm2#cru1#oln7#par46" name="oid_User.oid(ResearcherToUser)" source="userOIDArray" target="mov1#opm2#cru3.rel1#role2.userOID"/>
+        <LinkParameter id="mov1#opm2#cru1#oln7#par5" name="oid_PASSING" source="userOIDArray" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="455" gr:y="100" id="mov1#opm2#cru3" name="Create Researcher" entity="ent3">
+      <OKLink id="mov1#opm2#cru3#oln8" name="OKFlow8" to="mov1#opm2#okcu1">
+        <LinkParameter id="mov1#opm2#cru3#oln8#par6" name="oid_PASSING_Source oid [User]" sourceLinkParameter="mov1#opm2#cru1#oln7#par5" target="mov1#opm2#okcu1#ocp1"/>
+      </OKLink>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="665" gr:y="115" id="mov1#opm2#okcu1" name="OK Port1">
+      <OutputCollectorParameter id="mov1#opm2#okcu1#ocp1" name="Source oid [User]"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>

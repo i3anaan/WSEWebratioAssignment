@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="695" gr:y="105" id="sv2#page6" name="Login" landmark="true" customURLName="login2">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#page6#enu1" name="Login form" fieldOrder="sv2#page6#enu1#fld3 sv2#page6#enu1#fld2 sv2#page6#enu1#fld1" linkOrder="sv2#page6#enu1#ln6">
+      <Field id="sv2#page6#enu1#fld1" name="Swag" type="boolean" modifiable="true"/>
+      <Field id="sv2#page6#enu1#fld2" name="Password" type="password" modifiable="true" hidden="false"/>
+      <Field id="sv2#page6#enu1#fld3" name="Username" type="string" modifiable="true"/>
+      <Link id="sv2#page6#enu1#ln6" name="Submit" to="sv2#miu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page6#enu1#ln6#par10" name="Password_Password" source="sv2#page6#enu1#fld2" target="sv2#miu1.mov1#opm1#icu1#icp1"/>
+        <LinkParameter id="sv2#page6#enu1#ln6#par11" name="Swag_Remember Credentials (Persistent Cookie)" source="sv2#page6#enu1#fld1" target="sv2#miu1.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv2#page6#enu1#ln6#par12" name="Username_Username" source="sv2#page6#enu1#fld3" target="sv2#miu1.mov1#opm1#icu1#icp3"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page6#enu1">
+          <layout:Field field="sv2#page6#enu1#fld3"/>
+          <layout:Field field="sv2#page6#enu1#fld2"/>
+          <layout:Field field="sv2#page6#enu1#fld1"/>
+          <layout:Link link="sv2#page6#enu1#ln6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

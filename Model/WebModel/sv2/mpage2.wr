@@ -1,34 +1,24 @@
-<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="145" gr:y="230" id="sv2#mpage2" name="MasterPage">
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="45" gr:y="95" id="sv2#mpage2" name="MasterPage" layout:layoutManager="grid" layout:attributeLayout="WRDefault/Simple" layout:fieldLayout="WRDefault/FieldValue" layout:linkLayout="WRDefault/Simple" layout:cellLayout="WRDefault/Frame" layout:frameLayout="WebRatio/Basic" layout:pageLayout="WebRatio/Basic">
   <ContentUnits>
-    <EntryUnit gr:x="25" gr:y="80" id="sv2#mpage2#enu3" name="Login form" fieldOrder="sv2#mpage2#enu3#fld14 sv2#mpage2#enu3#fld12 sv2#mpage2#enu3#fld13" linkOrder="sv2#mpage2#enu3#ln4">
-      <Field id="sv2#mpage2#enu3#fld12" name="Swag" type="boolean" modifiable="true"/>
-      <Field id="sv2#mpage2#enu3#fld13" name="Password" type="password" modifiable="true" hidden="false"/>
-      <Field id="sv2#mpage2#enu3#fld14" name="Username" type="string" modifiable="true"/>
-      <Link id="sv2#mpage2#enu3#ln4" name="Submit" to="sv2#miu1" type="normal" validate="true">
-        <LinkParameter id="sv2#mpage2#enu3#ln4#par7" name="Password_Password" source="sv2#mpage2#enu3#fld13" target="sv2#miu1.mov1#opm1#icu1#icp1"/>
-        <LinkParameter id="sv2#mpage2#enu3#ln4#par8" name="Swag_Remember Credentials (Persistent Cookie)" source="sv2#mpage2#enu3#fld12" target="sv2#miu1.mov1#opm1#icu1#icp2"/>
-        <LinkParameter id="sv2#mpage2#enu3#ln4#par9" name="Username_Username" source="sv2#mpage2#enu3#fld14" target="sv2#miu1.mov1#opm1#icu1#icp3"/>
+    <DataUnit gr:x="0" gr:y="5" id="sv2#mpage2#dau2" name="You are logged in as:" entity="User" customDescriptor="false" gr:showAllParts="false" displayAttributes="rel1#role1.ent3#att10">
+      <Selector id="sv2#mpage2#dau2#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mpage2#dau2#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit gr:x="165" gr:y="105" id="sv2#mpage2#gtu1" name="CurrentUser" contextParameters="UserCtxParam">
+      <Link id="sv2#mpage2#gtu1#ln7" name="Flow7" to="sv2#mpage2#dau2" type="transport" validate="true">
+        <LinkParameter id="sv2#mpage2#gtu1#ln7#par13" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv2#mpage2#gtu1.UserCtxParam" target="sv2#mpage2#dau2#su1#kcond1.userOID"/>
       </Link>
-    </EntryUnit>
+    </GetUnit>
   </ContentUnits>
   <layout:CustomLocation name="Top">
     <layout:Grid containerType="cell">
       <layout:Row>
         <layout:Cell>
-          <layout:Unit unitId="sv2#mpage2#enu3">
-            <layout:Field field="sv2#mpage2#enu3#fld14"/>
-            <layout:Field field="sv2#mpage2#enu3#fld12"/>
-            <layout:Field field="sv2#mpage2#enu3#fld13"/>
-            <layout:Link link="sv2#mpage2#enu3#ln4"/>
+          <layout:Unit unitId="sv2#mpage2#dau2">
+            <layout:Attribute attribute="rel1#role1.ent3#att10"/>
           </layout:Unit>
         </layout:Cell>
-      </layout:Row>
-    </layout:Grid>
-  </layout:CustomLocation>
-  <layout:CustomLocation name="User">
-    <layout:Grid containerType="cell">
-      <layout:Row>
-        <layout:Cell/>
       </layout:Row>
     </layout:Grid>
   </layout:CustomLocation>
