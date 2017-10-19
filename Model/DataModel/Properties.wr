@@ -46,7 +46,7 @@
     <Attribute id="ent1#att5" name="abstract" type="string" db:column="abstract"/>
     <Attribute id="ent1#att6" name="file" type="url" db:column="file"/>
   </Entity>
-  <db:Database id="db1" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" cryptedPassword="true" password="QmVya2VsMjY1Mg==" schema="public">
+  <db:Database id="db1" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true">
   </db:Database>
   <Entity gr:x="10" gr:y="200" id="ent3" name="Researcher" duration="persistent" attributeOrder="ent3#att9 ent3#att10 ent3#att11" db:database="db1" db:table="researcher">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
