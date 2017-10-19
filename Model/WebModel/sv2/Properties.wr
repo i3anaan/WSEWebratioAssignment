@@ -1,3 +1,5 @@
-<SiteView id="sv2" name="Public">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Public" homePage="sv2#page1">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="140" gr:y="460" id="sv2#miu1" action="true" moduleId="mov1#opm1"/>
+  </OperationUnits>
 </SiteView>
