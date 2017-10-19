@@ -1,0 +1,61 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="130" gr:y="215" id="sv1#page1" name="Page 1">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#page1#inu1" name="Publications" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6"/>
+    <EntryUnit gr:x="165" gr:y="20" id="sv1#page1#enu1" name="Form1" entity="ent1" linkOrder="sv1#page1#enu1#ln2">
+      <Field id="sv1#page1#enu1#fld1" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Field id="sv1#page1#enu1#fld2" name="venue" type="string" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv1#page1#enu1#fld3" name="year" type="integer" modifiable="true" attribute="ent1#att4"/>
+      <Field id="sv1#page1#enu1#fld4" name="abstract" type="string" modifiable="true" attribute="ent1#att5"/>
+      <Field id="sv1#page1#enu1#fld5" name="file" type="url" modifiable="true" attribute="ent1#att6"/>
+      <Link id="sv1#page1#enu1#ln2" name="Flow2" to="sv1#cru1" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#inu1">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu1">
+          <layout:Field field="sv1#page1#enu1#fld1"/>
+          <layout:Field field="sv1#page1#enu1#fld2"/>
+          <layout:Field field="sv1#page1#enu1#fld3"/>
+          <layout:Field field="sv1#page1#enu1#fld4"/>
+          <layout:Field field="sv1#page1#enu1#fld5"/>
+          <layout:Link link="sv1#page1#enu1#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

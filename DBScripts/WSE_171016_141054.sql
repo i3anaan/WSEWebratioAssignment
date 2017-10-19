@@ -1,0 +1,83 @@
+-- Group [Group]
+create table "public"."group" (
+   "oid"  int4  not null,
+   "groupname"  varchar(255),
+  primary key ("oid")
+);
+
+
+-- Module [Module]
+create table "public"."module" (
+   "oid"  int4  not null,
+   "moduleid"  varchar(255),
+   "modulename"  varchar(255),
+  primary key ("oid")
+);
+
+
+-- User [User]
+create table "public"."user" (
+   "oid"  int4  not null,
+   "email"  varchar(255),
+   "password"  varchar(255),
+   "username"  varchar(255),
+  primary key ("oid")
+);
+
+
+-- Publication [ent1]
+create table "public"."publication" (
+   "oid"  int4  not null,
+   "title"  varchar(255),
+   "venue"  varchar(255),
+   "year"  int4,
+   "abstract"  varchar(255),
+   "file"  varchar(255),
+  primary key ("oid")
+);
+
+
+-- Author [ent2]
+create table "public"."author" (
+   "oid"  int4  not null,
+   "name"  varchar(255),
+  primary key ("oid")
+);
+
+
+-- Group_DefaultModule [Group2DefaultModule_DefaultModule2Group]
+alter table "public"."group"  add column  "module_oid"  int4;
+alter table "public"."group"   add constraint fk_group_module foreign key ("module_oid") references "public"."module" ("oid");
+create index "idx_group_module" on "public"."group"("module_oid");
+
+
+-- Group_Module [Group2Module_Module2Group]
+create table "public"."group_module" (
+   "group_oid"  int4 not null,
+   "module_oid"  int4 not null,
+  primary key ("group_oid", "module_oid")
+);
+alter table "public"."group_module"   add constraint fk_group_module_group foreign key ("group_oid") references "public"."group" ("oid");
+alter table "public"."group_module"   add constraint fk_group_module_module foreign key ("module_oid") references "public"."module" ("oid");
+create index "idx_group_module_group" on "public"."group_module"("group_oid");
+create index "idx_group_module_module" on "public"."group_module"("module_oid");
+
+
+-- User_DefaultGroup [User2DefaultGroup_DefaultGroup2User]
+alter table "public"."user"  add column  "group_oid"  int4;
+alter table "public"."user"   add constraint fk_user_group foreign key ("group_oid") references "public"."group" ("oid");
+create index "idx_user_group" on "public"."user"("group_oid");
+
+
+-- User_Group [User2Group_Group2User]
+create table "public"."user_group" (
+   "user_oid"  int4 not null,
+   "group_oid"  int4 not null,
+  primary key ("user_oid", "group_oid")
+);
+alter table "public"."user_group"   add constraint fk_user_group_user foreign key ("user_oid") references "public"."user" ("oid");
+alter table "public"."user_group"   add constraint fk_user_group_group foreign key ("group_oid") references "public"."group" ("oid");
+create index "idx_user_group_user" on "public"."user_group"("user_oid");
+create index "idx_user_group_group" on "public"."user_group"("group_oid");
+
+
