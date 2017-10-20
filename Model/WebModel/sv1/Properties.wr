@@ -12,19 +12,5 @@
         <KeyCondition id="sv1#mfu3#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
     </ModifyUnit>
-    <SelectorUnit gr:x="1130" gr:y="210" id="sv1#seu2" name="All Authors" entity="ent4" distinct="false" distinctAttributes="ent3#att9 ent3#att10 ent3#att11 ent4#att14">
-      <Link id="sv1#seu2#ln25" name="Flow23" to="sv1#page3#enu2" type="transport" newWindow="false" customDescriptor="false">
-        <LinkParameter id="sv1#seu2#ln25#par28" name="name_Author [label]" source="ent3#att10Array" target="sv1#page3#enu2#sfld10_label"/>
-        <LinkParameter id="sv1#seu2#ln25#par30" name="name_Author - Preselection" source="ent3#att10Array" target="sv1#page3#enu2#sfld10_presel"/>
-        <LinkParameter id="sv1#seu2#ln25#par36" name="_Author [output]" source="ent3#att9Array" target="sv1#page3#enu2#sfld10_output"/>
-      </Link>
-    </SelectorUnit>
-    <SelectorUnit gr:x="1245" gr:y="210" id="sv1#seu3" name="All Keywords" entity="ent5" distinctAttributes="ent5#att15 ent5#att16">
-      <Link id="sv1#seu3#ln26" name="Flow26" to="sv1#page3#enu2" type="transport" validate="true">
-        <LinkParameter id="sv1#seu3#ln26#par41" name="word_Keywords - Preselection" source="ent5#att16Array" target="sv1#page3#enu2#sfld9_presel"/>
-        <LinkParameter id="sv1#seu3#ln26#par42" name="word_Keywords [label]" source="ent5#att16Array" target="sv1#page3#enu2#sfld9_label"/>
-        <LinkParameter id="sv1#seu3#ln26#par43" name="word_Keywords [output]" source="ent5#att15Array" target="sv1#page3#enu2#sfld9_output"/>
-      </Link>
-    </SelectorUnit>
   </OperationUnits>
 </SiteView>

@@ -6,9 +6,13 @@
     <IndexUnit gr:x="0" gr:y="85" id="sv1#page2#inu3" name="Collections" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#page2#inu3#ln20">
       <Link id="sv1#page2#inu3#ln20" name="Show" to="sv1#page9#dau2" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
-    <EntryUnit gr:x="0" gr:y="175" id="sv1#page2#enu8" name="Search Pub" entity="ent1" linkOrder="sv1#page2#enu8#ln21">
-      <Field id="sv1#page2#enu8#fld22" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
-      <Link id="sv1#page2#enu8#ln21" name="Zoeken" to="sv1#page11#inu4" automaticCoupling="true" type="normal" validate="true"/>
+    <EntryUnit gr:x="5" gr:y="175" id="sv1#page2#enu1" name="Search Pub" linkOrder="sv1#page2#enu1#ln2">
+      <Field id="sv1#page2#enu1#fld1" name="keyword" type="string" modifiable="true"/>
+      <Link id="sv1#page2#enu1#ln2" name="Search" to="sv1#page11#inu4" type="normal" validate="true">
+        <LinkParameter id="sv1#page2#enu1#ln2#par2" name="keyword_Contains Keyword" source="sv1#page2#enu1#fld1" target="sv1#page11#inu4#su6#acond3"/>
+        <LinkParameter id="sv1#page2#enu1#ln2#par3" name="keyword_Abstract Contains Keyword" source="sv1#page2#enu1#fld1" target="sv1#page11#inu4#su6#acond4"/>
+        <LinkParameter id="sv1#page2#enu1#ln2#par8" name="keyword_Keywords Contains Keyword" source="sv1#page2#enu1#fld1" target="sv1#page11#inu4#su6#acond1"/>
+      </Link>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -59,9 +63,9 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page2#enu8">
-          <layout:Field field="sv1#page2#enu8#fld22"/>
-          <layout:Link link="sv1#page2#enu8#ln21"/>
+        <layout:Unit unitId="sv1#page2#enu1">
+          <layout:Field field="sv1#page2#enu1#fld1"/>
+          <layout:Link link="sv1#page2#enu1#ln2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
