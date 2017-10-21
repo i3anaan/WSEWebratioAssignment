@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1105" gr:y="365" id="sv1#area4#page17" name="View Publication">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv1#area4#page17#dau4" name="View Pub" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page17#dau4#ln13">
+      <Selector id="sv1#area4#page17#dau4#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#page17#dau4#su10#kcond9" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area4#page17#dau4#ln13" name="Edit" to="sv1#area4#page13#enu3" automaticCoupling="true" type="normal" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page17#dau4">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Link link="sv1#area4#page17#dau4#ln13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

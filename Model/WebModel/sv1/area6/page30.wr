@@ -1,18 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="960" gr:y="100" id="sv2#page5" name="Registered">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area6#page30" name="Registered" gr:x="950" gr:y="25">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#page5#mssu4" name="Success">
+    <MultiMessageUnit id="sv1#area6#page30#mssu9" name="Success" gr:x="0" gr:y="0">
       <Message xml:space="preserve">Success!</Message>
     </MultiMessageUnit>
-    <DataUnit gr:x="40" gr:y="65" id="sv2#page5#dau1" name="New User" entity="User" customDescriptor="false" displayAttributes="userName password email rel1#role1.ent3#att10 rel1#role1.ent3#att11">
-      <Selector id="sv2#page5#dau1#su3" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#page5#dau1#su3#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+    <DataUnit id="sv1#area6#page30#dau8" name="New User" customDescriptor="false" gr:x="40" gr:y="65" entity="User" displayAttributes="userName password email rel1#role1.ent3#att10 rel1#role1.ent3#att11">
+      <Selector id="sv1#area6#page30#dau8#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area6#page30#dau8#su15#kcond13" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page5#mssu4"/>
+        <layout:Unit unitId="sv1#area6#page30#mssu9"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -28,7 +28,7 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page5#dau1">
+        <layout:Unit unitId="sv1#area6#page30#dau8">
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="password"/>
           <layout:Attribute attribute="email"/>

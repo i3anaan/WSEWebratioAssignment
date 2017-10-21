@@ -43,6 +43,32 @@
 <stringAttribute key="model.servicesJobs.soapVersion" value=""/>
 <stringAttribute key="model.servicesJobs.targetNamespaceUri" value=""/>
 <stringAttribute key="model.servicesJobs.threadPoolSize" value=""/>
+<booleanAttribute key="providers.$db2$.databaseProvider.advanced.disableViewExportSuffix" value="false"/>
+<booleanAttribute key="providers.$db2$.databaseProvider.advanced.readIndexes" value="false"/>
+<booleanAttribute key="providers.$db2$.databaseProvider.advanced.readProcedures" value="false"/>
+<stringAttribute key="providers.$db2$.databaseProvider.advanced.schemaMask" value=""/>
+<booleanAttribute key="providers.$db2$.databaseProvider.advanced.showSqlInConsole" value="false"/>
+<stringAttribute key="providers.$db2$.databaseProvider.advanced.tableExportPrefix" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.advanced.tableMask" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.advanced.viewExportPrefix" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.mapping.databaseMappingPassword" value="cG9zdGdyZXM="/>
+<stringAttribute key="providers.$db2$.databaseProvider.mapping.databaseMappingType" value="PostgreSQL 9"/>
+<stringAttribute key="providers.$db2$.databaseProvider.mapping.databaseMappingUrl" value="jdbc:postgresql://localhost:5432/WSE"/>
+<stringAttribute key="providers.$db2$.databaseProvider.mapping.databaseMappingUsername" value="postgres"/>
+<stringAttribute key="providers.$db2$.databaseProvider.mapping.defaultSchema" value="public"/>
+<booleanAttribute key="providers.$db2$.databaseProvider.mapping.encryptDatabaseMappingPassword" value="true"/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.connectionProvider" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.connections" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.databaseJndiName" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.databaseRuntimePassword" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.databaseRuntimeType" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.databaseRuntimeUrl" value=""/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.databaseRuntimeUsername" value=""/>
+<booleanAttribute key="providers.$db2$.databaseProvider.runtime.encryptDatabaseRuntimePassword" value="false"/>
+<booleanAttribute key="providers.$db2$.databaseProvider.runtime.ignoreSchema" value="false"/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.transactionIsolation" value=""/>
+<booleanAttribute key="providers.$db2$.databaseProvider.runtime.validateConnection" value="false"/>
+<stringAttribute key="providers.$db2$.databaseProvider.runtime.validationQuery" value=""/>
 <mapAttribute key="tasks.task0">
 <mapEntry key="type" value="Clear Deployment Folder"/>
 </mapAttribute>

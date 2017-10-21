@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1110" gr:y="620" id="sv1#area4#page13" name="Edit Publication">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area4#page13#enu3" name="Edit Pub" entity="ent1" linkOrder="sv1#area4#page13#enu3#ln4">
+      <Link id="sv1#area4#page13#enu3#ln4" name="Update" to="sv1#area4#mfu4" automaticCoupling="true" type="normal" validate="true"/>
+      <Field id="sv1#area4#page13#enu3#fld4" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Field id="sv1#area4#page13#enu3#fld5" name="venue" type="string" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv1#area4#page13#enu3#fld20" name="year" type="integer" modifiable="true" attribute="ent1#att4"/>
+      <Field id="sv1#area4#page13#enu3#fld21" name="abstract" type="string" modifiable="true" attribute="ent1#att5"/>
+      <Field id="sv1#area4#page13#enu3#fld22" name="file" type="url" modifiable="true" attribute="ent1#att6"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page13#enu3">
+          <layout:Link link="sv1#area4#page13#enu3#ln4"/>
+          <layout:Field field="sv1#area4#page13#enu3#fld4"/>
+          <layout:Field field="sv1#area4#page13#enu3#fld5"/>
+          <layout:Field field="sv1#area4#page13#enu3#fld20"/>
+          <layout:Field field="sv1#area4#page13#enu3#fld21"/>
+          <layout:Field field="sv1#area4#page13#enu3#fld22"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

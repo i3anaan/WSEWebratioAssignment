@@ -1,0 +1,18 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="445" gr:y="145" id="mov1#opm3" name="IsLoggedIn">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm3#icu3" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm3#icu3#oln20" name="OKFlow20" to="mov1#opm3#inn4" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <GetUnit gr:x="380" gr:y="320" id="mov1#opm3#gtu8" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="mov1#opm3#gtu8#ln36" name="Flow36" to="mov1#opm3#inn4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm3#gtu8#ln36#par40" name="UserCtxParam.oid_Input" source="mov1#opm3#gtu8.UserCtxParam" target="mov1#opm3#inn4.isnotnull"/>
+      </Link>
+    </GetUnit>
+    <OKCollectorUnit gr:x="785" gr:y="95" id="mov1#opm3#okcu2" name="OK Port2"/>
+    <KOCollectorUnit gr:x="785" gr:y="210" id="mov1#opm3#kocu2" name="KO Port2"/>
+    <IsNotNullUnit gr:x="600" gr:y="155" id="mov1#opm3#inn4" name="IsLoggedIn">
+      <OKLink id="mov1#opm3#inn4#oln12" name="OKFlow12" to="mov1#opm3#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#inn4#kln2" name="KOFlow2" to="mov1#opm3#kocu2" automaticCoupling="true"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>

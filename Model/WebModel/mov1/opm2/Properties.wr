@@ -20,15 +20,31 @@
         <LinkParameter id="mov1#opm2#cru1#oln7#par43" name="name" target="mov1#opm2#cru3.ent3#att10" sourceLinkParameter="mov1#opm2#icu2#oln10#par52"/>
         <LinkParameter id="mov1#opm2#cru1#oln7#par46" name="oid_User.oid(ResearcherToUser)" source="userOIDArray" target="mov1#opm2#cru3.rel1#role2.userOID"/>
         <LinkParameter id="mov1#opm2#cru1#oln7#par5" name="oid_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru1#oln7#par44" name="password_PASSING" source="passwordArray" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru1#oln7#par45" name="userName_PASSING" source="userNameArray" passing="true"/>
       </OKLink>
+      <KOLink id="mov1#opm2#cru1#kln6" name="KOFlow6" to="mov1#opm2#kocu3" automaticCoupling="true"/>
     </CreateUnit>
     <CreateUnit gr:x="455" gr:y="100" id="mov1#opm2#cru3" name="Create Researcher" entity="ent3">
-      <OKLink id="mov1#opm2#cru3#oln8" name="OKFlow8" to="mov1#opm2#okcu1">
-        <LinkParameter id="mov1#opm2#cru3#oln8#par6" name="oid_PASSING_Source oid [User]" sourceLinkParameter="mov1#opm2#cru1#oln7#par5" target="mov1#opm2#okcu1#ocp1"/>
+      <OKLink id="mov1#opm2#cru3#oln8" name="OKFlow8" to="mov1#opm2#lgu1">
+        <LinkParameter id="mov1#opm2#cru3#oln8#par41" name="oid_PASSING" sourceLinkParameter="mov1#opm2#cru1#oln7#par5" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru3#oln8#par47" name="userName_PASSING_Username" sourceLinkParameter="mov1#opm2#cru1#oln7#par45" target="mov1#opm2#lgu1.username"/>
+        <LinkParameter id="mov1#opm2#cru3#oln8#par48" name="password_PASSING_Password" sourceLinkParameter="mov1#opm2#cru1#oln7#par44" target="mov1#opm2#lgu1.password"/>
+        <LinkParameter id="mov1#opm2#cru3#oln8#par49" name="true_Remember Credentials (Persistent Cookie)" sourceValue="true" target="mov1#opm2#lgu1.rememberCredentials"/>
       </OKLink>
+      <KOLink id="mov1#opm2#cru3#kln7" name="KOFlow7" to="mov1#opm2#kocu3" automaticCoupling="true"/>
     </CreateUnit>
-    <OKCollectorUnit gr:x="665" gr:y="115" id="mov1#opm2#okcu1" name="OK Port1">
+    <OKCollectorUnit gr:x="810" gr:y="115" id="mov1#opm2#okcu1" name="OK Port1">
       <OutputCollectorParameter id="mov1#opm2#okcu1#ocp1" name="Source oid [User]"/>
     </OKCollectorUnit>
+    <LoginUnit gr:x="670" gr:y="120" id="mov1#opm2#lgu1" name="Login1">
+      <OKLink id="mov1#opm2#lgu1#oln21" name="OKFlow21" to="mov1#opm2#okcu1">
+        <LinkParameter id="mov1#opm2#lgu1#oln21#par50" name="oid_PASSING_Source oid [User]" sourceLinkParameter="mov1#opm2#cru3#oln8#par41" target="mov1#opm2#okcu1#ocp1"/>
+      </OKLink>
+      <KOLink id="mov1#opm2#lgu1#kln8" name="KOFlow8" to="mov1#opm2#kocu3">
+        <LinkParameter id="mov1#opm2#lgu1#kln8#par57" name="Error Message_PASSING" source="errorMessage" passing="true"/>
+      </KOLink>
+    </LoginUnit>
+    <KOCollectorUnit gr:x="810" gr:y="390" id="mov1#opm2#kocu3" name="KO Port3"/>
   </OperationUnits>
 </OperationModule>
