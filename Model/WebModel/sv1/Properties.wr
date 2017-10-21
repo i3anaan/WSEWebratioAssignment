@@ -1,5 +1,16 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Researcher" protected="true">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Researcher" protected="false" homePage="sv1#page6">
   <OperationUnits>
-    <CreateUnit gr:x="475" gr:y="325" id="sv1#cru2" name="Publication" entity="ent1"/>
+    <CreateUnit gr:x="1310" gr:y="420" id="sv1#cru2" name="Create Pub" entity="ent1"/>
+    <CreateUnit gr:x="540" gr:y="380" id="sv1#cru3" name="Create Coll" entity="ent7"/>
+    <ModifyUnit gr:x="1310" gr:y="830" id="sv1#mfu2" name="Update Pub" entity="ent1">
+      <Selector id="sv1#mfu2#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu2#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <ModifyUnit gr:x="190" gr:y="810" id="sv1#mfu3" name="Update Coll" entity="ent7">
+      <Selector id="sv1#mfu3#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu3#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
   </OperationUnits>
 </SiteView>

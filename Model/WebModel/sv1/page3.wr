@@ -1,16 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="280" gr:y="325" id="sv1#page3" name="Create Publication">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1110" gr:y="370" id="sv1#page3" name="Create Publication">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page3#enu2" name="Create Pub" entity="ent1" linkOrder="sv1#page3#enu2#ln3">
-      <Link id="sv1#page3#enu2#ln3" name="Flow3" to="sv1#cru2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page3#enu2#ln3" name="Create" to="sv1#cru2" automaticCoupling="true" type="normal" validate="true"/>
       <Field id="sv1#page3#enu2#fld6" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
       <Field id="sv1#page3#enu2#fld7" name="venue" type="string" modifiable="true" attribute="ent1#att3"/>
       <Field id="sv1#page3#enu2#fld8" name="year" type="integer" modifiable="true" attribute="ent1#att4"/>
       <Field id="sv1#page3#enu2#fld9" name="abstract" type="string" modifiable="true" attribute="ent1#att5"/>
       <Field id="sv1#page3#enu2#fld10" name="file" type="url" modifiable="true" attribute="ent1#att6"/>
-      <SelectionField id="sv1#page3#enu2#sfld1" name="PublicationToAuthor" type="string" role="rel2#role4"/>
-      <MultiSelectionField id="sv1#page3#enu2#msfld1" name="PublicationToCollection" type="string" role="rel5#role10"/>
-      <SelectionField id="sv1#page3#enu2#sfld2" name="PublicationToComment" type="string" role="rel4#role8"/>
-      <SelectionField id="sv1#page3#enu2#sfld3" name="PublicationToKeyword" type="string" role="rel3#role6"/>
+      <SelectionField id="sv1#page3#enu2#sfld9" name="Keywords" type="string" role="rel3#role6"/>
+      <SelectionField id="sv1#page3#enu2#sfld10" name="Author" type="string" role="rel2#role4" attribute="ent1#att2"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -23,12 +21,24 @@
           <layout:Field field="sv1#page3#enu2#fld8"/>
           <layout:Field field="sv1#page3#enu2#fld9"/>
           <layout:Field field="sv1#page3#enu2#fld10"/>
-          <layout:Field field="sv1#page3#enu2#sfld1"/>
-          <layout:Field field="sv1#page3#enu2#msfld1"/>
-          <layout:Field field="sv1#page3#enu2#sfld2"/>
-          <layout:Field field="sv1#page3#enu2#sfld3"/>
+          <layout:Field field="sv1#page3#enu2#sfld9"/>
+          <layout:Field field="sv1#page3#enu2#sfld10"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
