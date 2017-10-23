@@ -1,12 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="705" gr:y="375" id="sv1#area4#page19" name="Home" linkOrder="sv1#area4#page19#ln21 sv1#area4#page19#ln22" linkVisibilityPolicy="inactive" layout:frameLayout="Multiflex/Default" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="710" gr:y="375" id="sv1#area4#page19" name="Home" linkOrder="sv1#area4#page19#ln21 sv1#area4#page19#ln22" linkVisibilityPolicy="inactive" layout:frameLayout="Multiflex/Default" landmark="true">
   <ContentUnits>
-    <IndexUnit gr:x="5" gr:y="0" id="sv1#area4#page19#inu6" name="Publications" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page19#inu6#ln14">
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area4#page19#inu6" name="Publications" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page19#inu6#ln14">
       <Link id="sv1#area4#page19#inu6#ln14" name="Show" to="sv1#area4#page17#dau4" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
-    <IndexUnit gr:x="5" gr:y="85" id="sv1#area4#page19#inu7" name="Collections" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#area4#page19#inu7#ln15">
+    <IndexUnit gr:x="0" gr:y="85" id="sv1#area4#page19#inu7" name="Collections" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#area4#page19#inu7#ln15">
       <Link id="sv1#area4#page19#inu7#ln15" name="Show" to="sv1#area4#page14#dau3" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
-    <EntryUnit gr:x="10" gr:y="175" id="sv1#area4#page19#enu9" name="Search Pub" linkOrder="sv1#area4#page19#enu9#ln17">
+    <EntryUnit gr:x="5" gr:y="175" id="sv1#area4#page19#enu9" name="Search Pub" linkOrder="sv1#area4#page19#enu9#ln17">
       <Field id="sv1#area4#page19#enu9#fld27" name="keyword" type="string" modifiable="true"/>
       <Link id="sv1#area4#page19#enu9#ln17" name="Search" to="sv1#area4#page18#inu5" type="normal" validate="true">
         <LinkParameter id="sv1#area4#page19#enu9#ln17#par7" name="keyword_Contains Keyword" source="sv1#area4#page19#enu9#fld27" target="sv1#area4#page18#inu5#su11#acond2"/>
@@ -14,7 +14,7 @@
         <LinkParameter id="sv1#area4#page19#enu9#ln17#par13" name="keyword_Keywords Contains Keyword" source="sv1#area4#page19#enu9#fld27" target="sv1#area4#page18#inu5#su11#acond6"/>
       </Link>
     </EntryUnit>
-    <IndexUnit gr:x="0" gr:y="250" id="sv1#area4#page19#inu1" name="Simple List1" entity="ent5" displayAttributes="ent5#att15 ent5#att16"/>
+    <IndexUnit gr:x="5" gr:y="250" id="sv1#area4#page19#inu1" name="Simple List1" entity="ent5" displayAttributes="ent5#att15 ent5#att16"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

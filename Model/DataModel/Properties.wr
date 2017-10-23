@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="10" gr:y="5" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db2" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="10" gr:y="5" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db2" db:schema="public" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
@@ -73,24 +73,24 @@
       <db:JoinColumn attribute="ent3#att9" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel2" name="Author_Publication" sourceEntity="ent4" targetEntity="ent1" db:database="db2" db:table="publication">
+  <Relationship id="rel2" name="Author_Publication" sourceEntity="ent4" targetEntity="ent1" db:database="db2" db:table="author_publication">
     <RelationshipRole1 id="rel2#role3" name="AuthorToPublication" maxCard="N">
       <db:JoinColumn attribute="ent3#att9" name="author_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel2#role4" name="PublicationToAuthor" maxCard="1">
-      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    <RelationshipRole2 id="rel2#role4" name="PublicationToAuthor" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="publication_oid"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="255" gr:y="620" id="ent5" name="Keyword" duration="persistent" attributeOrder="ent5#att15 ent5#att16" db:database="db2" db:table="keyword">
     <Attribute id="ent5#att15" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att16" name="word" type="string" db:column="word"/>
   </Entity>
-  <Relationship id="rel3" name="Keyword_Publication" sourceEntity="ent5" targetEntity="ent1" db:database="db2" db:table="publication">
+  <Relationship id="rel3" name="Keyword_Publication" sourceEntity="ent5" targetEntity="ent1" db:database="db2" db:table="keyword_publication">
     <RelationshipRole1 id="rel3#role5" name="KeywordToPublication" maxCard="N">
       <db:JoinColumn attribute="ent5#att15" name="keyword_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel3#role6" name="PublicationToKeyword" maxCard="1">
-      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    <RelationshipRole2 id="rel3#role6" name="PublicationToKeyword" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="publication_oid"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="555" gr:y="620" id="ent6" name="Comment" duration="persistent" attributeOrder="ent6#att17 ent6#att18 ent6#att19 ent6#att20" db:database="db2" db:table="comment">
@@ -99,12 +99,12 @@
     <Attribute id="ent6#att19" name="textualContent" type="string" db:column="textualcontent"/>
     <Attribute id="ent6#att18" name="title" type="string" db:column="title"/>
   </Entity>
-  <Relationship id="rel4" name="Comment_Publication" sourceEntity="ent6" targetEntity="ent1" db:database="db2" db:table="publication">
-    <RelationshipRole1 id="rel4#role7" name="CommentToPublication" maxCard="N">
-      <db:JoinColumn attribute="ent6#att17" name="comment_oid"/>
+  <Relationship id="rel4" name="Comment_Publication" sourceEntity="ent6" targetEntity="ent1" db:database="db2" db:table="comment">
+    <RelationshipRole1 id="rel4#role7" name="CommentToPublication" maxCard="1">
+      <db:JoinColumn attribute="ent6#att17" name="oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="PublicationToComment" maxCard="1">
-      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    <RelationshipRole2 id="rel4#role8" name="PublicationToComment" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="publication_oid"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="400" gr:y="160" id="ent7" name="Collection" duration="persistent" attributeOrder="ent7#att21 ent7#att22 ent7#att23" db:database="db2" db:table="collection">
@@ -158,5 +158,6 @@
       <db:JoinColumn attribute="ent8#att24" name="university_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true"/>
+  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="QmVya2VsMjY1Mg==" schema="public" cryptedPassword="true">
+  </db:Database>
 </DataModel>

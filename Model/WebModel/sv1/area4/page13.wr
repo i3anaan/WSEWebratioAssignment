@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1110" gr:y="620" id="sv1#area4#page13" name="Edit Publication">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1265" gr:y="620" id="sv1#area4#page13" name="Edit Publication">
   <ContentUnits>
     <EntryUnit id="sv1#area4#page13#enu1" entity="ent1" gr:x="0" gr:y="0" name="Edit Pub" linkOrder="sv1#area4#page13#enu1#ln4">
       <Field id="sv1#area4#page13#enu1#fld8" attribute="ent1#att2" type="string" modifiable="true" name="title"/>
