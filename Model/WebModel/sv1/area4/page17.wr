@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1045" gr:y="365" id="sv1#area4#page17" name="View Publication">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="965" gr:y="370" id="sv1#area4#page17" name="View Publication">
   <ContentUnits>
-    <DataUnit gr:x="10" gr:y="0" id="sv1#area4#page17#dau4" name="View Pub" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page17#dau4#ln13">
+    <DataUnit gr:x="10" gr:y="40" id="sv1#area4#page17#dau4" name="View Pub" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page17#dau4#ln13 sv1#area4#page17#dau4#ln16">
       <Selector id="sv1#area4#page17#dau4#su10" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#page17#dau4#su10#kcond9" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -11,8 +11,11 @@
       <Link id="sv1#area4#page17#dau4#ln5" name="Flow5" to="sv1#area4#page17#inu3" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page17#dau4#ln5#par39" name="oid_RoleCondition1 [oid]" source="data.ent1#att1" target="sv1#area4#page17#inu3#su2#rcond1.ent1#att1"/>
       </Link>
+      <Link id="sv1#area4#page17#dau4#ln16" name="Delete" to="sv1#area4#dlu1" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page17#dau4#ln16#par68" name="oid_PASSING_AuthorToPublication [oid]" sourceLinkParameter="sv1#area4#page17#seu6#ln24#par67" target="sv1#area4#dlu1#su3#rcond2.ent3#att9"/>
+      </Link>
     </DataUnit>
-    <EntryUnit gr:x="175" gr:y="70" id="sv1#area4#page17#enu2" name="Add Comment" entity="ent6" linkOrder="sv1#area4#page17#enu2#ln3">
+    <EntryUnit gr:x="260" gr:y="150" id="sv1#area4#page17#enu2" name="Add Comment" entity="ent6" linkOrder="sv1#area4#page17#enu2#ln3">
       <Field id="sv1#area4#page17#enu2#fld1" name="title" type="string" modifiable="true" attribute="ent6#att18"/>
       <Field id="sv1#area4#page17#enu2#fld2" name="textualContent" type="string" modifiable="true" attribute="ent6#att19"/>
       <Link id="sv1#area4#page17#enu2#ln3" name="Add" to="sv1#area4#cru2" type="normal" validate="true">
@@ -24,16 +27,29 @@
         <LinkParameter id="sv1#area4#page17#enu2#ln3#par63" name="timestamp_title" source="sv1#area4#page17#enu2#fld1" target="sv1#area4#cru2.ent6#att18"/>
       </Link>
     </EntryUnit>
-    <IndexUnit gr:x="0" gr:y="205" id="sv1#area4#page17#inu3" name="Comments" entity="ent6" displayAttributes="ent6#att17 ent6#att18 ent6#att19 ent6#att20 rel4#role7.ent1#att1">
+    <IndexUnit gr:x="0" gr:y="245" id="sv1#area4#page17#inu3" name="Comments" entity="ent6" displayAttributes="ent6#att17 ent6#att18 ent6#att19 ent6#att20 rel4#role7.ent1#att1">
       <Selector id="sv1#area4#page17#inu3#su2" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area4#page17#inu3#su2#rcond1" name="RoleCondition1" role="rel4#role8" predicate="in" implied="false"/>
       </Selector>
     </IndexUnit>
-    <TimeUnit gr:x="200" gr:y="230" id="sv1#area4#page17#tmu1" name="Current Time">
+    <TimeUnit gr:x="200" gr:y="270" id="sv1#area4#page17#tmu1" name="Current Time">
       <Link id="sv1#area4#page17#tmu1#ln10" name="Flow10" to="sv1#area4#page17#enu2" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page17#tmu1#ln10#par64" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
     </TimeUnit>
+    <GetUnit gr:x="335" gr:y="0" id="sv1#area4#page17#gtu2" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="sv1#area4#page17#gtu2#ln19" name="Flow19" to="sv1#area4#page17#seu6" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page17#gtu2#ln19#par66" name="UserCtxParam.oid_UserToResearcher [oid]" source="sv1#area4#page17#gtu2.UserCtxParam" target="sv1#area4#page17#seu6#su4#rcond3.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="145" gr:y="45" id="sv1#area4#page17#seu6" name="GetResearcherByUser" entity="ent3">
+      <Selector id="sv1#area4#page17#seu6#su4" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page17#seu6#su4#rcond3" name="UserToResearcher" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <Link id="sv1#area4#page17#seu6#ln24" name="Flow24" to="sv1#area4#page17#dau4" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page17#seu6#ln24#par67" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -46,6 +62,7 @@
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att6"/>
           <layout:Link link="sv1#area4#page17#dau4#ln13"/>
+          <layout:Link link="sv1#area4#page17#dau4#ln16"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

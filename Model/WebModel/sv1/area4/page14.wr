@@ -1,11 +1,27 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="390" gr:y="460" id="sv1#area4#page14" name="View Collection">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="215" gr:y="460" id="sv1#area4#page14" name="View Collection">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv1#area4#page14#dau3" name="View Coll" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#area4#page14#dau3#ln9">
+    <DataUnit gr:x="175" gr:y="0" id="sv1#area4#page14#dau3" name="View Coll" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#area4#page14#dau3#ln9 sv1#area4#page14#dau3#ln27">
       <Selector id="sv1#area4#page14#dau3#su9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#page14#dau3#su9#kcond8" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv1#area4#page14#dau3#ln9" name="Edit" to="sv1#area4#page16#enu8" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area4#page14#dau3#ln27" name="Delete" to="sv1#area4#dlu2" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page14#dau3#ln27#par72" name="oid_PASSING_ResearcherToCollection [oid]" sourceLinkParameter="sv1#area4#page14#seu7#ln26#par71" target="sv1#area4#dlu2#su5#rcond5.ent3#att9"/>
+      </Link>
     </DataUnit>
+    <GetUnit gr:x="0" gr:y="0" id="sv1#area4#page14#gtu3" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="sv1#area4#page14#gtu3#ln25" name="Flow25" to="sv1#area4#page14#seu7" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page14#gtu3#ln25#par70" name="UserCtxParam.oid_UserToResearcher [oid]" source="sv1#area4#page14#gtu3.UserCtxParam" target="sv1#area4#page14#seu7#su6#rcond4.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="5" gr:y="120" id="sv1#area4#page14#seu7" name="GetResearcherByUser" entity="ent3">
+      <Selector id="sv1#area4#page14#seu7#su6" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page14#seu7#su6#rcond4" name="UserToResearcher" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <Link id="sv1#area4#page14#seu7#ln26" name="Flow26" to="sv1#area4#page14#dau3" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page14#seu7#ln26#par71" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -15,8 +31,23 @@
           <layout:Attribute attribute="ent7#att22"/>
           <layout:Attribute attribute="ent7#att23"/>
           <layout:Link link="sv1#area4#page14#dau3#ln9"/>
+          <layout:Link link="sv1#area4#page14#dau3#ln27"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
