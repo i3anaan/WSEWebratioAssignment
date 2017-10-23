@@ -15,7 +15,7 @@
       <MultiSelectionField id="sv1#area4#page13#enu1#msfld2" name="Keywords" type="string"/>
       <MultiSelectionField id="sv1#area4#page13#enu1#msfld3" name="Authors" type="string"/>
     </EntryUnit>
-    <SelectorUnit id="sv1#area4#page13#seu4" name="Authors" gr:x="10" gr:y="200" entity="ent4" distinctAttributes="ent3#att9 ent3#att10">
+    <SelectorUnit id="sv1#area4#page13#seu4" name="Authors" gr:x="10" gr:y="200">
       <Link id="sv1#area4#page13#seu4#ln6" name="Flow6" to="sv1#area4#page13#enu1" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page13#seu4#ln6#par18" name="name_Authors [label]" source="ent3#att10Array" target="sv1#area4#page13#enu1#msfld3_label"/>
         <LinkParameter id="sv1#area4#page13#seu4#ln6#par19" name="oid_Authors [output]" source="ent3#att9Array" target="sv1#area4#page13#enu1#msfld3_output"/>

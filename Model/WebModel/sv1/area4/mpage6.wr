@@ -9,7 +9,26 @@
       <Link id="sv1#area4#mpage6#gtu6#ln34" name="Flow7" to="sv1#area4#mpage6#dau11" type="transport" validate="true">
         <LinkParameter id="sv1#area4#mpage6#gtu6#ln34#par32" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv1#area4#mpage6#gtu6.UserCtxParam" target="sv1#area4#mpage6#dau11#su18#kcond16.userOID"/>
       </Link>
+      <Link id="sv1#area4#mpage6#gtu6#ln44" name="Flow40" to="sv1#area4#mpage6#seu11" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
+    <MultiMessageUnit gr:x="205" gr:y="145" id="sv1#area4#mpage6#mssu1" name="Swag:">
+      <Message xml:space="preserve">Swag $$reputation$$</Message>
+      <Placeholder id="sv1#area4#mpage6#mssu1#ph1" name="reputation"/>
+    </MultiMessageUnit>
+    <SelectorUnit id="sv1#area4#mpage6#seu11" name="Selector10" gr:x="25" gr:y="265" entity="ent3">
+      <Selector id="sv1#area4#mpage6#seu11#su5" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#mpage6#seu11#su5#rcond5" name="RoleCondition4" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <Link id="sv1#area4#mpage6#seu11#ln45" name="Flow41" to="sv1#area4#mpage6#miu4" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#mpage6#seu11#ln45#par63" name="oid_AuthorOID" source="ent3#att9Array" target="sv1#area4#mpage6#miu4.mov1#opm6#icu6#icp9"/>
+      </Link>
+    </SelectorUnit>
+    <ModuleInstanceUnit id="sv1#area4#mpage6#miu4" gr:x="135" gr:y="435" action="true" moduleId="mov1#opm6">
+      <Link id="sv1#area4#mpage6#miu4#ln46" name="Flow46" to="sv1#area4#mpage6#mssu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#mpage6#miu4#ln46#par64" name="Reputation_reputation" source="mov1#opm6#okcu5#ocp2" target="sv1#area4#mpage6#mssu1.sv1#area4#mpage6#mssu1#ph1"/>
+        <LinkParameter id="sv1#area4#mpage6#miu4#ln46#par65" name="Reputation_Shown Messages" source="mov1#opm6#okcu5#ocp2" target="sv1#area4#mpage6#mssu1.shownMessages"/>
+      </Link>
+    </ModuleInstanceUnit>
   </ContentUnits>
   <layout:CustomLocation name="Top">
     <layout:Grid containerType="cell">
@@ -18,6 +37,7 @@
           <layout:Unit unitId="sv1#area4#mpage6#dau11">
             <layout:Attribute attribute="rel1#role1.ent3#att10"/>
           </layout:Unit>
+          <layout:Unit unitId="sv1#area4#mpage6#mssu1"/>
         </layout:Cell>
       </layout:Row>
     </layout:Grid>

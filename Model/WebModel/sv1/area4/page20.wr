@@ -16,7 +16,7 @@
         <LinkParameter id="sv1#area4#page20#seu2#ln1#par6" name="oid_Keywords [output]" source="ent5#att15Array" target="sv1#area4#page20#enu10#msfld1_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="sv1#area4#page20#seu3" name="Authors" gr:x="20" gr:y="165" entity="ent4" distinctAttributes="ent3#att9 ent3#att10">
+    <SelectorUnit id="sv1#area4#page20#seu3" name="Authors" gr:x="20" gr:y="165">
       <Link id="sv1#area4#page20#seu3#ln2" name="Flow3" to="sv1#area4#page20#enu10" type="transport" validate="true" gr:bendpoints="5,92,-35,-88">
         <LinkParameter id="sv1#area4#page20#seu3#ln2#par11" name="name_Author [label]" source="ent3#att10Array" target="sv1#area4#page20#enu10#sfld2_label"/>
         <LinkParameter id="sv1#area4#page20#seu3#ln2#par12" name="oid_Author [output]" source="ent3#att9Array" target="sv1#area4#page20#enu10#sfld2_output"/>

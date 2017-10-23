@@ -1,0 +1,27 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="440" gr:y="270" id="mov1#opm6" name="Reputation">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm6#icu6" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm6#icu6#icp9" name="AuthorOID"/>
+      <OKLink id="mov1#opm6#icu6#oln9" name="OKFlow9" to="mov1#opm6#qu1">
+        <LinkParameter id="mov1#opm6#icu6#oln9#par38" name="AuthorOID_authorOID" source="mov1#opm6#icu6#icp9" target="mov1#opm6#qu1.mov1#opm6#qu1#qi1"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <QueryUnit gr:x="375" gr:y="95" id="mov1#opm6#qu1" name="Query1" mode="select" language="SQL" db="db2">
+      <QueryInput id="mov1#opm6#qu1#qi1" name="authorOID" required="true"/>
+      <QueryText xml:space="preserve">SELECT (t1 * 100) / (t2 + 1) AS reputation FROM (
+SELECT
+(SELECT COUNT(*) AS pubs FROM publication
+INNER JOIN author_publication ON publication.oid = author_publication.publication_oid
+WHERE author_publication.author_oid = :authorOID ) AS t1,
+(SELECT COUNT(*) AS colecs FROM publication RIGHT JOIN collection_publication ON publication.oid = collection_publication.publication_oid WHERE publication.oid = :authorOID ) AS t2) as t3</QueryText>
+      <OKLink id="mov1#opm6#qu1#oln11" name="OKFlow11" to="mov1#opm6#okcu5" automaticCoupling="false">
+        <LinkParameter id="mov1#opm6#qu1#oln11#par39" name="QueryOutput1_PASSING" source="data[].queryOutput1" passing="true"/>
+        <LinkParameter id="mov1#opm6#qu1#oln11#par58" name="QueryOutput1" source="data[].queryOutput1" target="mov1#opm6#okcu5#ocp2"/>
+      </OKLink>
+      <QueryOutput id="mov1#opm6#qu1#qo1" name="QueryOutput1" type="decimal"/>
+    </QueryUnit>
+    <OKCollectorUnit gr:x="580" gr:y="90" id="mov1#opm6#okcu5" name="OK Port5">
+      <OutputCollectorParameter id="mov1#opm6#okcu5#ocp2" name="Reputation"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>

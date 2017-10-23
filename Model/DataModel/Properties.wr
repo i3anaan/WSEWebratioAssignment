@@ -59,12 +59,6 @@
     <Attribute id="ent3#att11" name="university" type="string" db:column="university"/>
     <Attribute id="ent3#att10" name="name" type="string" db:column="name"/>
   </Entity>
-  <Entity gr:x="200" gr:y="375" id="ent4" name="Author" duration="persistent" attributeOrder="ent4#att14" db:database="db2" db:table="author">
-    <Attribute id="ent4#att14" name="reputation" type="integer" db:column="reputation"/>
-    <Generalization superEntity="ent3">
-      <db:JoinColumn attribute="ent3#att9" name="researcher_oid"/>
-    </Generalization>
-  </Entity>
   <Relationship id="rel1" name="User_Researcher" sourceEntity="User" targetEntity="ent3" db:database="db2" db:table="researcher">
     <RelationshipRole1 id="rel1#role1" name="UserToResearcher" maxCard="1">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
@@ -73,7 +67,7 @@
       <db:JoinColumn attribute="ent3#att9" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel2" name="Author_Publication" sourceEntity="ent4" targetEntity="ent1" db:database="db2" db:table="author_publication">
+  <Relationship id="rel2" name="Author_Publication" sourceEntity="ent3" targetEntity="ent1" db:database="db2" db:table="author_publication" gr:bendpoints="197,97,-338,-13">
     <RelationshipRole1 id="rel2#role3" name="AuthorToPublication" maxCard="N">
       <db:JoinColumn attribute="ent3#att9" name="author_oid"/>
     </RelationshipRole1>
@@ -158,6 +152,6 @@
       <db:JoinColumn attribute="ent8#att24" name="university_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="QmVya2VsMjY1Mg==" schema="public" cryptedPassword="true">
+  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true">
   </db:Database>
 </DataModel>

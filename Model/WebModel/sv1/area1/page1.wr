@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="20" gr:y="180" id="sv1#area1#page1" name="New Researcher" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page1#enu3" name="Create an author" linkOrder="sv1#area1#page1#enu3#ln25" entity="ent3">
+      <Field id="sv1#area1#page1#enu3#fld4" name="reputation" type="integer" modifiable="true"/>
+      <Field id="sv1#area1#page1#enu3#fld5" name="university" type="string" modifiable="true"/>
+      <Field id="sv1#area1#page1#enu3#fld6" name="name" type="string" modifiable="true"/>
+      <Link id="sv1#area1#page1#enu3#ln25" name="Flow25" to="sv1#area1#cru6" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page1#enu3">
+          <layout:Field field="sv1#area1#page1#enu3#fld4"/>
+          <layout:Field field="sv1#area1#page1#enu3#fld5"/>
+          <layout:Field field="sv1#area1#page1#enu3#fld6"/>
+          <layout:Link link="sv1#area1#page1#enu3#ln25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
