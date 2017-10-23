@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="535" gr:y="260" id="sv1#area4" name="Researcher" landmark="true" landmarks="sv1#area4#page19" protected="false" defaultPage="sv1#area4#page19" customURLName="researcher">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="550" gr:y="295" id="sv1#area4" name="Researcher" landmark="true" landmarks="sv1#area4#page19" protected="false" defaultPage="sv1#area4#page19" customURLName="researcher">
   <OperationUnits>
     <ModifyUnit gr:x="185" gr:y="600" id="sv1#area4#mfu1" name="Update Coll" entity="ent7">
       <Selector id="sv1#area4#mfu1#su7" defaultPolicy="fill" booleanOperator="and">
@@ -6,27 +6,11 @@
       </Selector>
     </ModifyUnit>
     <CreateUnit gr:x="535" gr:y="170" id="sv1#area4#cru4" name="Create Coll" entity="ent7"/>
-    <CreateUnit gr:x="1340" gr:y="210" id="sv1#area4#cru5" name="Create Pub" entity="ent1"/>
+    <CreateUnit gr:x="1365" gr:y="115" id="sv1#area4#cru5" name="Create Pub" entity="ent1"/>
     <ModifyUnit gr:x="1305" gr:y="620" id="sv1#area4#mfu4" name="Update Pub" entity="ent1">
       <Selector id="sv1#area4#mfu4#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#mfu4#su8#kcond7" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
     </ModifyUnit>
-    <SelectorUnit gr:x="1085" gr:y="15" id="sv1#area4#seu1" name="Keywords" entity="ent5" distinctAttributes="ent5#att15 ent5#att16" maxResults="100">
-      <OKLink id="sv1#area4#seu1#oln2" name="Flow1" to="sv1#area4#page20#enu10" preserveForm="true">
-        <LinkParameter id="sv1#area4#seu1#oln2#par11" name="word_Keywords [label]" source="ent5#att16Array" target="sv1#area4#page20#enu10#sfld3_label"/>
-        <LinkParameter id="sv1#area4#seu1#oln2#par12" name="oid_Keywords [output]" source="ent5#att15Array" target="sv1#area4#page20#enu10#sfld3_output"/>
-        <LinkParameter id="sv1#area4#seu1#oln2#par14" name="computers_Keywords - Preselection" sourceValue="computers" target="sv1#area4#page20#enu10#sfld3_presel"/>
-      </OKLink>
-      <Link id="sv1#area4#seu1#ln3" name="Flow3" to="sv1#area4#page20#enu10" type="transport" validate="true" gr:bendpoints="5,92,-35,-88">
-        <LinkParameter id="sv1#area4#seu1#ln3#par18" name="word_Keywords [label]" source="ent5#att16Array" target="sv1#area4#page20#enu10#sfld3_label"/>
-        <LinkParameter id="sv1#area4#seu1#ln3#par19" name="oid_Keywords [output]" source="ent5#att15Array" target="sv1#area4#page20#enu10#sfld3_output"/>
-      </Link>
-      <KOLink id="sv1#area4#seu1#kln4" name="KOFlow4" to="sv1#area4#page20#enu10" gr:bendpoints="35,86,-5,-94">
-        <LinkParameter id="sv1#area4#seu1#kln4#par15" name="_Keywords - Preselection" blank="true" target="sv1#area4#page20#enu10#sfld3_presel"/>
-        <LinkParameter id="sv1#area4#seu1#kln4#par16" name="word_Keywords [label]" source="ent5#att16Array" target="sv1#area4#page20#enu10#sfld3_label"/>
-        <LinkParameter id="sv1#area4#seu1#kln4#par17" name="oid_Keywords [output]" source="ent5#att15Array" target="sv1#area4#page20#enu10#sfld3_output"/>
-      </KOLink>
-    </SelectorUnit>
   </OperationUnits>
 </Area>
