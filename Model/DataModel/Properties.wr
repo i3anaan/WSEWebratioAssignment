@@ -59,7 +59,7 @@
     <Attribute id="ent3#att11" name="university" type="string" db:column="university"/>
     <Attribute id="ent3#att10" name="name" type="string" db:column="name"/>
   </Entity>
-  <Entity gr:x="105" gr:y="330" id="ent4" name="Author" duration="persistent" attributeOrder="ent4#att14" db:database="db2" db:table="author">
+  <Entity gr:x="200" gr:y="375" id="ent4" name="Author" duration="persistent" attributeOrder="ent4#att14" db:database="db2" db:table="author">
     <Attribute id="ent4#att14" name="reputation" type="integer" db:column="reputation"/>
     <Generalization superEntity="ent3">
       <db:JoinColumn attribute="ent3#att9" name="researcher_oid"/>
