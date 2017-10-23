@@ -1,11 +1,29 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1105" gr:y="365" id="sv1#area4#page17" name="View Publication">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1055" gr:y="365" id="sv1#area4#page17" name="View Publication">
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv1#area4#page17#dau4" name="View Pub" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page17#dau4#ln13">
       <Selector id="sv1#area4#page17#dau4#su10" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#page17#dau4#su10#kcond9" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv1#area4#page17#dau4#ln13" name="Edit" to="sv1#area4#page13#enu1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area4#page17#dau4#ln8" name="Flow8" to="sv1#area4#page17#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page17#dau4#ln8#par8" name="oid_CommentToPublication - Preselection" source="data.ent1#att1" target="sv1#area4#page17#enu2#sfld1_presel"/>
+        <LinkParameter id="sv1#area4#page17#dau4#ln8#par10" name="oid_CommentToPublication [label]" source="data.ent1#att1" target="sv1#area4#page17#enu2#sfld1_label"/>
+        <LinkParameter id="sv1#area4#page17#dau4#ln8#par14" name="oid_CommentToPublication [output]" source="data.ent1#att1" target="sv1#area4#page17#enu2#sfld1_output"/>
+      </Link>
+      <Link id="sv1#area4#page17#dau4#ln5" name="Flow5" to="sv1#area4#page17#inu3" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
+    <EntryUnit gr:x="30" gr:y="115" id="sv1#area4#page17#enu2" name="Add Comment" entity="ent6" linkOrder="sv1#area4#page17#enu2#ln3">
+      <Field id="sv1#area4#page17#enu2#fld1" name="title" type="string" modifiable="true" attribute="ent6#att18"/>
+      <Field id="sv1#area4#page17#enu2#fld2" name="textualContent" type="string" modifiable="true" attribute="ent6#att19"/>
+      <Field id="sv1#area4#page17#enu2#fld3" name="timestamp" type="timestamp" modifiable="true" attribute="ent6#att20"/>
+      <Link id="sv1#area4#page17#enu2#ln3" name="Add" to="sv1#area4#cru2" automaticCoupling="true" type="normal" validate="true"/>
+      <SelectionField id="sv1#area4#page17#enu2#sfld1" name="CommentToPublication" type="string" role="rel4#role7"/>
+    </EntryUnit>
+    <IndexUnit gr:x="5" gr:y="205" id="sv1#area4#page17#inu3" name="Comments" entity="ent6" displayAttributes="ent6#att17 ent6#att18 ent6#att19 ent6#att20">
+      <Selector id="sv1#area4#page17#inu3#su1" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page17#inu3#su1#rcond1" name="RoleCondition1" role="rel4#role8" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -18,6 +36,49 @@
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att6"/>
           <layout:Link link="sv1#area4#page17#dau4#ln13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page17#enu2">
+          <layout:Link link="sv1#area4#page17#enu2#ln3"/>
+          <layout:Field field="sv1#area4#page17#enu2#fld1"/>
+          <layout:Field field="sv1#area4#page17#enu2#fld2"/>
+          <layout:Field field="sv1#area4#page17#enu2#fld3"/>
+          <layout:Field field="sv1#area4#page17#enu2#sfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page17#inu3">
+          <layout:Attribute attribute="ent6#att17"/>
+          <layout:Attribute attribute="ent6#att18"/>
+          <layout:Attribute attribute="ent6#att19"/>
+          <layout:Attribute attribute="ent6#att20"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
