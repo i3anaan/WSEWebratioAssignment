@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-65" gr:y="330" id="sv1#area4" name="Researcher" landmark="true" landmarks="sv1#area4#page19 sv1#area4#page2 sv1#area4#page1" protected="false" customURLName="researcher" defaultPage="sv1#area4#page19">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-70" gr:y="320" id="sv1#area4" name="Researcher" landmark="true" landmarks="sv1#area4#page19 sv1#area4#page2 sv1#area4#page1" protected="false" customURLName="researcher" defaultPage="sv1#area4#page19">
   <OperationUnits>
     <ModifyUnit gr:x="1075" gr:y="900" id="sv1#area4#mfu1" name="Update Coll" entity="ent7">
       <Selector id="sv1#area4#mfu1#su7" defaultPolicy="fill" booleanOperator="and">
@@ -18,7 +18,7 @@
         <KeyCondition id="sv1#area4#mfu4#su8#kcond7" name="KeyCondition3" predicate="in" implied="false"/>
         <RelationshipRoleCondition id="sv1#area4#mfu4#su8#rcond2" name="AuthorToPub" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
-      <OKLink id="sv1#area4#mfu4#oln9" name="OKFlow9" to="sv1#area4#page17" automaticCoupling="true"/>
+      <OKLink id="sv1#area4#mfu4#oln9" name="OKFlow9" to="sv1#area4#page17#dau4" automaticCoupling="true"/>
     </ModifyUnit>
     <CreateUnit gr:x="2500" gr:y="370" id="sv1#area4#cru2" name="Create Comment" entity="ent6">
       <OKLink id="sv1#area4#cru2#oln6" name="OKFlow6" to="sv1#area4#page17" automaticCoupling="true"/>
@@ -86,5 +86,44 @@
         <RelationshipRoleCondition id="sv1#area4#seu22#su28#rcond6" name="PubToKey" predicate="in" implied="false" role="rel3#role6"/>
       </Selector>
     </SelectorUnit>
+    <DisconnectUnit id="sv1#area4#dcnu5" name="Disconnect Keywords" gr:x="135" gr:y="1005" relationship="rel7#role13">
+      <SourceSelector id="sv1#area4#dcnu5#su37" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#dcnu5#su37#kcond20" name="KeyCondition12" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area4#dcnu5#su38" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#dcnu5#su38#kcond21" name="KeyCondition13" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area4#dcnu5#oln38" name="Flow27" to="sv1#area4#mfu6">
+        <LinkParameter id="sv1#area4#dcnu5#oln38#par256" name="description_PASSING_description" sourceLinkParameter="sv1#area4#seu26#oln40#par245" target="sv1#area4#mfu6.ent7#att23"/>
+        <LinkParameter id="sv1#area4#dcnu5#oln38#par257" name="Key [oid]_PASSING_KeyCondition3 [oid]" sourceLinkParameter="sv1#area4#seu26#oln40#par246" target="sv1#area4#mfu6#su42#kcond22.ent7#att21"/>
+        <LinkParameter id="sv1#area4#dcnu5#oln38#par258" name="CollectionToKeyword_PASSING_Keyword.oid(CollectionToKeyword)" sourceLinkParameter="sv1#area4#seu26#oln40#par243" target="sv1#area4#mfu6.rel7#role13.ent5#att15"/>
+        <LinkParameter id="sv1#area4#dcnu5#oln38#par259" name="CollectionToPublication_PASSING_Publication.oid(CollectionToPublication)" sourceLinkParameter="sv1#area4#seu26#oln40#par244" target="sv1#area4#mfu6.rel5#role9.ent1#att1"/>
+        <LinkParameter id="sv1#area4#dcnu5#oln38#par260" name="oid_PASSING_Researcher.oid(CollectionToResearcher)" sourceLinkParameter="sv1#area4#seu26#oln40#par247" target="sv1#area4#mfu6.rel6#role11.ent3#att9"/>
+        <LinkParameter id="sv1#area4#dcnu5#oln38#par261" name="title_PASSING_title" sourceLinkParameter="sv1#area4#seu26#oln40#par249" target="sv1#area4#mfu6.ent7#att22"/>
+      </OKLink>
+    </DisconnectUnit>
+    <SelectorUnit id="sv1#area4#seu26" name="GetKeywords" gr:x="25" gr:y="1195" entity="ent5">
+      <OKLink id="sv1#area4#seu26#oln40" name="Flow61" to="sv1#area4#dcnu5">
+        <LinkParameter id="sv1#area4#seu26#oln40#par165" name="oid_KeyCondition13 [oid] [Keyword] [Target]" source="ent5#att15Array" target="sv1#area4#dcnu5#su38#kcond21.ent5#att15"/>
+        <LinkParameter id="sv1#area4#seu26#oln40#par243" name="CollectionToKeyword_PASSING" sourceLinkParameter="sv1#area4#page16#enu8#ln27#par236" passing="true"/>
+        <LinkParameter id="sv1#area4#seu26#oln40#par244" name="CollectionToPublication_PASSING" sourceLinkParameter="sv1#area4#page16#enu8#ln27#par237" passing="true"/>
+        <LinkParameter id="sv1#area4#seu26#oln40#par245" name="description_PASSING" sourceLinkParameter="sv1#area4#page16#enu8#ln27#par238" passing="true"/>
+        <LinkParameter id="sv1#area4#seu26#oln40#par246" name="Key [oid]_PASSING" sourceLinkParameter="sv1#area4#page16#enu8#ln27#par239" passing="true"/>
+        <LinkParameter id="sv1#area4#seu26#oln40#par247" name="oid_PASSING" sourceLinkParameter="sv1#area4#page16#enu8#ln27#par240" passing="true"/>
+        <LinkParameter id="sv1#area4#seu26#oln40#par248" name="Publication Object_PASSING" sourceLinkParameter="sv1#area4#page16#enu8#ln27#par229" passing="true"/>
+        <LinkParameter id="sv1#area4#seu26#oln40#par249" name="title_PASSING" sourceLinkParameter="sv1#area4#page16#enu8#ln27#par241" passing="true"/>
+        <LinkParameter id="sv1#area4#seu26#oln40#par250" name="Key [oid]_PASSING_KeyCondition12 [oid] [Collection] [Source]" sourceLinkParameter="sv1#area4#page16#enu8#ln27#par239" target="sv1#area4#dcnu5#su37#kcond20.ent7#att21"/>
+      </OKLink>
+      <Selector id="sv1#area4#seu26#su41" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#seu26#su41#rcond23" name="PubToKey" predicate="in" implied="false" role="rel7#role13"/>
+      </Selector>
+    </SelectorUnit>
+    <ModifyUnit id="sv1#area4#mfu6" name="Update Pub" gr:x="85" gr:y="840" entity="ent7">
+      <Selector id="sv1#area4#mfu6#su42" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#mfu6#su42#kcond22" name="KeyCondition3" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv1#area4#mfu6#su42#rcond24" name="AuthorToPub" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area4#mfu6#oln41" name="OKFlow9" to="sv1#area4#page14#dau3" automaticCoupling="true"/>
+    </ModifyUnit>
   </OperationUnits>
 </Area>
