@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="440" gr:y="270" id="mov1#opm6" name="Reputation">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="375" gr:y="205" id="mov1#opm6" name="Reputation">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm6#icu6" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm6#icu6#icp9" name="AuthorOID"/>

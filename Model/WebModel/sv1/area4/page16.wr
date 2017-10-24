@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="845" id="sv1#area4#page16" name="Edit Coll">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="420" gr:y="795" id="sv1#area4#page16" name="Edit Coll">
   <ContentUnits>
     <EntryUnit gr:x="190" gr:y="10" id="sv1#area4#page16#enu8" name="Edit Coll" linkOrder="sv1#area4#page16#enu8#ln12" entity="ent7">
       <Link id="sv1#area4#page16#enu8#ln12" name="Update" to="sv1#area4#mfu1" type="normal" validate="true">
@@ -9,6 +9,7 @@
         <LinkParameter id="sv1#area4#page16#enu8#ln12#par113" name="CollectionToPublication_Publication.oid(CollectionToPublication)" source="sv1#area4#page16#enu8#msfld7" target="sv1#area4#mfu1.rel5#role9.ent1#att1"/>
         <LinkParameter id="sv1#area4#page16#enu8#ln12#par114" name="oid_PASSING_Researcher.oid(CollectionToResearcher)" sourceLinkParameter="sv1#area4#page16#seu11#ln51#par97" target="sv1#area4#mfu1.rel6#role11.ent3#att9"/>
         <LinkParameter id="sv1#area4#page16#enu8#ln12#par115" name="title_title" source="sv1#area4#page16#enu8#fld25" target="sv1#area4#mfu1.ent7#att22"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln12#par121" name="oid_PASSING_ResearcherToColl [oid]" sourceLinkParameter="sv1#area4#page16#seu11#ln51#par97" target="sv1#area4#mfu1#su7#rcond10.ent3#att9"/>
       </Link>
       <Field id="sv1#area4#page16#enu8#fld25" name="title" type="string" modifiable="true" attribute="ent7#att22"/>
       <Field id="sv1#area4#page16#enu8#fld26" name="description" type="string" modifiable="true" attribute="ent7#att23"/>
@@ -45,11 +46,11 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area4#page16#enu8">
-          <layout:Link link="sv1#area4#page16#enu8#ln12"/>
           <layout:Field field="sv1#area4#page16#enu8#fld25"/>
           <layout:Field field="sv1#area4#page16#enu8#fld26"/>
           <layout:Field field="sv1#area4#page16#enu8#msfld6"/>
           <layout:Field field="sv1#area4#page16#enu8#msfld7"/>
+          <layout:Link link="sv1#area4#page16#enu8#ln12"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
