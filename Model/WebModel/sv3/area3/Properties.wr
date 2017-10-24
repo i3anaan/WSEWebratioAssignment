@@ -1,0 +1,9 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-85" gr:y="355" id="sv3#area3" name="Groups" landmark="true" defaultPage="sv3#area3#page2">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="645" gr:y="40" id="sv3#area3#miu3" action="true" name="Create Group" moduleId="mov1#opm6"/>
+    <ModuleInstanceUnit gr:x="0" gr:y="190" id="sv3#area3#miu2" action="true" moduleId="mov1#opm5"/>
+    <ModuleInstanceUnit id="sv3#area3#miu4" name="Edit Group" gr:x="500" gr:y="350" action="true" moduleId="mov1#opm4">
+      <OKLink id="sv3#area3#miu4#oln19" name="OKFlow19" to="sv3#area3#page2" automaticCoupling="true" gr:bendpoints="0,-83,185,162"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

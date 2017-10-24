@@ -1,0 +1,22 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="370" gr:y="40" id="sv3#page4" name="Dashboard" linkOrder="sv3#page4#ln2 sv3#page4#ln19" customURLName="administrator">
+  <ContentUnits/>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#page4#ln2" name="Researcher Management" to="sv3#area1#page5" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv3#page4#ln11" name="Researcher Management" to="sv3#area2#page1" type="normal" automaticCoupling="true" validate="true"/>
+  <Link id="sv3#page4#ln19" name="Flow19" to="sv3#area3" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

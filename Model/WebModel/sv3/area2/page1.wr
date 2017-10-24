@@ -1,0 +1,86 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area2#page1" name="Comment Management" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area2#page1#pwu2" name="List of Comments" linkOrder="sv3#area2#page1#pwu2#ln7" customDescriptor="false" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att19 ent6#att20 ent6#att18">
+      <Link id="sv3#area2#page1#pwu2#ln7" name="Edit" to="sv3#area2#page1#enu3" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page1#pwu2#ln7#par1" name="oid_Key Condition [oid]" source="data[].ent3#att9" target="sv3#area2#page1#enu3.ent3#att9"/>
+        <LinkParameter id="sv3#area2#page1#pwu2#ln7#par2" name="ResearcherToUniversity.name_University - Preselection" target="sv3#area2#page1#enu3#sfld1_presel" sourceValue="$$NULL$$"/>
+        <LinkParameter id="sv3#area2#page1#pwu2#ln7#par3" name="ResearcherToUniversity.name_University [label]" source="data[].rel9#role17$ent8#att25" target="sv3#area2#page1#enu3#sfld1_label"/>
+        <LinkParameter id="sv3#area2#page1#pwu2#ln7#par4" name="ResearcherToUniversity.name_University [output]" source="data[].rel9#role17$ent8#att25" target="sv3#area2#page1#enu3#sfld1_output"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#area2#page1#enu3" name="Edit Comment" gr:x="275" gr:y="0" entity="ent3" fieldOrder="sv3#area2#page1#enu3#fld2 sv3#area2#page1#enu3#sfld1">
+      <Field id="sv3#area2#page1#enu3#fld2" name="name" type="string" modifiable="true" attribute="ent3#att10"/>
+      <SelectionField id="sv3#area2#page1#enu3#sfld1" name="University" type="integer" role="rel9#role17"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell rowspan="3" colspan="8">
+        <layout:Unit unitId="sv3#area2#page1#pwu2">
+          <layout:Link link="sv3#area2#page1#pwu2#ln7"/>
+          <layout:Attribute attribute="ent6#att19"/>
+          <layout:Attribute attribute="ent6#att20"/>
+          <layout:Attribute attribute="ent6#att18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell rowspan="3" colspan="4">
+        <layout:Unit unitId="sv3#area2#page1#enu3">
+          <layout:Field field="sv3#area2#page1#enu3#fld2"/>
+          <layout:Field field="sv3#area2#page1#enu3#sfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

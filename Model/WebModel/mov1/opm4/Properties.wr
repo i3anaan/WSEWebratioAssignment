@@ -1,0 +1,25 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="395" gr:y="275" id="mov1#opm4" name="Edit Group">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="65">
+      <InputCollectorParameter id="mov1#opm4#icu4#icp14" name="oidGroup"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp13" name="modules"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp12" name="groupName"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp11" name="defaultModule"/>
+      <OKLink id="mov1#opm4#icu4#oln24" name="OKFlow24" to="mov1#opm4#mfu2">
+        <LinkParameter id="mov1#opm4#icu4#oln24#par109" name="groupName_groupName" source="mov1#opm4#icu4#icp12" target="mov1#opm4#mfu2.groupName"/>
+        <LinkParameter id="mov1#opm4#icu4#oln24#par110" name="defaultModule_Module.oid(defaultModule)" source="mov1#opm4#icu4#icp11" target="mov1#opm4#mfu2.Group2DefaultModule.moduleOID"/>
+        <LinkParameter id="mov1#opm4#icu4#oln24#par111" name="modules_Module.oid(modules)" source="mov1#opm4#icu4#icp13" target="mov1#opm4#mfu2.Group2Module.moduleOID"/>
+        <LinkParameter id="mov1#opm4#icu4#oln24#par136" name="oidGroup_KeyCondition1 [oid]" source="mov1#opm4#icu4#icp14" target="mov1#opm4#mfu2#su1#kcond1.groupOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="340" gr:y="75" id="mov1#opm4#mfu2" name="Update group" entity="Group">
+      <Selector id="mov1#opm4#mfu2#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#mfu2#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm4#mfu2#oln6" name="OKFlow6" to="mov1#opm4#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#mfu2#kln10" name="KOFlow10" to="mov1#opm4#kocu4" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="550" gr:y="-25" id="mov1#opm4#okcu4" name="OK"/>
+    <KOCollectorUnit gr:x="550" gr:y="195" id="mov1#opm4#kocu4" name="KO"/>
+  </OperationUnits>
+</OperationModule>

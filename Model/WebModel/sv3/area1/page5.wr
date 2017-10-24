@@ -1,0 +1,98 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area1#page5" name="Researcher Management">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area1#page5#pwu1" name="List of Researchers" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att10 ent3#att11 rel1#role2.userName rel1#role2.email rel9#role17.ent8#att25 rel9#role17.ent8#att26 rel9#role17.ent8#att27" customDescriptor="false" linkOrder="sv3#area1#page5#pwu1#ln21">
+      <Link id="sv3#area1#page5#pwu1#ln21" name="Edit" to="sv3#area1#page5#enu4" type="normal" validate="true">
+        <LinkParameter id="sv3#area1#page5#pwu1#ln21#par11" name="oid_Key Condition [oid]" source="data[].ent3#att9" target="sv3#area1#page5#enu4.ent3#att9"/>
+        <LinkParameter id="sv3#area1#page5#pwu1#ln21#par12" name="ResearcherToUniversity.name_University - Preselection" target="sv3#area1#page5#enu4#sfld6_presel" sourceValue="$$NULL$$"/>
+        <LinkParameter id="sv3#area1#page5#pwu1#ln21#par13" name="ResearcherToUniversity.name_University [label]" source="data[].rel9#role17$ent8#att25" target="sv3#area1#page5#enu4#sfld6_label"/>
+        <LinkParameter id="sv3#area1#page5#pwu1#ln21#par14" name="ResearcherToUniversity.name_University [output]" source="data[].rel9#role17$ent8#att25" target="sv3#area1#page5#enu4#sfld6_output"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="275" gr:y="0" id="sv3#area1#page5#enu4" name="Edit Researcher" entity="ent3" fieldOrder="sv3#area1#page5#enu4#fld5 sv3#area1#page5#enu4#sfld6">
+      <Field id="sv3#area1#page5#enu4#fld5" name="name" type="string" modifiable="true" attribute="ent3#att10"/>
+      <SelectionField id="sv3#area1#page5#enu4#sfld6" name="University" type="integer" role="rel9#role17"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="290" gr:y="165" id="sv3#area1#page5#seu4" name="Universities" entity="ent8" distinctAttributes="ent8#att25 ent8#att24">
+      <Link id="sv3#area1#page5#seu4#ln15" name="Flow15" to="sv3#area1#page5#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#area1#page5#seu4#ln15#par9" name="name_University [label]" source="ent8#att25Array" target="sv3#area1#page5#enu4#sfld6_label"/>
+        <LinkParameter id="sv3#area1#page5#seu4#ln15#par10" name="oid_University [output]" source="ent8#att25Array" target="sv3#area1#page5#enu4#sfld6_output"/>
+        <LinkParameter id="sv3#area1#page5#seu4#ln15#par15" name="oid_Key Condition [oid]" source="ent8#att24Array" target="sv3#area1#page5#enu4.ent3#att9"/>
+        <LinkParameter id="sv3#area1#page5#seu4#ln15#par16" name="name_University - Preselection" source="ent8#att25Array" target="sv3#area1#page5#enu4#sfld6_presel"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="8" rowspan="3">
+        <layout:Unit unitId="sv3#area1#page5#pwu1">
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="rel1#role2.userName"/>
+          <layout:Attribute attribute="rel1#role2.email"/>
+          <layout:Attribute attribute="rel9#role17.ent8#att25"/>
+          <layout:Attribute attribute="rel9#role17.ent8#att26"/>
+          <layout:Attribute attribute="rel9#role17.ent8#att27"/>
+          <layout:Link link="sv3#area1#page5#pwu1#ln21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4" rowspan="3">
+        <layout:Unit unitId="sv3#area1#page5#enu4">
+          <layout:Field field="sv3#area1#page5#enu4#fld5"/>
+          <layout:Field field="sv3#area1#page5#enu4#sfld6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

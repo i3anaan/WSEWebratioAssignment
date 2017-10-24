@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm6" name="Create Group" gr:x="660" gr:y="80">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm6#icu6" gr:x="30" gr:y="65">
+      <InputCollectorParameter id="mov1#opm6#icu6#icp10" name="modules"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp15" name="groupName"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp16" name="defaultModule"/>
+      <OKLink id="mov1#opm6#icu6#oln22" name="OKFlow22" to="mov1#opm6#cru6">
+        <LinkParameter id="mov1#opm6#icu6#oln22#par106" name="groupName_groupName" source="mov1#opm6#icu6#icp15" target="mov1#opm6#cru6.groupName"/>
+        <LinkParameter id="mov1#opm6#icu6#oln22#par107" name="defaultModule_Module.oid(defaultModule)" source="mov1#opm6#icu6#icp16" target="mov1#opm6#cru6.Group2DefaultModule.moduleOID"/>
+        <LinkParameter id="mov1#opm6#icu6#oln22#par108" name="modules_Module.oid(modules)" source="mov1#opm6#icu6#icp10" target="mov1#opm6#cru6.Group2Module.moduleOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <CreateUnit id="mov1#opm6#cru6" name="Create group" gr:x="285" gr:y="80" entity="Group">
+      <OKLink id="mov1#opm6#cru6#oln23" name="OKFlow4" to="mov1#opm6#okcu6" automaticCoupling="true"/>
+      <KOLink id="mov1#opm6#cru6#kln13" name="KOFlow9" to="mov1#opm6#kocu6" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit id="mov1#opm6#okcu6" name="OK" gr:x="475" gr:y="-10"/>
+    <KOCollectorUnit id="mov1#opm6#kocu6" name="KO" gr:x="475" gr:y="195"/>
+  </OperationUnits>
+</OperationModule>
