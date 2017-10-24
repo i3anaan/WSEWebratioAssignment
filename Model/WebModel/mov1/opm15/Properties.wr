@@ -7,6 +7,7 @@
         <LinkParameter id="mov1#opm15#icu15#oln76#par253" name="Mail - To_PASSING" source="mov1#opm15#icu15#icp45" passing="true"/>
         <LinkParameter id="mov1#opm15#icu15#oln76#par254" name="Placeholder1_PASSING" source="mov1#opm15#icu15#icp47" passing="true"/>
         <LinkParameter id="mov1#opm15#icu15#oln76#par255" name="Placeholder2_PASSING" source="mov1#opm15#icu15#icp48" passing="true"/>
+        <LinkParameter id="mov1#opm15#icu15#oln76#par286" name="template_Switch" source="mov1#opm15#icu15#icp46" target="mov1#opm15#switch1.switch"/>
       </OKLink>
       <InputCollectorParameter id="mov1#opm15#icu15#icp43" name="Mail - Body"/>
       <InputCollectorParameter id="mov1#opm15#icu15#icp44" name="Mail - Subject"/>

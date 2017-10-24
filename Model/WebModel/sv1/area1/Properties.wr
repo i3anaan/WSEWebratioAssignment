@@ -1,5 +1,11 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-205" gr:y="1300" id="sv1#area1" name="Authors" landmark="true" defaultPage="sv1#area1#page2" landmarks="sv1#area1#page1">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="320" gr:y="285" id="sv1#area1#miu17" action="true" moduleId="mov1#opm6"/>
+    <SelectorUnit gr:x="300" gr:y="130" id="sv1#area1#seu30" name="Universities" entity="ent8" distinctAttributes="ent8#att24 ent8#att25" linkOrder="sv1#area1#seu30#ln71">
+      <Link id="sv1#area1#seu30#ln71" name="Flow71" to="sv1#area1#page1#enu3" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#seu30#ln71#par284" name="name_ResearcherToUniversity [label]" source="ent8#att25Array" target="sv1#area1#page1#enu3#msfld10_label"/>
+        <LinkParameter id="sv1#area1#seu30#ln71#par285" name="oid_ResearcherToUniversity [output]" source="ent8#att24Array" target="sv1#area1#page1#enu3#msfld10_output"/>
+      </Link>
+    </SelectorUnit>
   </OperationUnits>
 </Area>
