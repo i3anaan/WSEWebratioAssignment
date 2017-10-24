@@ -1,6 +1,6 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area5" name="Comments" defaultPage="sv3#area5#page3" landmark="true" gr:x="1050" gr:y="-260">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="415" gr:y="120" id="sv3#area5#miu8" action="true" moduleId="mov1#opm10" name="Edit Comment">
+    <ModuleInstanceUnit gr:x="415" gr:y="120" id="sv3#area5#miu8" action="true" name="Edit Comment" moduleId="mov1#opm14">
       <OKLink id="sv3#area5#miu8#oln40" name="OKFlow40" to="sv3#area5#page3#mssu3">
         <LinkParameter id="sv3#area5#miu8#oln40#par158" name="Message_Shown Messages" source="mov1#opm10#okcu9#ocp3" target="sv3#area5#page3#mssu3.shownMessages"/>
       </OKLink>

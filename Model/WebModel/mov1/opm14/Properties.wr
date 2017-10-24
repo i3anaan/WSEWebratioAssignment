@@ -1,0 +1,29 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm14" name="Edit Comment" gr:x="390" gr:y="460">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm14#icu14" gr:x="30" gr:y="75">
+      <InputCollectorParameter id="mov1#opm14#icu14#icp39" name="commentTimestamp"/>
+      <InputCollectorParameter id="mov1#opm14#icu14#icp40" name="commentText"/>
+      <InputCollectorParameter id="mov1#opm14#icu14#icp41" name="commentTitle"/>
+      <InputCollectorParameter id="mov1#opm14#icu14#icp42" name="commentID"/>
+      <OKLink id="mov1#opm14#icu14#oln50" name="OKFlow39" to="mov1#opm14#mfu7">
+        <LinkParameter id="mov1#opm14#icu14#oln50#par193" name="commentID_KeyCondition1 [oid]" source="mov1#opm14#icu14#icp42" target="mov1#opm14#mfu7#su31#kcond17.ent6#att17"/>
+        <LinkParameter id="mov1#opm14#icu14#oln50#par194" name="commentText_textualContent" source="mov1#opm14#icu14#icp40" target="mov1#opm14#mfu7.ent6#att19"/>
+        <LinkParameter id="mov1#opm14#icu14#oln50#par195" name="commentTimestamp_timestamp" source="mov1#opm14#icu14#icp39" target="mov1#opm14#mfu7.ent6#att20"/>
+        <LinkParameter id="mov1#opm14#icu14#oln50#par196" name="commentTitle_title" source="mov1#opm14#icu14#icp41" target="mov1#opm14#mfu7.ent6#att18"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#opm14#okcu13" name="OK" gr:x="590" gr:y="-15">
+      <OutputCollectorParameter id="mov1#opm14#okcu13#ocp11" name="Message" value="Comment succesfully updated"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm14#kocu11" name="KO" gr:x="590" gr:y="205">
+      <OutputCollectorParameter id="mov1#opm14#kocu11#ocp12" name="Message" value="Comment update failed"/>
+    </KOCollectorUnit>
+    <ModifyUnit id="mov1#opm14#mfu7" name="Update group" customDescriptor="false" gr:x="405" gr:y="85" entity="ent6" bulk="false">
+      <Selector id="mov1#opm14#mfu7#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm14#mfu7#su31#kcond17" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm14#mfu7#oln51" name="OKFlow6" to="mov1#opm14#okcu13" automaticCoupling="true"/>
+      <KOLink id="mov1#opm14#mfu7#kln24" name="KOFlow10" to="mov1#opm14#kocu11" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>
