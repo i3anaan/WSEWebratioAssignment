@@ -1,6 +1,6 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2#area2" name="Home" defaultPage="sv2#area2#page26" landmarks="sv2#area2#page26 sv2#area2#page25 sv2#area2#page23 sv2#area2#lou1" landmark="true" gr:x="0" gr:y="35">
   <OperationUnits>
-    <ModuleInstanceUnit id="sv2#area2#miu1" customURLName="login" gr:x="355" gr:y="415" action="true" moduleId="mov1#opm1">
+    <ModuleInstanceUnit id="sv2#area2#miu1" gr:x="355" gr:y="415" action="true" moduleId="mov1#opm1">
       <OKLink id="sv2#area2#miu1#oln30" name="OKFlow17" to="sv2#area2#miu3" automaticCoupling="true"/>
       <KOLink id="sv2#area2#miu1#kln15" name="KOFlow5" to="sv2#area2#page25" automaticCoupling="true" gr:bendpoints="36,-62,71,73"/>
     </ModuleInstanceUnit>

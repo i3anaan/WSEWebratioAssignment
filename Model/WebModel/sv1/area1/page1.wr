@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="20" gr:y="180" id="sv1#area1#page1" name="New Researcher" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="20" gr:y="180" id="sv1#area1#page1" name="New author" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#area1#page1#enu3" name="Create an author" linkOrder="sv1#area1#page1#enu3#ln25" entity="ent3">
       <Field id="sv1#area1#page1#enu3#fld6" name="name" type="string" modifiable="true"/>
