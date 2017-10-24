@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="5" gr:y="0" id="mov1#opm12" name="Edit Publication">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="125" gr:y="455" id="mov1#opm12" name="Edit Publication">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm12#icu12" gr:x="30" gr:y="75">
       <OKLink id="mov1#opm12#icu12#oln47" name="OKFlow47" to="mov1#opm12#mfu6">

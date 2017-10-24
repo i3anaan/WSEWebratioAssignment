@@ -8,7 +8,7 @@
         <LinkParameter id="sv3#area3#miu12#kln20#par168" name="Message_Shown Messages" source="mov1#opm12#kocu9#ocp8" target="sv3#area3#page10#mssu7.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit id="sv3#area3#miu13" name="Delete Publication" gr:x="0" gr:y="0" action="true" moduleId="mov1#opm13">
+    <ModuleInstanceUnit id="sv3#area3#miu13" name="Delete Publication" gr:x="0" gr:y="0" action="true">
       <OKLink id="sv3#area3#miu13#oln45" name="OKFlow43" to="sv3#area3#page10#mssu7" gr:bendpoints="85,57,0,-108">
         <LinkParameter id="sv3#area3#miu13#oln45#par191" name="Message_Shown Messages" source="mov1#opm13#okcu12#ocp10" target="sv3#area3#page10#mssu7.shownMessages"/>
       </OKLink>

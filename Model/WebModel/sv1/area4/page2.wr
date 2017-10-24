@@ -1,7 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="625" id="sv1#area4#page2" name="Collections" landmark="true" customURLName="collections">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="625" id="sv1#area4#page2" name="Show Collections" landmark="true">
   <ContentUnits>
     <IndexUnit id="sv1#area4#page2#inu4" name="Collections" linkOrder="sv1#area4#page2#inu4#ln45" gr:x="295" gr:y="90" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23">
-      <Link id="sv1#area4#page2#inu4#ln45" name="Show" to="sv1#area4#page14#dau3" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-376,42,240,282"/>
+      <Link id="sv1#area4#page2#inu4#ln45" name="Show" to="sv1#area4#page14#dau3" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-270,40,310,100"/>
       <Selector id="sv1#area4#page2#inu4#su16" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area4#page2#inu4#su16#rcond11" name="Contains Pub" predicate="in" implied="true" role="rel5#role10"/>
         <AttributesCondition id="sv1#area4#page2#inu4#su16#acond12" name="Title Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent7#att22" ignoreCase="true"/>
@@ -33,25 +33,6 @@
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area4#page2#enu4">
-          <layout:Field field="sv1#area4#page2#enu4#fld4"/>
-          <layout:Link link="sv1#area4#page2#enu4#ln47"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area4#page2#inu4">
           <layout:Attribute attribute="ent7#att21"/>
           <layout:Attribute attribute="ent7#att22"/>
@@ -72,7 +53,12 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page2#enu4">
+          <layout:Field field="sv1#area4#page2#enu4#fld4"/>
+          <layout:Link link="sv1#area4#page2#enu4#ln47"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
