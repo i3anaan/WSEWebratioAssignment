@@ -9,9 +9,6 @@
     <CreateUnit gr:x="855" gr:y="255" id="sv1#area4#cru4" name="Create Coll" entity="ent7">
       <OKLink id="sv1#area4#cru4#oln3" name="OKFlow3" to="sv1#area4#page2" automaticCoupling="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="1560" gr:y="130" id="sv1#area4#cru5" name="Create Pub" entity="ent1">
-      <OKLink id="sv1#area4#cru5#oln2" name="OKFlow2" to="sv1#area4#page1" automaticCoupling="true"/>
-    </CreateUnit>
     <ModifyUnit gr:x="2085" gr:y="620" id="sv1#area4#mfu4" name="Update Pub" entity="ent1">
       <Selector id="sv1#area4#mfu4#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#mfu4#su8#kcond7" name="KeyCondition3" predicate="in" implied="false"/>
@@ -42,5 +39,8 @@
       <OKLink id="sv1#area4#dlu3#oln14" name="OKFlow14" to="sv1#area4#page17" automaticCoupling="true" gr:bendpoints="-17,-111,-12,259"/>
       <KOLink id="sv1#area4#dlu3#kln10" name="KOFlow10" to="sv1#area4#page17" automaticCoupling="true"/>
     </DeleteUnit>
+    <ModuleInstanceUnit gr:x="1715" gr:y="135" id="sv1#area4#miu8" action="true" moduleId="mov1#opm5">
+      <OKLink id="sv1#area4#miu8#oln41" name="OKFlow2" to="sv1#area4#page1" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </Area>

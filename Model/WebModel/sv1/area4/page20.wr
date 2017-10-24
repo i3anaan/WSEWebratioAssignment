@@ -1,7 +1,15 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1245" gr:y="50" id="sv1#area4#page20" name="Create Publication">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#area4#page20#enu10" name="Create Pub" entity="ent1" linkOrder="sv1#area4#page20#enu10#ln23">
-      <Link id="sv1#area4#page20#enu10#ln23" name="Create" to="sv1#area4#cru5" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area4#page20#enu10#ln23" name="Create" to="sv1#area4#miu8" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page20#enu10#ln23#par156" name="abstract_abstract" source="sv1#area4#page20#enu10#fld31" target="sv1#area4#miu8.mov1#opm5#icu9#icp22"/>
+        <LinkParameter id="sv1#area4#page20#enu10#ln23#par157" name="file_file" source="sv1#area4#page20#enu10#fld32" target="sv1#area4#miu8.mov1#opm5#icu9#icp23"/>
+        <LinkParameter id="sv1#area4#page20#enu10#ln23#par158" name="Keywords_Keyword.oid(PublicationToKeyword)" source="sv1#area4#page20#enu10#msfld1" target="sv1#area4#miu8.mov1#opm5#icu9#icp19"/>
+        <LinkParameter id="sv1#area4#page20#enu10#ln23#par159" name="Author_Researcher.oid(PublicationToAuthor)" source="sv1#area4#page20#enu10#sfld2" target="sv1#area4#miu8.mov1#opm5#icu9#icp21"/>
+        <LinkParameter id="sv1#area4#page20#enu10#ln23#par160" name="title_title" source="sv1#area4#page20#enu10#fld28" target="sv1#area4#miu8.mov1#opm5#icu9#icp25"/>
+        <LinkParameter id="sv1#area4#page20#enu10#ln23#par161" name="venue_venue" source="sv1#area4#page20#enu10#fld29" target="sv1#area4#miu8.mov1#opm5#icu9#icp26"/>
+        <LinkParameter id="sv1#area4#page20#enu10#ln23#par162" name="year_year" source="sv1#area4#page20#enu10#fld30" target="sv1#area4#miu8.mov1#opm5#icu9#icp27"/>
+      </Link>
       <Field id="sv1#area4#page20#enu10#fld28" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
       <Field id="sv1#area4#page20#enu10#fld29" name="venue" type="string" modifiable="true" attribute="ent1#att3"/>
       <Field id="sv1#area4#page20#enu10#fld30" name="year" type="integer" modifiable="true" attribute="ent1#att4"/>

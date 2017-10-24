@@ -31,9 +31,21 @@
     <CreateUnit id="mov1#opm5#cru8" name="Create Pub" gr:x="465" gr:y="250" entity="ent1">
       <OKLink id="mov1#opm5#cru8#oln37" name="OKFlow37" to="mov1#opm5#lpu2">
         <LinkParameter id="mov1#opm5#cru8#oln37#par150" name="Researcher.oid(PublicationToAuthor)_PASSING_Input Array" sourceLinkParameter="mov1#opm5#icu9#oln36#par149" target="mov1#opm5#lpu2.array"/>
+        <LinkParameter id="mov1#opm5#cru8#oln37#par154" name="oid_PASSING" source="ent1#att1Array" passing="true"/>
       </OKLink>
     </CreateUnit>
-    <LoopUnit gr:x="555" gr:y="105" id="mov1#opm5#lpu2" name="Notifications"/>
-    <CreateUnit gr:x="600" gr:y="-20" id="mov1#opm5#cru9" name="CreateNotifications"/>
+    <LoopUnit gr:x="555" gr:y="105" id="mov1#opm5#lpu2" name="Notifications">
+      <OKLink id="mov1#opm5#lpu2#oln38" name="OKFlow38" to="mov1#opm5#cru9" code="next">
+        <LinkParameter id="mov1#opm5#lpu2#oln38#par151" name="You have been added as an Author for a newly uploaded publication!_message" sourceValue="You have been added as an Author for a newly uploaded publication!" target="mov1#opm5#cru9.ent2#att12"/>
+        <LinkParameter id="mov1#opm5#lpu2#oln38#par152" name="Next Element_Researcher.oid(NotificationToResearcher)" source="next" target="mov1#opm5#cru9.rel4#role7.ent3#att9"/>
+        <LinkParameter id="mov1#opm5#lpu2#oln38#par153" name="3_shown" sourceValue="3" target="mov1#opm5#cru9.ent2#att11"/>
+      </OKLink>
+      <OKLink id="mov1#opm5#lpu2#oln40" name="OKFlow40" to="mov1#opm5#okcu8">
+        <LinkParameter id="mov1#opm5#lpu2#oln40#par155" name="oid_PASSING" sourceLinkParameter="mov1#opm5#cru8#oln37#par154" passing="true"/>
+      </OKLink>
+    </LoopUnit>
+    <CreateUnit gr:x="610" gr:y="-45" id="mov1#opm5#cru9" name="CreateNotifications" entity="ent2">
+      <OKLink id="mov1#opm5#cru9#oln39" name="OKFlow39" to="mov1#opm5#lpu2" automaticCoupling="true" gr:bendpoints="-30,82,50,-58"/>
+    </CreateUnit>
   </OperationUnits>
 </OperationModule>
