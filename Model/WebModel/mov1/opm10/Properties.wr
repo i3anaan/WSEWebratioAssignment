@@ -1,0 +1,55 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="975" gr:y="110" id="mov1#opm10" name="ShowNotifications">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm10#icu10#icp28" name="ResearcherOID"/>
+      <OKLink id="mov1#opm10#icu10#oln42" name="OKFlow42" to="mov1#opm10#seu22">
+        <LinkParameter id="mov1#opm10#icu10#oln42#par163" name="ResearcherOID_RoleCondition16 [oid]" source="mov1#opm10#icu10#icp28" target="mov1#opm10#seu22#su27#rcond16.ent3#att9"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="345" gr:y="180" id="mov1#opm10#seu22" name="GetNotifications" entity="ent2">
+      <Selector id="mov1#opm10#seu22#su27" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm10#seu22#su27#rcond16" name="RoleCondition16" role="rel4#role8" predicate="in" implied="false"/>
+        <AttributesCondition id="mov1#opm10#seu22#su27#acond14" name="AttCondition14" predicate="gt" booleanOperator="or" implied="false" attributes="ent2#att11" value="0"/>
+      </Selector>
+      <OKLink id="mov1#opm10#seu22#oln43" name="OKFlow43" to="mov1#opm10#lpu3">
+        <LinkParameter id="mov1#opm10#seu22#oln43#par164" name="oid_Input Array" source="ent2#att8Array" target="mov1#opm10#lpu3.array"/>
+        <LinkParameter id="mov1#opm10#seu22#oln43#par165" name="shown_PASSING" source="ent2#att11Array" passing="true"/>
+        <LinkParameter id="mov1#opm10#seu22#oln43#par179" name="oid_PASSING" source="ent2#att8Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <LoopUnit gr:x="595" gr:y="230" id="mov1#opm10#lpu3" name="Loop3">
+      <OKLink id="mov1#opm10#lpu3#oln48" name="OKFlow48" to="mov1#opm10#okcu9" code="end">
+        <LinkParameter id="mov1#opm10#lpu3#oln48#par180" name="oid_PASSING_Notifications" sourceLinkParameter="mov1#opm10#seu22#oln43#par179" target="mov1#opm10#okcu9#ocp3"/>
+      </OKLink>
+      <OKLink id="mov1#opm10#lpu3#oln51" name="OKFlow51" to="mov1#opm10#seu24" code="next">
+        <LinkParameter id="mov1#opm10#lpu3#oln51#par188" name="Next Element_KeyCondition18 [oid]" source="next" target="mov1#opm10#seu24#su33#kcond18.ent2#att8"/>
+        <LinkParameter id="mov1#opm10#lpu3#oln51#par190" name="Next Element_PASSING" source="next" passing="true"/>
+      </OKLink>
+    </LoopUnit>
+    <MathUnit gr:x="755" gr:y="330" id="mov1#opm10#mathu1" name="Math1" resultType="float" defaultExpression="Shown - 1">
+      <MathVariable id="mov1#opm10#mathu1#mathv1" name="Shown"/>
+      <OKLink id="mov1#opm10#mathu1#oln46" name="OKFlow46" to="mov1#opm10#mfu5">
+        <LinkParameter id="mov1#opm10#mathu1#oln46#par166" name="Result_shown" source="result" target="mov1#opm10#mfu5.ent2#att11"/>
+        <LinkParameter id="mov1#opm10#mathu1#oln46#par192" name="Next Element_PASSING_KeyCondition14 [oid]" sourceLinkParameter="mov1#opm10#seu24#oln52#par191" target="mov1#opm10#mfu5#su30#kcond14.ent2#att8"/>
+      </OKLink>
+    </MathUnit>
+    <ModifyUnit gr:x="500" gr:y="440" id="mov1#opm10#mfu5" name="IncreaseNotificationShown" entity="ent2">
+      <Selector id="mov1#opm10#mfu5#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm10#mfu5#su30#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm10#mfu5#oln47" name="OKFlow47" to="mov1#opm10#lpu3" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="1055" gr:y="245" id="mov1#opm10#okcu9" name="OK Port9">
+      <OutputCollectorParameter id="mov1#opm10#okcu9#ocp3" name="Notifications"/>
+    </OKCollectorUnit>
+    <SelectorUnit gr:x="310" gr:y="375" id="mov1#opm10#seu24" name="Selector24" entity="ent2">
+      <Selector id="mov1#opm10#seu24#su33" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm10#seu24#su33#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm10#seu24#oln52" name="OKFlow52" to="mov1#opm10#mathu1">
+        <LinkParameter id="mov1#opm10#seu24#oln52#par189" name="shown_Shown" source="ent2#att11Array" target="mov1#opm10#mathu1#mathv1"/>
+        <LinkParameter id="mov1#opm10#seu24#oln52#par191" name="Next Element_PASSING" sourceLinkParameter="mov1#opm10#lpu3#oln51#par190" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

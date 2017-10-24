@@ -18,7 +18,10 @@
       <Selector id="mov1#opm12#mfu6#su29" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm12#mfu6#su29#kcond14" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov1#opm12#mfu6#oln46" name="OKFlow6" to="mov1#opm12#okcu11" automaticCoupling="true"/>
+      <OKLink id="mov1#opm12#mfu6#oln46" name="OKFlow6" to="mov1#opm12#miu14">
+        <LinkParameter id="mov1#opm12#mfu6#oln46#par216" name="Your publication has been edited_message" sourceValue="Your publication has been edited" target="mov1#opm12#miu14.mov1#opm11#icu11#icp30"/>
+        <LinkParameter id="mov1#opm12#mfu6#oln46#par217" name="oid_Researcher.oid(NotificationToResearcher)" source="ent1#att1Array" target="mov1#opm12#miu14.mov1#opm11#icu11#icp29"/>
+      </OKLink>
       <KOLink id="mov1#opm12#mfu6#kln22" name="KOFlow10" to="mov1#opm12#kocu9" automaticCoupling="true"/>
     </ModifyUnit>
     <OKCollectorUnit id="mov1#opm12#okcu11" name="OK" gr:x="515" gr:y="5">
@@ -27,5 +30,8 @@
     <KOCollectorUnit id="mov1#opm12#kocu9" name="KO" gr:x="515" gr:y="225">
       <OutputCollectorParameter id="mov1#opm12#kocu9#ocp8" name="Message" value="Publication update failed"/>
     </KOCollectorUnit>
+    <ModuleInstanceUnit gr:x="300" gr:y="350" id="mov1#opm12#miu14" action="true" moduleId="mov1#opm11">
+      <OKLink id="mov1#opm12#miu14#oln57" name="OKFlow57" to="mov1#opm12#okcu11" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </OperationModule>

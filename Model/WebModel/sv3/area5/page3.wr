@@ -1,35 +1,26 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page3" name="Comment Management" gr:x="25" gr:y="90">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area5#page3" name="Comment Management" gr:x="0" gr:y="0">
   <ContentUnits>
-    <PowerIndexUnit id="sv3#area5#page3#pwu1" name="List of Comments" customDescriptor="false" gr:x="0" gr:y="85" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att19 ent6#att20 ent6#att18 rel10#role19.ent3#att10 rel11#role21.ent1#att2" linkOrder="sv3#area5#page3#pwu1#ln61 sv3#area5#page3#pwu1#ln63">
-      <Link id="sv3#area5#page3#pwu1#ln61" name="Edit" to="sv3#area5#page3#enu12" automaticCoupling="true" type="normal" validate="true"/>
-      <Link id="sv3#area5#page3#pwu1#ln63" name="Delete" to="sv3#area5#miu10" type="normal" validate="true">
-        <LinkParameter id="sv3#area5#page3#pwu1#ln63#par161" name="oid_commentID" source="data[].ent6#att17" target="sv3#area5#miu10.mov1#opm11#icu11#icp32"/>
+    <PowerIndexUnit id="sv3#area5#page3#pwu1" name="List of Comments" linkOrder="sv3#area5#page3#pwu1#ln14" customDescriptor="false" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att19 ent6#att20 ent6#att18">
+      <Link id="sv3#area5#page3#pwu1#ln14" name="Edit" to="sv3#area5#page3#enu5" type="normal" validate="true">
+        <LinkParameter id="sv3#area5#page3#pwu1#ln14#par9" name="oid_Key Condition [oid]" source="data[].ent3#att9" target="sv3#area5#page3#enu5.ent3#att9"/>
+        <LinkParameter id="sv3#area5#page3#pwu1#ln14#par13" name="ResearcherToUniversity.name_University - Preselection" target="sv3#area5#page3#enu5#sfld1_presel" sourceValue="$$NULL$$"/>
+        <LinkParameter id="sv3#area5#page3#pwu1#ln14#par14" name="ResearcherToUniversity.name_University [label]" source="data[].rel9#role17$ent8#att25" target="sv3#area5#page3#enu5#sfld1_label"/>
+        <LinkParameter id="sv3#area5#page3#pwu1#ln14#par23" name="ResearcherToUniversity.name_University [output]" source="data[].rel9#role17$ent8#att25" target="sv3#area5#page3#enu5#sfld1_output"/>
       </Link>
     </PowerIndexUnit>
-    <EntryUnit gr:x="205" gr:y="85" id="sv3#area5#page3#enu12" name="Edit Comment" entity="ent6" linkOrder="sv3#area5#page3#enu12#ln62">
-      <Field id="sv3#area5#page3#enu12#fld17" name="title" type="string" modifiable="true" attribute="ent6#att18"/>
-      <Field id="sv3#area5#page3#enu12#fld18" name="textualContent" type="string" modifiable="true" attribute="ent6#att19"/>
-      <Field id="sv3#area5#page3#enu12#fld19" name="timestamp" type="timestamp" modifiable="true" attribute="ent6#att20"/>
-      <Link id="sv3#area5#page3#enu12#ln62" name="Save" to="sv3#area5#miu8" type="normal" validate="true">
-        <LinkParameter id="sv3#area5#page3#enu12#ln62#par23" name="textualContent_commentText" source="sv3#area5#page3#enu12#fld18" target="sv3#area5#miu8.mov1#opm10#icu10#icp29"/>
-        <LinkParameter id="sv3#area5#page3#enu12#ln62#par151" name="timestamp_commentTimestamp" source="sv3#area5#page3#enu12#fld19" target="sv3#area5#miu8.mov1#opm10#icu10#icp30"/>
-        <LinkParameter id="sv3#area5#page3#enu12#ln62#par152" name="title_commentTitle" source="sv3#area5#page3#enu12#fld17" target="sv3#area5#miu8.mov1#opm10#icu10#icp28"/>
-        <LinkParameter id="sv3#area5#page3#enu12#ln62#par153" name="Key [oid]_commentID" source="key.ent6#att17" target="sv3#area5#miu8.mov1#opm10#icu10#icp31"/>
-      </Link>
+    <EntryUnit id="sv3#area5#page3#enu5" name="Edit Comment" gr:x="275" gr:y="0" entity="ent3" fieldOrder="sv3#area5#page3#enu5#fld7 sv3#area5#page3#enu5#sfld1">
+      <Field id="sv3#area5#page3#enu5#fld7" name="name" type="string" modifiable="true" attribute="ent3#att10"/>
+      <SelectionField id="sv3#area5#page3#enu5#sfld1" name="University" type="integer" role="rel9#role17"/>
     </EntryUnit>
-    <MultiMessageUnit gr:x="125" gr:y="0" id="sv3#area5#page3#mssu3" name="Feedback"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell rowspan="3" colspan="8">
         <layout:Unit unitId="sv3#area5#page3#pwu1">
-          <layout:Link link="sv3#area5#page3#pwu1#ln61"/>
-          <layout:Link link="sv3#area5#page3#pwu1#ln63"/>
+          <layout:Link link="sv3#area5#page3#pwu1#ln14"/>
           <layout:Attribute attribute="ent6#att19"/>
           <layout:Attribute attribute="ent6#att20"/>
           <layout:Attribute attribute="ent6#att18"/>
-          <layout:Attribute attribute="rel10#role19.ent3#att10"/>
-          <layout:Attribute attribute="rel11#role21.ent1#att2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -39,51 +30,21 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="4"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="4"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="4"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area5#page3#enu12">
-          <layout:Field field="sv3#area5#page3#enu12#fld17"/>
-          <layout:Field field="sv3#area5#page3#enu12#fld18"/>
-          <layout:Field field="sv3#area5#page3#enu12#fld19"/>
-          <layout:Link link="sv3#area5#page3#enu12#ln62"/>
+      <layout:Cell rowspan="3" colspan="4">
+        <layout:Unit unitId="sv3#area5#page3#enu5">
+          <layout:Field field="sv3#area5#page3#enu5#fld7"/>
+          <layout:Field field="sv3#area5#page3#enu5#sfld1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -94,9 +55,21 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area5#page3#mssu3"/>
-      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

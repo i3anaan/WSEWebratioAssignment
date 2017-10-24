@@ -145,7 +145,7 @@
       <db:JoinColumn attribute="ent8#att24" name="university_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="YmFrZmlldHM=" schema="public" cryptedPassword="true">
+  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true">
   </db:Database>
   <Relationship id="rel10" name="Comment_Researcher" sourceEntity="ent6" targetEntity="ent3" db:database="db2" db:table="comment">
     <RelationshipRole1 id="rel10#role19" name="CommentToResearcher" maxCard="1">
@@ -163,16 +163,17 @@
       <db:JoinColumn attribute="ent1#att1" name="publication_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="-230" gr:y="205" id="ent2" name="Notification" duration="persistent" attributeOrder="ent2#att8 ent2#att11 ent2#att12" db:database="db2" db:table="notification">
+  <Entity gr:x="-330" gr:y="205" id="ent2" name="Notification" duration="persistent" attributeOrder="ent2#att8 ent2#att11 ent2#att12 ent2#att14" db:database="db2" db:table="notification">
     <Attribute id="ent2#att8" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att11" name="shown" type="integer" db:column="shown"/>
     <Attribute id="ent2#att12" name="message" type="string" db:column="message"/>
+    <Attribute id="ent2#att14" name="timestamp" type="timestamp" db:column="timestamp"/>
   </Entity>
   <Relationship id="rel4" name="Notifications" sourceEntity="ent2" targetEntity="ent3" db:database="db2" db:table="notification">
     <RelationshipRole1 id="rel4#role7" name="NotificationToResearcher" maxCard="1">
       <db:JoinColumn attribute="ent2#att8" name="oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="ResearcherToNotification" maxCard="N">
+    <RelationshipRole2 id="rel4#role8" name="ResearcherToNotification" maxCard="1">
       <db:JoinColumn attribute="ent3#att9" name="researcher_oid"/>
     </RelationshipRole2>
   </Relationship>
