@@ -5,7 +5,7 @@
       <Field id="sv1#area4#page13#enu1#fld9" attribute="ent1#att3" type="string" modifiable="true" name="venue"/>
       <Field id="sv1#area4#page13#enu1#fld10" attribute="ent1#att4" type="integer" modifiable="true" name="year"/>
       <Field id="sv1#area4#page13#enu1#fld11" attribute="ent1#att5" type="string" modifiable="true" name="abstract"/>
-      <Field id="sv1#area4#page13#enu1#fld12" attribute="ent1#att6" type="url" modifiable="true" name="file"/>
+      <Field id="sv1#area4#page13#enu1#fld12" attribute="ent1#att6" type="blob" modifiable="true" name="file" contentType="application/pdf"/>
       <Link id="sv1#area4#page13#enu1#ln4" name="Update" to="sv1#area4#mfu4" type="normal" validate="true">
         <LinkParameter id="sv1#area4#page13#enu1#ln4#par20" name="Authors_Author.oid(PublicationToAuthor)" source="sv1#area4#page13#enu1#msfld11" target="sv1#area4#mfu4.rel2#role4.ent3#att9"/>
         <LinkParameter id="sv1#area4#page13#enu1#ln4#par21" name="Key [oid]_KeyCondition3 [oid]" source="key.ent1#att1" target="sv1#area4#mfu4#su8#kcond7.ent1#att1"/>
@@ -17,6 +17,7 @@
         <LinkParameter id="sv1#area4#page13#enu1#ln4#par100" name="venue_venue" source="sv1#area4#page13#enu1#fld9" target="sv1#area4#mfu4.ent1#att3"/>
         <LinkParameter id="sv1#area4#page13#enu1#ln4#par101" name="year_year" source="sv1#area4#page13#enu1#fld10" target="sv1#area4#mfu4.ent1#att4"/>
         <LinkParameter id="sv1#area4#page13#enu1#ln4#par10" name="oid_PASSING_AuthorToPub [oid]" sourceLinkParameter="sv1#area4#page17#dau4#ln13#par4" target="sv1#area4#mfu4#su8#rcond2.ent3#att9"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln4#par68" name="file_file [file name]" source="sv1#area4#page13#enu1#fld12" target="sv1#area4#mfu4.ent1#att6_name"/>
       </Link>
       <MultiSelectionField id="sv1#area4#page13#enu1#msfld2" name="Keywords" type="string"/>
       <Link id="sv1#area4#page13#enu1#ln28" name="Flow28" to="sv1#area4#page13#seu18" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="111,19,-139,9"/>

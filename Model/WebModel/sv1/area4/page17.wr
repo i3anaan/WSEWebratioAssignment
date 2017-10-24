@@ -3,7 +3,6 @@
     <DataUnit gr:x="10" gr:y="40" id="sv1#area4#page17#dau4" name="View Pub" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page17#dau4#ln13 sv1#area4#page17#dau4#ln16">
       <Selector id="sv1#area4#page17#dau4#su10" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#page17#dau4#su10#kcond9" name="KeyCondition2" predicate="in" implied="false"/>
-        <RelationshipRoleCondition id="sv1#area4#page17#dau4#su10#rcond19" name="AuthorToPub" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
       <Link id="sv1#area4#page17#dau4#ln13" name="Edit" to="sv1#area4#page13#enu1" type="normal" validate="true">
         <LinkParameter id="sv1#area4#page17#dau4#ln13#par81" name="oid_Key Condition [oid]" source="data.ent1#att1" target="sv1#area4#page13#enu1.ent1#att1"/>

@@ -11,12 +11,13 @@
         <LinkParameter id="sv1#area4#page20#enu10#ln23#par29" name="venue_venue" source="sv1#area4#page20#enu10#fld29" target="sv1#area4#cru5.ent1#att3"/>
         <LinkParameter id="sv1#area4#page20#enu10#ln23#par30" name="year_year" source="sv1#area4#page20#enu10#fld30" target="sv1#area4#cru5.ent1#att4"/>
         <LinkParameter id="sv1#area4#page20#enu10#ln23#par87" name="Author_Researcher.oid(PublicationToAuthor)" source="sv1#area4#page20#enu10#msfld10" target="sv1#area4#cru5.rel2#role4.ent3#att9"/>
+        <LinkParameter id="sv1#area4#page20#enu10#ln23#par6" name="file_file [file name]" source="sv1#area4#page20#enu10#fld32" target="sv1#area4#cru5.ent1#att6_name"/>
       </Link>
       <Field id="sv1#area4#page20#enu10#fld28" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
       <Field id="sv1#area4#page20#enu10#fld29" name="venue" type="string" modifiable="true" attribute="ent1#att3"/>
       <Field id="sv1#area4#page20#enu10#fld30" name="year" type="integer" modifiable="true" attribute="ent1#att4"/>
       <Field id="sv1#area4#page20#enu10#fld31" name="abstract" type="string" modifiable="true" attribute="ent1#att5"/>
-      <Field id="sv1#area4#page20#enu10#fld32" name="file" type="url" modifiable="true" attribute="ent1#att6"/>
+      <Field id="sv1#area4#page20#enu10#fld32" name="file" type="blob" modifiable="true" attribute="ent1#att6" contentType="application/pdf"/>
       <MultiSelectionField id="sv1#area4#page20#enu10#msfld9" role="rel3#role6" type="string" name="PublicationToKeyword"/>
       <MultiSelectionField id="sv1#area4#page20#enu10#msfld10" role="rel2#role4" type="string" name="Author"/>
     </EntryUnit>

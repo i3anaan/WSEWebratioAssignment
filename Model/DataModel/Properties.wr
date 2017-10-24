@@ -52,7 +52,7 @@
     <Attribute id="ent1#att3" name="venue" type="string" db:column="venue"/>
     <Attribute id="ent1#att4" name="year" type="integer" db:column="year"/>
     <Attribute id="ent1#att5" name="abstract" type="string" db:column="abstract"/>
-    <Attribute id="ent1#att6" name="file" type="url" db:column="file"/>
+    <Attribute id="ent1#att6" name="file" type="blob" db:column="file"/>
   </Entity>
   <Entity gr:x="10" gr:y="200" id="ent3" name="Researcher" duration="persistent" attributeOrder="ent3#att9 ent3#att10 ent3#att7" db:database="db2" db:table="researcher">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
