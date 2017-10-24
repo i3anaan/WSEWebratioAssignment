@@ -321,8 +321,8 @@ INSERT INTO collection_publication VALUES (2, 2);
 -- Data for Name: group; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO "group" VALUES (2, 'researcher', 2);
 INSERT INTO "group" VALUES (1, 'admin', 1);
+INSERT INTO "group" VALUES (2, 'researcher', 2);
 
 
 --
@@ -349,7 +349,7 @@ INSERT INTO group_module VALUES (2, 1);
 --
 
 INSERT INTO module VALUES (1, 'sv3', 'Admin');
-INSERT INTO module VALUES (2, 'sv1area4page19', 'Home');
+INSERT INTO module VALUES (2, 'sv1', 'Researcher');
 
 
 --

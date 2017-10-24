@@ -12,6 +12,6 @@
     <ModuleInstanceUnit id="sv2#area2#miu3" gr:x="610" gr:y="415" action="true" moduleId="mov1#opm3">
       <KOLink id="sv2#area2#miu3#kln16" name="KOFlow3" to="sv2#area2#page27" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <LogoutUnit id="sv2#area2#lou1" name="Logout" landmark="true" gr:x="25" gr:y="300" siteView="sv1" invalidateSession="true"/>
+    <LogoutUnit id="sv2#area2#lou1" name="Logout" landmark="true" gr:x="25" gr:y="300" siteView="sv2" invalidateSession="true"/>
   </OperationUnits>
 </Area>
