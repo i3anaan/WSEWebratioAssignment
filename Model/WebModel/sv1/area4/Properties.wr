@@ -13,14 +13,14 @@
     <CreateUnit gr:x="2045" gr:y="80" id="sv1#area4#cru5" name="Create Pub" entity="ent1">
       <OKLink id="sv1#area4#cru5#oln2" name="OKFlow2" to="sv1#area4#page1" automaticCoupling="true"/>
     </CreateUnit>
-    <ModifyUnit gr:x="2415" gr:y="550" id="sv1#area4#mfu4" name="Update Pub" entity="ent1">
+    <ModifyUnit gr:x="2430" gr:y="565" id="sv1#area4#mfu4" name="Update Pub" entity="ent1">
       <Selector id="sv1#area4#mfu4#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#mfu4#su8#kcond7" name="KeyCondition3" predicate="in" implied="false"/>
         <RelationshipRoleCondition id="sv1#area4#mfu4#su8#rcond2" name="AuthorToPub" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
-      <OKLink id="sv1#area4#mfu4#oln9" name="OKFlow9" to="sv1#area4#page17#dau4">
-        <LinkParameter id="sv1#area4#mfu4#oln9#par10" name="oid_KeyCondition2 [oid]" source="ent1#att1Array" target="sv1#area4#page17#dau4#su10#kcond9.ent1#att1"/>
-        <LinkParameter id="sv1#area4#mfu4#oln9#par20" name="oid_PASSING" source="ent1#att1Array" passing="true"/>
+      <OKLink id="sv1#area4#mfu4#oln9" name="OKFlow9" to="sv1#area4#lpu1">
+        <LinkParameter id="sv1#area4#mfu4#oln9#par68" name="Keywords_PASSING_Input Array" sourceLinkParameter="sv1#area4#dcnu2#oln14#par34" target="sv1#area4#lpu1.array"/>
+        <LinkParameter id="sv1#area4#mfu4#oln9#par158" name="Key [oid]_PASSING" sourceLinkParameter="sv1#area4#dcnu2#oln14#par157" passing="true"/>
       </OKLink>
     </ModifyUnit>
     <CreateUnit gr:x="2145" gr:y="390" id="sv1#area4#cru2" name="Create Comment" entity="ent6">
@@ -47,7 +47,7 @@
       </Selector>
       <OKLink id="sv1#area4#dlu3#oln13" name="OKFlow13" to="sv1#area4#page2" automaticCoupling="true"/>
     </DeleteUnit>
-    <DisconnectUnit gr:x="2500" gr:y="715" id="sv1#area4#dcnu2" name="Disconnect Keywords" relationship="rel3#role6">
+    <DisconnectUnit gr:x="2525" gr:y="750" id="sv1#area4#dcnu2" name="Disconnect Keywords" relationship="rel3#role6">
       <SourceSelector id="sv1#area4#dcnu2#su11" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#dcnu2#su11#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
       </SourceSelector>
@@ -55,7 +55,7 @@
         <KeyCondition id="sv1#area4#dcnu2#su27#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </TargetSelector>
       <OKLink id="sv1#area4#dcnu2#oln14" name="Flow27" to="sv1#area4#mfu4">
-        <LinkParameter id="sv1#area4#dcnu2#oln14#par167" name="Source oid [Publication]_KeyCondition3 [oid]" source="sourceent1#att1" target="sv1#area4#mfu4#su8#kcond7.ent1#att1"/>
+        <LinkParameter id="sv1#area4#dcnu2#oln14#par167" name="Source oid [Publication]_KeyCondition3 [oid]" target="sv1#area4#mfu4#su8#kcond7.ent1#att1" sourceLinkParameter="sv1#area4#seu22#oln15#par190"/>
         <LinkParameter id="sv1#area4#dcnu2#oln14#par199" name="abstract_PASSING_abstract" sourceLinkParameter="sv1#area4#seu22#oln15#par186" target="sv1#area4#mfu4.ent1#att5"/>
         <LinkParameter id="sv1#area4#dcnu2#oln14#par201" name="file_PASSING_file" sourceLinkParameter="sv1#area4#seu22#oln15#par189" target="sv1#area4#mfu4.ent1#att6"/>
         <LinkParameter id="sv1#area4#dcnu2#oln14#par202" name="file_PASSING_file [file name]" sourceLinkParameter="sv1#area4#seu22#oln15#par189" target="sv1#area4#mfu4.ent1#att6_name"/>
@@ -66,6 +66,8 @@
         <LinkParameter id="sv1#area4#dcnu2#oln14#par207" name="venue_PASSING_venue" sourceLinkParameter="sv1#area4#seu22#oln15#par196" target="sv1#area4#mfu4.ent1#att3"/>
         <LinkParameter id="sv1#area4#dcnu2#oln14#par208" name="year_PASSING_year" sourceLinkParameter="sv1#area4#seu22#oln15#par198" target="sv1#area4#mfu4.ent1#att4"/>
         <LinkParameter id="sv1#area4#dcnu2#oln14#par289" name="oid_PASSING_AuthorToPub [oid]" sourceLinkParameter="sv1#area4#seu22#oln15#par192" target="sv1#area4#mfu4#su8#rcond2.ent3#att9"/>
+        <LinkParameter id="sv1#area4#dcnu2#oln14#par34" name="Keywords_PASSING" sourceLinkParameter="sv1#area4#seu22#oln15#par191" passing="true"/>
+        <LinkParameter id="sv1#area4#dcnu2#oln14#par157" name="Key [oid]_PASSING" sourceLinkParameter="sv1#area4#seu22#oln15#par190" passing="true"/>
       </OKLink>
     </DisconnectUnit>
     <SelectorUnit gr:x="2300" gr:y="720" id="sv1#area4#seu22" name="GetKeywords" entity="ent5">
@@ -129,5 +131,23 @@
       </Selector>
       <OKLink id="sv1#area4#mfu6#oln41" name="OKFlow9" to="sv1#area4#page14#dau3" automaticCoupling="true"/>
     </ModifyUnit>
+    <LoopUnit gr:x="2395" gr:y="455" id="sv1#area4#lpu1" name="Loop1">
+      <OKLink id="sv1#area4#lpu1#oln64" name="OKFlow64" to="sv1#area4#cnu1" code="next">
+        <LinkParameter id="sv1#area4#lpu1#oln64#par72" name="Next Element_KeyCondition5 [oid] [Keyword] [Source]" source="next" target="sv1#area4#cnu1#su46#kcond5.ent5#att15"/>
+        <LinkParameter id="sv1#area4#lpu1#oln64#par252" name="Key [oid]_PASSING_KeyCondition23 [oid] [Publication] [Target]" sourceLinkParameter="sv1#area4#mfu4#oln9#par158" target="sv1#area4#cnu1#su47#kcond23.ent1#att1"/>
+      </OKLink>
+      <OKLink id="sv1#area4#lpu1#oln79" name="OKFlow79" to="sv1#area4#page17#dau4" code="end">
+        <LinkParameter id="sv1#area4#lpu1#oln79#par253" name="Key [oid]_PASSING_KeyCondition2 [oid]" sourceLinkParameter="sv1#area4#mfu4#oln9#par158" target="sv1#area4#page17#dau4#su10#kcond9.ent1#att1"/>
+      </OKLink>
+    </LoopUnit>
+    <ConnectUnit gr:x="2485" gr:y="335" id="sv1#area4#cnu1" name="Connect1" relationship="rel3#role5">
+      <SourceSelector id="sv1#area4#cnu1#su46" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#cnu1#su46#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv1#area4#cnu1#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#cnu1#su47#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv1#area4#cnu1#oln77" name="OKFlow77" to="sv1#area4#lpu1" automaticCoupling="true" gr:bendpoints="-68,72,57,-28"/>
+    </ConnectUnit>
   </OperationUnits>
 </Area>

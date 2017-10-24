@@ -53,7 +53,7 @@
         <LinkParameter id="sv1#area4#page17#gtu2#ln19#par66" name="UserCtxParam.oid_UserToResearcher [oid]" source="sv1#area4#page17#gtu2.UserCtxParam" target="sv1#area4#page17#seu6#su4#rcond3.userOID"/>
       </Link>
     </GetUnit>
-    <SelectorUnit gr:x="195" gr:y="110" id="sv1#area4#page17#seu6" name="GetResearcherByUser" entity="ent3">
+    <SelectorUnit gr:x="240" gr:y="185" id="sv1#area4#page17#seu6" name="GetResearcherByUser" entity="ent3">
       <Selector id="sv1#area4#page17#seu6#su4" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area4#page17#seu6#su4#rcond3" name="UserToResearcher" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>

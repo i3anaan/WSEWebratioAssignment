@@ -58,6 +58,7 @@
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att10" name="name" type="string" db:column="name"/>
     <Attribute id="ent3#att7" name="reputation" type="float" db:column="reputation"/>
+    <Attribute id="ent3#att13" name="university" db:column="university" type="string" key="false"/>
   </Entity>
   <Relationship id="rel1" name="User_Researcher" sourceEntity="User" targetEntity="ent3" db:database="db2" db:table="researcher">
     <RelationshipRole1 id="rel1#role1" name="UserToResearcher" maxCard="1">
@@ -173,6 +174,14 @@
       <db:JoinColumn attribute="ent2#att8" name="oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel4#role8" name="ResearcherToNotification" maxCard="1">
+      <db:JoinColumn attribute="ent3#att9" name="researcher_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel12" name="NotificationResearcher" db:database="db2" db:table="notification" sourceEntity="ent2" targetEntity="ent3">
+    <RelationshipRole1 id="rel12#role23" name="NotificationToResearcher_2" maxCard="1">
+      <db:JoinColumn attribute="ent2#att8" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="ResearcherToNotification_2" maxCard="N">
       <db:JoinColumn attribute="ent3#att9" name="researcher_oid"/>
     </RelationshipRole2>
   </Relationship>
