@@ -1,30 +1,59 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1900" gr:y="870" id="sv1#area4#page13" name="Edit Publication" customURLName="publications-edit">
   <ContentUnits>
-    <EntryUnit id="sv1#area4#page13#enu1" entity="ent1" gr:x="0" gr:y="0" name="Edit Pub" linkOrder="sv1#area4#page13#enu1#ln4">
+    <EntryUnit id="sv1#area4#page13#enu1" entity="ent1" gr:x="320" gr:y="0" name="Edit Pub" linkOrder="sv1#area4#page13#enu1#ln18">
       <Field id="sv1#area4#page13#enu1#fld8" attribute="ent1#att2" type="string" modifiable="true" name="title"/>
       <Field id="sv1#area4#page13#enu1#fld9" attribute="ent1#att3" type="string" modifiable="true" name="venue"/>
       <Field id="sv1#area4#page13#enu1#fld10" attribute="ent1#att4" type="integer" modifiable="true" name="year"/>
       <Field id="sv1#area4#page13#enu1#fld11" attribute="ent1#att5" type="string" modifiable="true" name="abstract"/>
-      <Field id="sv1#area4#page13#enu1#fld12" attribute="ent1#att6" type="url" modifiable="true" name="file"/>
-      <Link id="sv1#area4#page13#enu1#ln4" name="Update" to="sv1#area4#mfu4" type="normal" validate="true">
-        <LinkParameter id="sv1#area4#page13#enu1#ln4#par20" name="Authors_Author.oid(PublicationToAuthor)" source="sv1#area4#page13#enu1#msfld3" target="sv1#area4#mfu4.rel2#role4.ent3#att9"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln4#par21" name="Key [oid]_KeyCondition3 [oid]" source="key.ent1#att1" target="sv1#area4#mfu4#su8#kcond7.ent1#att1"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln4#par22" name="Keywords_Keyword.oid(PublicationToKeyword)" source="sv1#area4#page13#enu1#msfld2" target="sv1#area4#mfu4.rel3#role6.ent5#att15"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln4#par34" name="Publication Object_Publication Object" source="entityBean" target="sv1#area4#mfu4.entityBeans"/>
-      </Link>
+      <Field id="sv1#area4#page13#enu1#fld12" attribute="ent1#att6" type="blob" modifiable="true" name="file" contentType="application/pdf"/>
       <MultiSelectionField id="sv1#area4#page13#enu1#msfld2" name="Keywords" type="string"/>
-      <MultiSelectionField id="sv1#area4#page13#enu1#msfld3" name="Authors" type="string" role="rel2#role4"/>
+      <Link id="sv1#area4#page13#enu1#ln28" name="Flow28" to="sv1#area4#page13#seu18" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="111,19,-139,9"/>
+      <MultiSelectionField id="sv1#area4#page13#enu1#msfld11" role="rel2#role4" type="string" name="Authors"/>
+      <Link id="sv1#area4#page13#enu1#ln18" name="Update" to="sv1#area4#seu22" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par152" name="abstract_PASSING" source="sv1#area4#page13#enu1#fld11" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par153" name="Authors_PASSING" source="sv1#area4#page13#enu1#msfld11" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par154" name="file_PASSING" source="sv1#area4#page13#enu1#fld12" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par155" name="Key [oid]_PASSING" source="key.ent1#att1" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par156" name="Keywords_PASSING" source="sv1#area4#page13#enu1#msfld2" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par159" name="Publication Object_PASSING" source="entityBean" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par160" name="title_PASSING" source="sv1#area4#page13#enu1#fld8" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par161" name="venue_PASSING" source="sv1#area4#page13#enu1#fld9" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par162" name="year_PASSING" source="sv1#area4#page13#enu1#fld10" passing="true"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par183" name="Key [oid]_RoleCondition6 [oid]" source="key.ent1#att1" target="sv1#area4#seu22#su28#rcond6.ent1#att1"/>
+        <LinkParameter id="sv1#area4#page13#enu1#ln18#par288" name="oid_PASSING" sourceLinkParameter="sv1#area4#page13#seu25#ln69#par285" passing="true"/>
+      </Link>
     </EntryUnit>
-    <SelectorUnit id="sv1#area4#page13#seu4" name="Authors" gr:x="10" gr:y="200" entity="ent3">
+    <SelectorUnit id="sv1#area4#page13#seu4" name="Authors" gr:x="330" gr:y="200" entity="ent3">
       <Link id="sv1#area4#page13#seu4#ln6" name="Flow6" to="sv1#area4#page13#enu1" type="transport" validate="true">
-        <LinkParameter id="sv1#area4#page13#seu4#ln6#par18" name="name_Authors [label]" source="ent3#att10Array" target="sv1#area4#page13#enu1#msfld3_label"/>
-        <LinkParameter id="sv1#area4#page13#seu4#ln6#par19" name="oid_Authors [output]" source="ent3#att9Array" target="sv1#area4#page13#enu1#msfld3_output"/>
+        <LinkParameter id="sv1#area4#page13#seu4#ln6#par18" name="name_Authors [label]" source="ent3#att10Array" target="sv1#area4#page13#enu1#msfld11_label"/>
+        <LinkParameter id="sv1#area4#page13#seu4#ln6#par19" name="oid_Authors [output]" source="ent3#att9Array" target="sv1#area4#page13#enu1#msfld11_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="sv1#area4#page13#seu5" name="Keywords" gr:x="120" gr:y="200" entity="ent5">
+    <SelectorUnit id="sv1#area4#page13#seu5" name="Keywords" gr:x="440" gr:y="200" entity="ent5">
       <Link id="sv1#area4#page13#seu5#ln7" name="Flow7" to="sv1#area4#page13#enu1" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page13#seu5#ln7#par16" name="word_Keywords [label]" source="ent5#att16Array" target="sv1#area4#page13#enu1#msfld2_label"/>
         <LinkParameter id="sv1#area4#page13#seu5#ln7#par17" name="oid_Keywords [output]" source="ent5#att15Array" target="sv1#area4#page13#enu1#msfld2_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv1#area4#page13#seu18" name="GetKeywords" gr:x="525" gr:y="95" entity="ent5">
+      <Selector id="sv1#area4#page13#seu18#su22" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page13#seu18#su22#rcond16" name="RoleCondition14" predicate="in" implied="false" role="rel3#role6"/>
+      </Selector>
+      <Link id="sv1#area4#page13#seu18#ln21" name="Flow15" to="sv1#area4#page13#enu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page13#seu18#ln21#par60" name="oid_Keywords - Preselection" source="ent5#att15Array" target="sv1#area4#page13#enu1#msfld2_presel"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit id="sv1#area4#page13#gtu5" name="GetUser" gr:x="100" gr:y="210" contextParameters="UserCtxParam">
+      <Link id="sv1#area4#page13#gtu5#ln68" name="Flow19" to="sv1#area4#page13#seu25" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page13#gtu5#ln68#par284" name="UserCtxParam.oid_UserToResearcher [oid]" source="sv1#area4#page13#gtu5.UserCtxParam" target="sv1#area4#page13#seu25#su36#rcond22.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv1#area4#page13#seu25" name="GetResearcherByUser" gr:x="0" gr:y="55" entity="ent3">
+      <Selector id="sv1#area4#page13#seu25#su36" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page13#seu25#su36#rcond22" name="UserToResearcher" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <Link id="sv1#area4#page13#seu25#ln69" name="Flow24" to="sv1#area4#page13#enu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page13#seu25#ln69#par285" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>
@@ -32,14 +61,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area4#page13#enu1">
-          <layout:Link link="sv1#area4#page13#enu1#ln4"/>
           <layout:Field field="sv1#area4#page13#enu1#fld8"/>
           <layout:Field field="sv1#area4#page13#enu1#fld9"/>
           <layout:Field field="sv1#area4#page13#enu1#fld10"/>
           <layout:Field field="sv1#area4#page13#enu1#fld11"/>
           <layout:Field field="sv1#area4#page13#enu1#fld12"/>
           <layout:Field field="sv1#area4#page13#enu1#msfld2"/>
-          <layout:Field field="sv1#area4#page13#enu1#msfld3"/>
+          <layout:Field field="sv1#area4#page13#enu1#msfld11"/>
+          <layout:Link link="sv1#area4#page13#enu1#ln18"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

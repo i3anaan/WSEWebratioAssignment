@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="845" id="sv1#area4#page16" name="Edit Coll" customURLName="collections-edit">
   <ContentUnits>
-    <EntryUnit gr:x="190" gr:y="10" id="sv1#area4#page16#enu8" name="Edit Coll" linkOrder="sv1#area4#page16#enu8#ln12" entity="ent7">
+    <EntryUnit gr:x="190" gr:y="10" id="sv1#area4#page16#enu8" name="Edit Coll" linkOrder="sv1#area4#page16#enu8#ln12 sv1#area4#page16#enu8#ln27" entity="ent7">
       <Link id="sv1#area4#page16#enu8#ln12" name="Update" to="sv1#area4#mfu1" type="normal" validate="true">
         <LinkParameter id="sv1#area4#page16#enu8#ln12#par109" name="Collection Object_Collection Object" source="entityBean" target="sv1#area4#mfu1.entityBeans"/>
         <LinkParameter id="sv1#area4#page16#enu8#ln12#par110" name="description_description" source="sv1#area4#page16#enu8#fld26" target="sv1#area4#mfu1.ent7#att23"/>
@@ -9,11 +9,22 @@
         <LinkParameter id="sv1#area4#page16#enu8#ln12#par113" name="CollectionToPublication_Publication.oid(CollectionToPublication)" source="sv1#area4#page16#enu8#msfld7" target="sv1#area4#mfu1.rel5#role9.ent1#att1"/>
         <LinkParameter id="sv1#area4#page16#enu8#ln12#par114" name="oid_PASSING_Researcher.oid(CollectionToResearcher)" sourceLinkParameter="sv1#area4#page16#seu11#ln51#par97" target="sv1#area4#mfu1.rel6#role11.ent3#att9"/>
         <LinkParameter id="sv1#area4#page16#enu8#ln12#par115" name="title_title" source="sv1#area4#page16#enu8#fld25" target="sv1#area4#mfu1.ent7#att22"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln12#par121" name="oid_PASSING_ResearcherToColl [oid]" sourceLinkParameter="sv1#area4#page16#seu11#ln51#par97" target="sv1#area4#mfu1#su7#rcond10.ent3#att9"/>
       </Link>
       <Field id="sv1#area4#page16#enu8#fld25" name="title" type="string" modifiable="true" attribute="ent7#att22"/>
       <Field id="sv1#area4#page16#enu8#fld26" name="description" type="string" modifiable="true" attribute="ent7#att23"/>
       <MultiSelectionField id="sv1#area4#page16#enu8#msfld6" name="CollectionToKeyword" type="string" role="rel7#role13"/>
       <MultiSelectionField id="sv1#area4#page16#enu8#msfld7" name="CollectionToPublication" type="string" role="rel5#role9"/>
+      <Link id="sv1#area4#page16#enu8#ln27" name="Update" to="sv1#area4#seu26" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page16#enu8#ln27#par229" name="Publication Object_PASSING" source="entityBean" passing="true"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln27#par236" name="CollectionToKeyword_PASSING" source="sv1#area4#page16#enu8#msfld6" passing="true"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln27#par237" name="CollectionToPublication_PASSING" source="sv1#area4#page16#enu8#msfld7" passing="true"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln27#par238" name="description_PASSING" source="sv1#area4#page16#enu8#fld26" passing="true"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln27#par239" name="Key [oid]_PASSING" source="key.ent7#att21" passing="true"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln27#par240" name="oid_PASSING" sourceLinkParameter="sv1#area4#page16#seu11#ln51#par97" passing="true"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln27#par241" name="title_PASSING" source="sv1#area4#page16#enu8#fld25" passing="true"/>
+        <LinkParameter id="sv1#area4#page16#enu8#ln27#par251" name="Key [oid]_PubToKey [oid]" source="key.ent7#att21" target="sv1#area4#seu26#su41#rcond23.ent7#att21"/>
+      </Link>
     </EntryUnit>
     <SelectorUnit id="sv1#area4#page16#seu11" name="GetResearcherByUser" gr:x="0" gr:y="100" entity="ent3">
       <Selector id="sv1#area4#page16#seu11#su20" defaultPolicy="fill" booleanOperator="and">
@@ -45,11 +56,12 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area4#page16#enu8">
-          <layout:Link link="sv1#area4#page16#enu8#ln12"/>
           <layout:Field field="sv1#area4#page16#enu8#fld25"/>
           <layout:Field field="sv1#area4#page16#enu8#fld26"/>
           <layout:Field field="sv1#area4#page16#enu8#msfld6"/>
           <layout:Field field="sv1#area4#page16#enu8#msfld7"/>
+          <layout:Link link="sv1#area4#page16#enu8#ln12"/>
+          <layout:Link link="sv1#area4#page16#enu8#ln27"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,14 +1,15 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="480" id="sv1#area4#page14" name="View Collection" customURLName="collections-detail">
   <ContentUnits>
-    <DataUnit gr:x="175" gr:y="0" id="sv1#area4#page14#dau3" name="View Coll" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#area4#page14#dau3#ln9 sv1#area4#page14#dau3#ln27">
+    <DataUnit gr:x="175" gr:y="0" id="sv1#area4#page14#dau3" name="View Coll" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#area4#page14#dau3#ln9 sv1#area4#page14#dau3#ln22">
       <Selector id="sv1#area4#page14#dau3#su9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#page14#dau3#su9#kcond8" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv1#area4#page14#dau3#ln9" name="Edit" to="sv1#area4#page16#enu8" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-60,175,126,-130"/>
-      <Link id="sv1#area4#page14#dau3#ln27" name="Delete" to="sv1#area4#dlu2" type="normal" validate="true">
-        <LinkParameter id="sv1#area4#page14#dau3#ln27#par72" name="oid_PASSING_ResearcherToCollection [oid]" sourceLinkParameter="sv1#area4#page14#seu7#ln26#par71" target="sv1#area4#dlu2#su5#rcond5.ent3#att9"/>
-      </Link>
       <Link id="sv1#area4#page14#dau3#ln50" name="Flow50" to="sv1#area4#page14#inu6" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#area4#page14#dau3#ln22" name="Delete" to="sv1#area4#dlu3" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page14#dau3#ln22#par119" name="oid_PASSING_RoleCondition7 [oid]" sourceLinkParameter="sv1#area4#page14#seu7#ln26#par71" target="sv1#area4#dlu3#su1#rcond7.ent3#att9"/>
+        <LinkParameter id="sv1#area4#page14#dau3#ln22#par120" name="Key [oid]_oid" source="data.ent7#att21" target="sv1#area4#dlu3#su1#acond14"/>
+      </Link>
     </DataUnit>
     <GetUnit gr:x="0" gr:y="0" id="sv1#area4#page14#gtu3" name="GetUser" contextParameters="UserCtxParam">
       <Link id="sv1#area4#page14#gtu3#ln25" name="Flow25" to="sv1#area4#page14#seu7" type="transport" validate="true">
@@ -37,7 +38,7 @@
           <layout:Attribute attribute="ent7#att22"/>
           <layout:Attribute attribute="ent7#att23"/>
           <layout:Link link="sv1#area4#page14#dau3#ln9"/>
-          <layout:Link link="sv1#area4#page14#dau3#ln27"/>
+          <layout:Link link="sv1#area4#page14#dau3#ln22"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
