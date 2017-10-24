@@ -1,8 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page23" name="Registration" landmark="true" customURLName="register" gr:x="685" gr:y="190">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page23" name="Register" landmark="true" customURLName="register" gr:x="535" gr:y="0">
   <ContentUnits>
-    <EntryUnit id="sv2#area2#page23#enu17" name="New researcher" linkOrder="sv2#area2#page23#enu17#ln90" gr:x="0" gr:y="0" entity="ent3">
+    <EntryUnit id="sv2#area2#page23#enu17" name="Register as a Researcher" linkOrder="sv2#area2#page23#enu17#ln90" gr:x="0" gr:y="0" entity="ent3">
       <Field id="sv2#area2#page23#enu17#fld37" name="Name" type="string" modifiable="true" attribute="ent3#att10"/>
-      <Field id="sv2#area2#page23#enu17#fld38" name="University" type="string" modifiable="true" attribute="ent3#att11"/>
       <Field id="sv2#area2#page23#enu17#fld39" name="Username" type="string" modifiable="true"/>
       <Field id="sv2#area2#page23#enu17#fld40" name="Password" type="password" modifiable="true" hidden="false"/>
       <Field id="sv2#area2#page23#enu17#fld41" name="Email" type="string" modifiable="true"/>
@@ -10,21 +9,28 @@
         <LinkParameter id="sv2#area2#page23#enu17#ln90#par170" name="Email_email" source="sv2#area2#page23#enu17#fld41" target="sv2#area2#miu2.mov1#opm2#icu2#icp4"/>
         <LinkParameter id="sv2#area2#page23#enu17#ln90#par171" name="Name_name" source="sv2#area2#page23#enu17#fld37" target="sv2#area2#miu2.mov1#opm2#icu2#icp7"/>
         <LinkParameter id="sv2#area2#page23#enu17#ln90#par172" name="Password_password" source="sv2#area2#page23#enu17#fld40" target="sv2#area2#miu2.mov1#opm2#icu2#icp5"/>
-        <LinkParameter id="sv2#area2#page23#enu17#ln90#par173" name="University_university" source="sv2#area2#page23#enu17#fld38" target="sv2#area2#miu2.mov1#opm2#icu2#icp8"/>
+        <LinkParameter id="sv2#area2#page23#enu17#ln90#par173" name="University_university" source="sv2#area2#page23#enu17#msfld8" target="sv2#area2#miu2.mov1#opm2#icu2#icp8"/>
         <LinkParameter id="sv2#area2#page23#enu17#ln90#par174" name="Username_userName" source="sv2#area2#page23#enu17#fld39" target="sv2#area2#miu2.mov1#opm2#icu2#icp6"/>
       </Link>
+      <MultiSelectionField id="sv2#area2#page23#enu17#msfld8" type="string" name="University" role="rel9#role17"/>
     </EntryUnit>
+    <SelectorUnit gr:x="50" gr:y="120" id="sv2#area2#page23#seu15" name="Universities" entity="ent8" distinctAttributes="ent8#att24 ent8#att25">
+      <Link id="sv2#area2#page23#seu15#ln14" name="Flow14" to="sv2#area2#page23#enu17" type="transport" validate="true">
+        <LinkParameter id="sv2#area2#page23#seu15#ln14#par9" name="name_University [label]" source="ent8#att25Array" target="sv2#area2#page23#enu17#msfld8_label"/>
+        <LinkParameter id="sv2#area2#page23#seu15#ln14#par13" name="oid_University [output]" source="ent8#att24Array" target="sv2#area2#page23#enu17#msfld8_output"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area2#page23#enu17">
+          <layout:Link link="sv2#area2#page23#enu17#ln90"/>
           <layout:Field field="sv2#area2#page23#enu17#fld37"/>
-          <layout:Field field="sv2#area2#page23#enu17#fld38"/>
           <layout:Field field="sv2#area2#page23#enu17#fld39"/>
           <layout:Field field="sv2#area2#page23#enu17#fld40"/>
           <layout:Field field="sv2#area2#page23#enu17#fld41"/>
-          <layout:Link link="sv2#area2#page23#enu17#ln90"/>
+          <layout:Field field="sv2#area2#page23#enu17#msfld8"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

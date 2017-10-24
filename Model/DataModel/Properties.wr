@@ -54,9 +54,8 @@
     <Attribute id="ent1#att5" name="abstract" type="string" db:column="abstract"/>
     <Attribute id="ent1#att6" name="file" type="url" db:column="file"/>
   </Entity>
-  <Entity gr:x="10" gr:y="200" id="ent3" name="Researcher" duration="persistent" attributeOrder="ent3#att9 ent3#att10 ent3#att11 ent3#att7" db:database="db2" db:table="researcher">
+  <Entity gr:x="10" gr:y="200" id="ent3" name="Researcher" duration="persistent" attributeOrder="ent3#att9 ent3#att10 ent3#att7" db:database="db2" db:table="researcher">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent3#att11" name="university" type="string" db:column="university"/>
     <Attribute id="ent3#att10" name="name" type="string" db:column="name"/>
     <Attribute id="ent3#att7" name="reputation" type="float" db:column="reputation"/>
   </Entity>
@@ -145,7 +144,8 @@
       <db:JoinColumn attribute="ent8#att24" name="university_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true"/>
+  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true">
+  </db:Database>
   <Relationship id="rel10" name="Comment_Researcher" sourceEntity="ent6" targetEntity="ent3" db:database="db2" db:table="comment">
     <RelationshipRole1 id="rel10#role19" name="CommentToResearcher" maxCard="1">
       <db:JoinColumn attribute="ent6#att17" name="oid"/>

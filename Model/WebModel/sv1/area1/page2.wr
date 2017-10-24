@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page2" name="Authors">
   <ContentUnits>
-    <MultiDataUnit id="sv1#area1#page2#mdu1" entity="ent3" displayAttributes="ent3#att10 ent3#att11 ent3#att9 ent3#att7" gr:x="0" gr:y="0" name="Researchers">
+    <MultiDataUnit id="sv1#area1#page2#mdu1" entity="ent3" displayAttributes="ent3#att10 ent3#att9 ent3#att7" gr:x="0" gr:y="0" name="Researchers">
       <Property id="sv1#area1#page2#mdu1#prop5" name="Reputation"/>
       <Property id="sv1#area1#page2#mdu1#prop6" name="Property 1" value="Heel veel"/>
     </MultiDataUnit>
@@ -24,7 +24,6 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page2#mdu1">
           <layout:Attribute attribute="ent3#att10"/>
-          <layout:Attribute attribute="ent3#att11"/>
           <layout:Attribute attribute="ent3#att9"/>
           <layout:Attribute attribute="ent3#att7"/>
         </layout:Unit>
