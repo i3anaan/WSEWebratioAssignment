@@ -100,6 +100,7 @@
         <LinkParameter id="sv1#area4#dcnu5#oln38#par259" name="CollectionToPublication_PASSING_Publication.oid(CollectionToPublication)" sourceLinkParameter="sv1#area4#seu26#oln40#par244" target="sv1#area4#mfu6.rel5#role9.ent1#att1"/>
         <LinkParameter id="sv1#area4#dcnu5#oln38#par260" name="oid_PASSING_Researcher.oid(CollectionToResearcher)" sourceLinkParameter="sv1#area4#seu26#oln40#par247" target="sv1#area4#mfu6.rel6#role11.ent3#att9"/>
         <LinkParameter id="sv1#area4#dcnu5#oln38#par261" name="title_PASSING_title" sourceLinkParameter="sv1#area4#seu26#oln40#par249" target="sv1#area4#mfu6.ent7#att22"/>
+        <LinkParameter id="sv1#area4#dcnu5#oln38#par4" name="oid_PASSING_AuthorToPub [oid]" sourceLinkParameter="sv1#area4#seu26#oln40#par247" target="sv1#area4#mfu6#su42#rcond24.ent3#att9"/>
       </OKLink>
     </DisconnectUnit>
     <SelectorUnit id="sv1#area4#seu26" name="GetKeywords" gr:x="15" gr:y="1220" entity="ent5">
@@ -121,7 +122,7 @@
     <ModifyUnit id="sv1#area4#mfu6" name="Update Pub" gr:x="520" gr:y="1030" entity="ent7">
       <Selector id="sv1#area4#mfu6#su42" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#mfu6#su42#kcond22" name="KeyCondition3" predicate="in" implied="false"/>
-        <RelationshipRoleCondition id="sv1#area4#mfu6#su42#rcond24" name="AuthorToPub" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv1#area4#mfu6#su42#rcond24" name="AuthorToPub" predicate="in" implied="false" role="rel6#role12"/>
       </Selector>
       <OKLink id="sv1#area4#mfu6#oln41" name="OKFlow9" to="sv1#area4#page14#dau3" automaticCoupling="true"/>
     </ModifyUnit>
