@@ -1,119 +1,55 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="685" gr:y="85" id="mov1#opm10" name="UpdatePublication">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="975" gr:y="110" id="mov1#opm10" name="ShowNotifications">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="45" gr:y="190">
-      <InputCollectorParameter id="mov1#opm10#icu10#icp31" name="Pub [oid]"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp32" name="Abstract"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp33" name="File"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp35" name="Keywords"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp36" name="PubObj"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp37" name="Authors"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp38" name="Year"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp39" name="Title"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp40" name="Venue"/>
-      <OKLink id="mov1#opm10#icu10#oln43" name="OKFlow43" to="mov1#opm10#seu23">
-        <LinkParameter id="mov1#opm10#icu10#oln43#par253" name="PubToKeyword [oid]_PubToKeyword [oid]" source="mov1#opm10#icu10#icp31" target="mov1#opm10#seu23#su31#rcond19.ent1#att1"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par254" name="Pub [oid]_PASSING" source="mov1#opm10#icu10#icp31" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par290" name="Abstract_PASSING" source="mov1#opm10#icu10#icp32" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par291" name="Authors_PASSING" source="mov1#opm10#icu10#icp37" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par292" name="File_PASSING" source="mov1#opm10#icu10#icp33" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par293" name="Keywords_PASSING" source="mov1#opm10#icu10#icp35" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par294" name="PubObj_PASSING" source="mov1#opm10#icu10#icp36" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par295" name="Title_PASSING" source="mov1#opm10#icu10#icp39" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par296" name="UserID_PASSING" source="mov1#opm10#icu10#icp41" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par297" name="Venue_PASSING" source="mov1#opm10#icu10#icp40" passing="true"/>
-        <LinkParameter id="mov1#opm10#icu10#oln43#par298" name="Year_PASSING" source="mov1#opm10#icu10#icp38" passing="true"/>
+    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm10#icu10#icp28" name="ResearcherOID"/>
+      <OKLink id="mov1#opm10#icu10#oln42" name="OKFlow42" to="mov1#opm10#seu22">
+        <LinkParameter id="mov1#opm10#icu10#oln42#par163" name="ResearcherOID_RoleCondition16 [oid]" source="mov1#opm10#icu10#icp28" target="mov1#opm10#seu22#su27#rcond16.ent3#att9"/>
       </OKLink>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp41" name="UserID"/>
     </InputCollectorUnit>
-    <DisconnectUnit id="mov1#opm10#dcnu3" name="Disconnect Keywords" gr:x="585" gr:y="75" relationship="rel3#role6">
-      <SourceSelector id="mov1#opm10#dcnu3#su29" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm10#dcnu3#su29#kcond14" name="KeyCondition12" predicate="in" implied="false"/>
-      </SourceSelector>
-      <TargetSelector id="mov1#opm10#dcnu3#su30" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm10#dcnu3#su30#kcond15" name="KeyCondition13" predicate="in" implied="false"/>
-      </TargetSelector>
-      <OKLink id="mov1#opm10#dcnu3#oln44" name="OKFlow44" to="mov1#opm10#seu24">
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par309" name="Pub [oid]_PASSING_PubToAuthor [oid]" sourceLinkParameter="mov1#opm10#seu23#oln39#par303" target="mov1#opm10#seu24#su33#rcond21.ent1#att1"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par310" name="Abstract_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par299" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par311" name="Authors_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par300" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par313" name="File_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par301" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par314" name="Keywords_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par302" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par316" name="Pub [oid]_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par303" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par317" name="PubObj_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par304" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par318" name="Title_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par305" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par319" name="UserID_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par306" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par320" name="Venue_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par307" passing="true"/>
-        <LinkParameter id="mov1#opm10#dcnu3#oln44#par322" name="Year_PASSING" sourceLinkParameter="mov1#opm10#seu23#oln39#par308" passing="true"/>
-      </OKLink>
-    </DisconnectUnit>
-    <SelectorUnit id="mov1#opm10#seu23" name="GetKeywords" gr:x="375" gr:y="75" entity="ent5">
-      <OKLink id="mov1#opm10#seu23#oln39" name="Flow61" to="mov1#opm10#dcnu3">
-        <LinkParameter id="mov1#opm10#seu23#oln39#par221" name="oid_KeyCondition13 [oid] [Keyword] [Target]" source="ent5#att15Array" target="mov1#opm10#dcnu3#su30#kcond15.ent5#att15"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par255" name="Pub [oid]_PASSING_KeyCondition12 [oid] [Publication] [Source]" sourceLinkParameter="mov1#opm10#icu10#oln43#par254" target="mov1#opm10#dcnu3#su29#kcond14.ent1#att1"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par299" name="Abstract_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par290" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par300" name="Authors_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par291" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par301" name="File_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par292" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par302" name="Keywords_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par293" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par303" name="Pub [oid]_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par254" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par304" name="PubObj_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par294" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par305" name="Title_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par295" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par306" name="UserID_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par296" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par307" name="Venue_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par297" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu23#oln39#par308" name="Year_PASSING" sourceLinkParameter="mov1#opm10#icu10#oln43#par298" passing="true"/>
-      </OKLink>
-      <Selector id="mov1#opm10#seu23#su31" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="mov1#opm10#seu23#su31#rcond19" name="PubToKeyword" predicate="in" implied="false" role="rel3#role6"/>
+    <SelectorUnit gr:x="345" gr:y="180" id="mov1#opm10#seu22" name="GetNotifications" entity="ent2">
+      <Selector id="mov1#opm10#seu22#su27" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm10#seu22#su27#rcond16" name="RoleCondition16" role="rel4#role8" predicate="in" implied="false"/>
+        <AttributesCondition id="mov1#opm10#seu22#su27#acond14" name="AttCondition14" predicate="gt" booleanOperator="or" implied="false" attributes="ent2#att11" value="0"/>
       </Selector>
+      <OKLink id="mov1#opm10#seu22#oln43" name="OKFlow43" to="mov1#opm10#lpu3">
+        <LinkParameter id="mov1#opm10#seu22#oln43#par164" name="oid_Input Array" source="ent2#att8Array" target="mov1#opm10#lpu3.array"/>
+        <LinkParameter id="mov1#opm10#seu22#oln43#par165" name="shown_PASSING" source="ent2#att11Array" passing="true"/>
+        <LinkParameter id="mov1#opm10#seu22#oln43#par179" name="oid_PASSING" source="ent2#att8Array" passing="true"/>
+      </OKLink>
     </SelectorUnit>
-    <ModifyUnit id="mov1#opm10#mfu5" name="Update Pub" gr:x="845" gr:y="245" entity="ent1">
-      <Selector id="mov1#opm10#mfu5#su32" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm10#mfu5#su32#kcond17" name="KeyCondition3" predicate="in" implied="false"/>
-        <RelationshipRoleCondition id="mov1#opm10#mfu5#su32#rcond20" name="AuthorToPub" predicate="in" implied="false" role="rel2#role3"/>
+    <LoopUnit gr:x="595" gr:y="230" id="mov1#opm10#lpu3" name="Loop3">
+      <OKLink id="mov1#opm10#lpu3#oln48" name="OKFlow48" to="mov1#opm10#okcu9" code="end">
+        <LinkParameter id="mov1#opm10#lpu3#oln48#par180" name="oid_PASSING_Notifications" sourceLinkParameter="mov1#opm10#seu22#oln43#par179" target="mov1#opm10#okcu9#ocp3"/>
+      </OKLink>
+      <OKLink id="mov1#opm10#lpu3#oln51" name="OKFlow51" to="mov1#opm10#seu24" code="next">
+        <LinkParameter id="mov1#opm10#lpu3#oln51#par188" name="Next Element_KeyCondition18 [oid]" source="next" target="mov1#opm10#seu24#su33#kcond18.ent2#att8"/>
+        <LinkParameter id="mov1#opm10#lpu3#oln51#par190" name="Next Element_PASSING" source="next" passing="true"/>
+      </OKLink>
+    </LoopUnit>
+    <MathUnit gr:x="755" gr:y="330" id="mov1#opm10#mathu1" name="Math1" resultType="float" defaultExpression="Shown - 1">
+      <MathVariable id="mov1#opm10#mathu1#mathv1" name="Shown"/>
+      <OKLink id="mov1#opm10#mathu1#oln46" name="OKFlow46" to="mov1#opm10#mfu5">
+        <LinkParameter id="mov1#opm10#mathu1#oln46#par166" name="Result_shown" source="result" target="mov1#opm10#mfu5.ent2#att11"/>
+        <LinkParameter id="mov1#opm10#mathu1#oln46#par192" name="Next Element_PASSING_KeyCondition14 [oid]" sourceLinkParameter="mov1#opm10#seu24#oln52#par191" target="mov1#opm10#mfu5#su30#kcond14.ent2#att8"/>
+      </OKLink>
+    </MathUnit>
+    <ModifyUnit gr:x="500" gr:y="440" id="mov1#opm10#mfu5" name="IncreaseNotificationShown" entity="ent2">
+      <Selector id="mov1#opm10#mfu5#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm10#mfu5#su30#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov1#opm10#mfu5#oln46" name="OKFlow46" to="mov1#opm10#okcu9" automaticCoupling="true"/>
-      <KOLink id="mov1#opm10#mfu5#kln4" name="KOFlow4" to="mov1#opm10#kocu7" automaticCoupling="true"/>
+      <OKLink id="mov1#opm10#mfu5#oln47" name="OKFlow47" to="mov1#opm10#lpu3" automaticCoupling="true"/>
     </ModifyUnit>
-    <SelectorUnit gr:x="365" gr:y="370" id="mov1#opm10#seu24" name="GetAuthors" entity="ent3">
+    <OKCollectorUnit gr:x="1055" gr:y="245" id="mov1#opm10#okcu9" name="OK Port9">
+      <OutputCollectorParameter id="mov1#opm10#okcu9#ocp3" name="Notifications"/>
+    </OKCollectorUnit>
+    <SelectorUnit gr:x="310" gr:y="375" id="mov1#opm10#seu24" name="Selector24" entity="ent2">
       <Selector id="mov1#opm10#seu24#su33" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="mov1#opm10#seu24#su33#rcond21" name="PubToAuthor" predicate="in" implied="false" role="rel2#role4"/>
+        <KeyCondition id="mov1#opm10#seu24#su33#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov1#opm10#seu24#oln42" name="OKFlow42" to="mov1#opm10#dcnu4">
-        <LinkParameter id="mov1#opm10#seu24#oln42#par252" name="oid_KeyCondition19 [oid] [Researcher] [Target]" source="ent3#att9Array" target="mov1#opm10#dcnu4#su35#kcond19.ent3#att9"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par323" name="Pub [oid]_PASSING_KeyCondition18 [oid] [Publication] [Source]" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par316" target="mov1#opm10#dcnu4#su34#kcond18.ent1#att1"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par324" name="Abstract_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par310" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par325" name="Authors_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par311" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par326" name="File_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par313" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par327" name="Keywords_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par314" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par329" name="Pub [oid]_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par316" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par330" name="PubObj_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par317" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par331" name="UserID_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par319" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par332" name="Venue_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par320" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par334" name="Year_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par322" passing="true"/>
-        <LinkParameter id="mov1#opm10#seu24#oln42#par335" name="Title_PASSING" sourceLinkParameter="mov1#opm10#dcnu3#oln44#par318" passing="true"/>
+      <OKLink id="mov1#opm10#seu24#oln52" name="OKFlow52" to="mov1#opm10#mathu1">
+        <LinkParameter id="mov1#opm10#seu24#oln52#par189" name="shown_Shown" source="ent2#att11Array" target="mov1#opm10#mathu1#mathv1"/>
+        <LinkParameter id="mov1#opm10#seu24#oln52#par191" name="Next Element_PASSING" sourceLinkParameter="mov1#opm10#lpu3#oln51#par190" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <DisconnectUnit gr:x="610" gr:y="370" id="mov1#opm10#dcnu4" name="Disconnect Authors" relationship="rel2#role4">
-      <SourceSelector id="mov1#opm10#dcnu4#su34" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm10#dcnu4#su34#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
-      </SourceSelector>
-      <TargetSelector id="mov1#opm10#dcnu4#su35" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm10#dcnu4#su35#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
-      </TargetSelector>
-      <OKLink id="mov1#opm10#dcnu4#oln45" name="OKFlow45" to="mov1#opm10#mfu5">
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par336" name="Abstract_PASSING_abstract" sourceLinkParameter="mov1#opm10#seu24#oln42#par324" target="mov1#opm10#mfu5.ent1#att5"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par337" name="UserID_PASSING_AuthorToPub [oid]" sourceLinkParameter="mov1#opm10#seu24#oln42#par331" target="mov1#opm10#mfu5#su32#rcond20.ent3#att9"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par338" name="File_PASSING_file" sourceLinkParameter="mov1#opm10#seu24#oln42#par326" target="mov1#opm10#mfu5.ent1#att6"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par339" name="File_PASSING_file [file name]" sourceLinkParameter="mov1#opm10#seu24#oln42#par326" target="mov1#opm10#mfu5.ent1#att6_name"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par340" name="Pub [oid]_PASSING_KeyCondition3 [oid]" sourceLinkParameter="mov1#opm10#seu24#oln42#par329" target="mov1#opm10#mfu5#su32#kcond17.ent1#att1"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par341" name="Keywords_PASSING_Keyword.oid(PublicationToKeyword)" sourceLinkParameter="mov1#opm10#seu24#oln42#par327" target="mov1#opm10#mfu5.rel3#role6.ent5#att15"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par342" name="PubObj_PASSING_Publication Object" sourceLinkParameter="mov1#opm10#seu24#oln42#par330" target="mov1#opm10#mfu5.entityBeans"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par343" name="Authors_PASSING_Researcher.oid(PublicationToAuthor)" sourceLinkParameter="mov1#opm10#seu24#oln42#par325" target="mov1#opm10#mfu5.rel2#role4.ent3#att9"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par344" name="Title_PASSING_title" sourceLinkParameter="mov1#opm10#seu24#oln42#par335" target="mov1#opm10#mfu5.ent1#att2"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par345" name="Venue_PASSING_venue" sourceLinkParameter="mov1#opm10#seu24#oln42#par332" target="mov1#opm10#mfu5.ent1#att3"/>
-        <LinkParameter id="mov1#opm10#dcnu4#oln45#par346" name="Year_PASSING_year" sourceLinkParameter="mov1#opm10#seu24#oln42#par334" target="mov1#opm10#mfu5.ent1#att4"/>
-      </OKLink>
-    </DisconnectUnit>
-    <OKCollectorUnit gr:x="1060" gr:y="170" id="mov1#opm10#okcu9" name="OK Port9"/>
-    <KOCollectorUnit gr:x="1060" gr:y="355" id="mov1#opm10#kocu7" name="KO Port7"/>
   </OperationUnits>
 </OperationModule>

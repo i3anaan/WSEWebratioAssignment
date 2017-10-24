@@ -1,34 +1,37 @@
-<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area4#mpage6" name="MasterPage" layout:pageLayout="WebRatio/Basic" layout:layoutManager="grid" layout:frameLayout="WebRatio/Basic" layout:cellLayout="WRDefault/Frame" layout:attributeLayout="WRDefault/Simple" layout:fieldLayout="WRDefault/FieldValue" layout:linkLayout="WRDefault/Simple" gr:x="425" gr:y="15">
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area4#mpage6" name="MasterPage" layout:pageLayout="WebRatio/Basic" layout:layoutManager="grid" layout:frameLayout="WebRatio/Basic" layout:cellLayout="WRDefault/Frame" layout:attributeLayout="WRDefault/Simple" layout:fieldLayout="WRDefault/FieldValue" layout:linkLayout="WRDefault/Simple" gr:x="25" gr:y="15">
   <ContentUnits>
-    <DataUnit id="sv1#area4#mpage6#dau11" name="You are logged in as:" customDescriptor="false" gr:showAllParts="false" gr:x="75" gr:y="0" entity="User" displayAttributes="rel1#role1.ent3#att10">
+    <DataUnit id="sv1#area4#mpage6#dau11" name="You are logged in as:" customDescriptor="false" gr:showAllParts="false" gr:x="245" gr:y="0" entity="User" displayAttributes="rel1#role1.ent3#att10 rel1#role1.ent3#att7">
       <Selector id="sv1#area4#mpage6#dau11#su18" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#mpage6#dau11#su18#kcond16" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <GetUnit id="sv1#area4#mpage6#gtu6" name="CurrentUser" gr:x="0" gr:y="135" contextParameters="UserCtxParam">
+    <GetUnit id="sv1#area4#mpage6#gtu6" name="CurrentUser" gr:x="20" gr:y="50" contextParameters="UserCtxParam">
       <Link id="sv1#area4#mpage6#gtu6#ln34" name="Flow7" to="sv1#area4#mpage6#dau11" type="transport" validate="true">
         <LinkParameter id="sv1#area4#mpage6#gtu6#ln34#par32" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv1#area4#mpage6#gtu6.UserCtxParam" target="sv1#area4#mpage6#dau11#su18#kcond16.userOID"/>
       </Link>
-      <Link id="sv1#area4#mpage6#gtu6#ln44" name="Flow40" to="sv1#area4#mpage6#seu11" type="transport" automaticCoupling="true" validate="true"/>
-    </GetUnit>
-    <MultiMessageUnit gr:x="205" gr:y="145" id="sv1#area4#mpage6#mssu1" name="Swag:">
-      <Message xml:space="preserve">Swag $$reputation$$</Message>
-      <Placeholder id="sv1#area4#mpage6#mssu1#ph1" name="reputation"/>
-    </MultiMessageUnit>
-    <SelectorUnit id="sv1#area4#mpage6#seu11" name="Selector10" gr:x="25" gr:y="265" entity="ent3">
-      <Selector id="sv1#area4#mpage6#seu11#su5" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv1#area4#mpage6#seu11#su5#rcond5" name="RoleCondition4" predicate="in" implied="false" role="rel1#role1"/>
-      </Selector>
-      <Link id="sv1#area4#mpage6#seu11#ln45" name="Flow41" to="sv1#area4#mpage6#miu4" type="transport" validate="true">
-        <LinkParameter id="sv1#area4#mpage6#seu11#ln45#par63" name="oid_AuthorOID" source="ent3#att9Array" target="sv1#area4#mpage6#miu4.mov1#opm6#icu6#icp9"/>
+      <Link id="sv1#area4#mpage6#gtu6#ln62" name="Flow62" to="sv1#area4#mpage6#seu23" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#mpage6#gtu6#ln62#par186" name="UserCtxParam.oid_KeyCondition17 [oid]" source="sv1#area4#mpage6#gtu6.UserCtxParam" target="sv1#area4#mpage6#seu23#su32#kcond17.userOID"/>
       </Link>
-    </SelectorUnit>
-    <ModuleInstanceUnit id="sv1#area4#mpage6#miu4" gr:x="135" gr:y="435" action="true" moduleId="mov1#opm6">
-      <Link id="sv1#area4#mpage6#miu4#ln46" name="Flow46" to="sv1#area4#mpage6#mssu1" type="transport" validate="true">
-        <LinkParameter id="sv1#area4#mpage6#miu4#ln46#par64" name="Reputation_reputation" source="mov1#opm6#okcu5#ocp2" target="sv1#area4#mpage6#mssu1.sv1#area4#mpage6#mssu1#ph1"/>
-        <LinkParameter id="sv1#area4#mpage6#miu4#ln46#par65" name="Reputation_Shown Messages" source="mov1#opm6#okcu5#ocp2" target="sv1#area4#mpage6#mssu1.shownMessages"/>
+    </GetUnit>
+    <IndexUnit gr:x="335" gr:y="115" id="sv1#area4#mpage6#inu1" name="Simple List1" entity="ent2" displayAttributes="ent2#att12 ent2#att14">
+      <Selector id="sv1#area4#mpage6#inu1#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#mpage6#inu1#su31#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+        <AttributesCondition id="sv1#area4#mpage6#inu1#su31#acond15" name="AttCondition15" predicate="gt" booleanOperator="or" implied="false" attributes="ent2#att11" value="0"/>
+      </Selector>
+    </IndexUnit>
+    <ModuleInstanceUnit id="sv1#area4#mpage6#miu10" gr:x="205" gr:y="260" action="true" moduleId="mov1#opm10">
+      <Link id="sv1#area4#mpage6#miu10#ln61" name="Flow61" to="sv1#area4#mpage6#inu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#mpage6#miu10#ln61#par184" name="Notifications_KeyCondition15 [oid]" source="mov1#opm10#okcu9#ocp3" target="sv1#area4#mpage6#inu1#su31#kcond15.ent2#att8"/>
       </Link>
     </ModuleInstanceUnit>
+    <SelectorUnit gr:x="0" gr:y="190" id="sv1#area4#mpage6#seu23" name="GetResearcher" entity="User" distinctAttributes="rel1#role1.ent3#att9">
+      <Link id="sv1#area4#mpage6#seu23#ln63" name="Flow63" to="sv1#area4#mpage6#miu10" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#mpage6#seu23#ln63#par187" name="UserToResearcher.oid_ResearcherOID" source="rel1#role1$ent3#att9Array" target="sv1#area4#mpage6#miu10.mov1#opm10#icu10#icp28"/>
+      </Link>
+      <Selector id="sv1#area4#mpage6#seu23#su32" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area4#mpage6#seu23#su32#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
   </ContentUnits>
   <layout:CustomLocation name="Top">
     <layout:Grid containerType="cell">
@@ -36,8 +39,12 @@
         <layout:Cell>
           <layout:Unit unitId="sv1#area4#mpage6#dau11">
             <layout:Attribute attribute="rel1#role1.ent3#att10"/>
+            <layout:Attribute attribute="rel1#role1.ent3#att7"/>
           </layout:Unit>
-          <layout:Unit unitId="sv1#area4#mpage6#mssu1"/>
+          <layout:Unit unitId="sv1#area4#mpage6#inu1">
+            <layout:Attribute attribute="ent2#att12"/>
+            <layout:Attribute attribute="ent2#att14"/>
+          </layout:Unit>
         </layout:Cell>
       </layout:Row>
     </layout:Grid>

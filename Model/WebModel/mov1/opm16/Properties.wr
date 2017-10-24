@@ -1,0 +1,99 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="115" gr:y="510" id="mov1#opm16" name="SendEmail">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm16#icu4" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm16#icu4#oln34" name="OKFlow76" to="mov1#opm16#switch2">
+        <LinkParameter id="mov1#opm16#icu4#oln34#par23" name="Mail - Body_PASSING" source="mov1#opm16#icu4#icp49" passing="true"/>
+        <LinkParameter id="mov1#opm16#icu4#oln34#par207" name="Mail - Subject_PASSING" source="mov1#opm16#icu4#icp50" passing="true"/>
+        <LinkParameter id="mov1#opm16#icu4#oln34#par208" name="Mail - To_PASSING" source="mov1#opm16#icu4#icp51" passing="true"/>
+        <LinkParameter id="mov1#opm16#icu4#oln34#par209" name="Placeholder1_PASSING" source="mov1#opm16#icu4#icp53" passing="true"/>
+        <LinkParameter id="mov1#opm16#icu4#oln34#par212" name="Placeholder2_PASSING" source="mov1#opm16#icu4#icp54" passing="true"/>
+        <LinkParameter id="mov1#opm16#icu4#oln34#par223" name="template_Switch" source="mov1#opm16#icu4#icp52" target="mov1#opm16#switch2.switch"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm16#icu4#icp49" name="Mail - Body"/>
+      <InputCollectorParameter id="mov1#opm16#icu4#icp50" name="Mail - Subject"/>
+      <InputCollectorParameter id="mov1#opm16#icu4#icp51" name="Mail - To"/>
+      <InputCollectorParameter id="mov1#opm16#icu4#icp52" name="template"/>
+      <InputCollectorParameter id="mov1#opm16#icu4#icp53" name="Placeholder1"/>
+      <InputCollectorParameter id="mov1#opm16#icu4#icp54" name="Placeholder2"/>
+    </InputCollectorUnit>
+    <MailUnit id="mov1#opm16#mlu5" name="Mail1" gr:x="495" gr:y="285" format="plainText">
+      <OKLink id="mov1#opm16#mlu5#oln35" name="OKFlow77" to="mov1#opm16#okcu15" automaticCoupling="true"/>
+      <BodyTemplate xml:space="preserve">Dear $$Placeholder1$$,
+
+You have been added as an Author to our platform.
+
+Your username is:
+$$Placeholder1$$
+
+Your password is:
+$$Placeholder2$$
+
+Cheers.</BodyTemplate>
+      <Placeholder id="mov1#opm16#mlu5#ph1" name="Placeholder1"/>
+      <Placeholder id="mov1#opm16#mlu5#ph8" name="Placeholder2"/>
+    </MailUnit>
+    <OKCollectorUnit gr:x="590" gr:y="100" id="mov1#opm16#okcu15" name="OK Port14"/>
+    <SwitchUnit gr:x="290" gr:y="260" id="mov1#opm16#switch2" name="Switch1">
+      <OKLink id="mov1#opm16#switch2#oln84" name="OKFlow79" to="mov1#opm16#mlu5" code="password">
+        <LinkParameter id="mov1#opm16#switch2#oln84#par224" name="Mail - Subject_PASSING_Mail - Subject" sourceLinkParameter="mov1#opm16#icu4#oln34#par207" target="mov1#opm16#mlu5.subject"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par225" name="Mail - To_PASSING_Mail - To" sourceLinkParameter="mov1#opm16#icu4#oln34#par208" target="mov1#opm16#mlu5.to"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par235" name="Placeholder1_PASSING_Placeholder1" sourceLinkParameter="mov1#opm16#icu4#oln34#par209" target="mov1#opm16#mlu5.Placeholder1"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par245" name="Placeholder2_PASSING_Placeholder2" sourceLinkParameter="mov1#opm16#icu4#oln34#par212" target="mov1#opm16#mlu5.Placeholder2"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par286" name="wse.webratio@gmail.com_Mail - From" sourceValue="wse.webratio@gmail.com" target="mov1#opm16#mlu5.from"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par287" name="smtp.gmail.com_SMTP Server - Host" sourceValue="smtp.gmail.com" target="mov1#opm16#mlu5.serverHost"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par288" name="webratio1_SMTP Server - Password" sourceValue="webratio1" target="mov1#opm16#mlu5.serverPassword"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par289" name="587_SMTP Server - Port" sourceValue="587" target="mov1#opm16#mlu5.serverPort"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par290" name="TLS_SMTP Server - Protocol" sourceValue="TLS" target="mov1#opm16#mlu5.serverProtocol"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par291" name="1_SMTP Server - Use SSL" sourceValue="1" target="mov1#opm16#mlu5.serverUseSsl"/>
+        <LinkParameter id="mov1#opm16#switch2#oln84#par292" name="wse.webratio@gmail.com_SMTP Server - Username" sourceValue="wse.webratio@gmail.com" target="mov1#opm16#mlu5.serverUsername"/>
+      </OKLink>
+      <OKLink id="mov1#opm16#switch2#oln85" name="OKFlow79" to="mov1#opm16#mlu6" code="notification">
+        <LinkParameter id="mov1#opm16#switch2#oln85#par246" name="Mail - Subject_PASSING_Mail - Subject" sourceLinkParameter="mov1#opm16#icu4#oln34#par207" target="mov1#opm16#mlu6.subject"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par247" name="Mail - To_PASSING_Mail - To" sourceLinkParameter="mov1#opm16#icu4#oln34#par208" target="mov1#opm16#mlu6.to"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par248" name="Placeholder1_PASSING_Placeholder1" sourceLinkParameter="mov1#opm16#icu4#oln34#par209" target="mov1#opm16#mlu6.Placeholder1"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par249" name="Placeholder2_PASSING_Placeholder2" sourceLinkParameter="mov1#opm16#icu4#oln34#par212" target="mov1#opm16#mlu6.Placeholder2"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par293" name="wse.webratio@gmail.com_Mail - From" sourceValue="wse.webratio@gmail.com" target="mov1#opm16#mlu6.from"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par294" name="smtp.gmail.com_SMTP Server - Host" sourceValue="smtp.gmail.com" target="mov1#opm16#mlu6.serverHost"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par295" name="webratio1_SMTP Server - Password" sourceValue="webratio1" target="mov1#opm16#mlu6.serverPassword"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par296" name="587_SMTP Server - Port" sourceValue="587" target="mov1#opm16#mlu6.serverPort"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par297" name="TLS_SMTP Server - Protocol" sourceValue="TLS" target="mov1#opm16#mlu6.serverProtocol"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par298" name="1_SMTP Server - Use SSL" sourceValue="1" target="mov1#opm16#mlu6.serverUseSsl"/>
+        <LinkParameter id="mov1#opm16#switch2#oln85#par299" name="wse.webratio@gmail.com_SMTP Server - Username" sourceValue="wse.webratio@gmail.com" target="mov1#opm16#mlu6.serverUsername"/>
+      </OKLink>
+      <OKLink id="mov1#opm16#switch2#oln86" name="OKFlow79" to="mov1#opm16#mlu7" code="body">
+        <LinkParameter id="mov1#opm16#switch2#oln86#par250" name="Mail - Body_PASSING_Mail - Body" sourceLinkParameter="mov1#opm16#icu4#oln34#par23" target="mov1#opm16#mlu7.body"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par256" name="Mail - Subject_PASSING_Mail - Subject" sourceLinkParameter="mov1#opm16#icu4#oln34#par207" target="mov1#opm16#mlu7.subject"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par261" name="Mail - To_PASSING_Mail - To" sourceLinkParameter="mov1#opm16#icu4#oln34#par208" target="mov1#opm16#mlu7.to"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par271" name="Placeholder1_PASSING_Placeholder1" sourceLinkParameter="mov1#opm16#icu4#oln34#par209" target="mov1#opm16#mlu7.Placeholder1"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par272" name="Placeholder2_PASSING_Placeholder2" sourceLinkParameter="mov1#opm16#icu4#oln34#par212" target="mov1#opm16#mlu7.Placeholder2"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par265" name="wse.webratio@gmail.com_Mail - From" sourceValue="wse.webratio@gmail.com" target="mov1#opm16#mlu7.from"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par266" name="smtp.gmail.com_SMTP Server - Host" sourceValue="smtp.gmail.com" target="mov1#opm16#mlu7.serverHost"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par267" name="webratio1_SMTP Server - Password" sourceValue="webratio1" target="mov1#opm16#mlu7.serverPassword"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par268" name="587_SMTP Server - Port" sourceValue="587" target="mov1#opm16#mlu7.serverPort"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par269" name="TLS_SMTP Server - Protocol" sourceValue="TLS" target="mov1#opm16#mlu7.serverProtocol"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par270" name="1_SMTP Server - Use SSL" sourceValue="1" target="mov1#opm16#mlu7.serverUseSsl"/>
+        <LinkParameter id="mov1#opm16#switch2#oln86#par273" name="wse.webratio@gmail.com_SMTP Server - Username" sourceValue="wse.webratio@gmail.com" target="mov1#opm16#mlu7.serverUsername"/>
+      </OKLink>
+      <Case value="password"/>
+      <Case value="notification"/>
+      <Case value="body"/>
+    </SwitchUnit>
+    <MailUnit id="mov1#opm16#mlu6" name="Mail1" gr:x="460" gr:y="395" format="plainText">
+      <OKLink id="mov1#opm16#mlu6#oln87" name="OKFlow77" to="mov1#opm16#okcu15" automaticCoupling="true" gr:bendpoints="130,-105,-125,195"/>
+      <BodyTemplate xml:space="preserve">Dear $$Placeholder1$$,
+
+You have a new notification on our platform.
+
+$$Placeholder2$$
+
+Cheers</BodyTemplate>
+      <Placeholder id="mov1#opm16#mlu6#ph9" name="Placeholder1"/>
+      <Placeholder id="mov1#opm16#mlu6#ph10" name="Placeholder2"/>
+    </MailUnit>
+    <MailUnit id="mov1#opm16#mlu7" name="Mail1" gr:x="440" gr:y="145" format="plainText">
+      <OKLink id="mov1#opm16#mlu7#oln88" name="OKFlow77" to="mov1#opm16#okcu15" automaticCoupling="true"/>
+      <Placeholder id="mov1#opm16#mlu7#ph11" name="Placeholder1"/>
+      <Placeholder id="mov1#opm16#mlu7#ph12" name="Placeholder2"/>
+    </MailUnit>
+  </OperationUnits>
+</OperationModule>

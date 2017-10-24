@@ -1,34 +1,52 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="375" gr:y="205" id="mov1#opm6" name="Reputation">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm6#icu6" gr:x="30" gr:y="60">
-      <InputCollectorParameter id="mov1#opm6#icu6#icp9" name="AuthorOID"/>
-      <OKLink id="mov1#opm6#icu6#oln9" name="OKFlow9" to="mov1#opm6#lpu4">
-        <LinkParameter id="mov1#opm6#icu6#oln9#par38" name="AuthorOID_Input Array" source="mov1#opm6#icu6#icp9" target="mov1#opm6#lpu4.array"/>
-      </OKLink>
+      <OKLink id="mov1#opm6#icu6#oln72" name="OKFlow72" to="mov1#opm6#pwu8" automaticCoupling="true"/>
+      <Link id="mov1#opm6#icu6#ln68" name="Flow68" to="mov1#opm6#cru6" type="transport" validate="true">
+        <LinkParameter id="mov1#opm6#icu6#ln68#par236" name="email" source="mov1#opm6#icu6#icp9" target="mov1#opm6#cru6.email"/>
+        <LinkParameter id="mov1#opm6#icu6#ln68#par238" name="name_userName" source="mov1#opm6#icu6#icp31" target="mov1#opm6#cru6.userName"/>
+        <LinkParameter id="mov1#opm6#icu6#ln68#par240" name="name_PASSING" source="mov1#opm6#icu6#icp31" passing="true"/>
+        <LinkParameter id="mov1#opm6#icu6#ln68#par241" name="universities_PASSING" source="mov1#opm6#icu6#icp32" passing="true"/>
+        <LinkParameter id="mov1#opm6#icu6#ln68#par278" name="email_PASSING" source="mov1#opm6#icu6#icp9" passing="true"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp9" name="email"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp31" name="name"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp32" name="universities"/>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="580" gr:y="90" id="mov1#opm6#okcu5" name="OK Port5">
-      <OutputCollectorParameter id="mov1#opm6#okcu5#ocp2" name="Reputation"/>
+    <CreateUnit id="mov1#opm6#cru5" name="Create Researcher" gr:x="590" gr:y="120" entity="ent3">
+      <OKLink id="mov1#opm6#cru5#oln74" name="OKFlow74" to="mov1#opm6#miu18">
+        <LinkParameter id="mov1#opm6#cru5#oln74#par243" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par274" name="You have been added as an author to our platform_Mail - Subject" sourceValue="You have been added as an author to our platform" target="mov1#opm6#miu18.mov1#opm16#icu4#icp50"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par275" name="userName_PASSING_Placeholder1" sourceLinkParameter="mov1#opm6#cru6#oln71#par234" target="mov1#opm6#miu18.mov1#opm16#icu4#icp53"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par276" name="password_PASSING_Placeholder2" sourceLinkParameter="mov1#opm6#cru6#oln71#par233" target="mov1#opm6#miu18.mov1#opm16#icu4#icp54"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par277" name="password_template" sourceValue="password" target="mov1#opm6#miu18.mov1#opm16#icu4#icp52"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par280" name="email_PASSING_Mail - To" sourceLinkParameter="mov1#opm6#cru6#oln71#par279" target="mov1#opm6#miu18.mov1#opm16#icu4#icp51"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit id="mov1#opm6#cru6" name="Create User" gr:x="385" gr:y="100" entity="User">
+      <OKLink id="mov1#opm6#cru6#oln71" name="Flow9" to="mov1#opm6#cru5">
+        <LinkParameter id="mov1#opm6#cru6#oln71#par230" name="name" sourceLinkParameter="mov1#opm6#icu6#ln68#par240" target="mov1#opm6#cru5.ent3#att10"/>
+        <LinkParameter id="mov1#opm6#cru6#oln71#par231" name="oid_User.oid(ResearcherToUser)" source="userOIDArray" target="mov1#opm6#cru5.rel1#role2.userOID"/>
+        <LinkParameter id="mov1#opm6#cru6#oln71#par232" name="oid_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov1#opm6#cru6#oln71#par233" name="password_PASSING" source="passwordArray" passing="true"/>
+        <LinkParameter id="mov1#opm6#cru6#oln71#par234" name="userName_PASSING" source="userNameArray" passing="true"/>
+        <LinkParameter id="mov1#opm6#cru6#oln71#par242" name="universities_PASSING_University.oid(ResearcherToUniversity)" sourceLinkParameter="mov1#opm6#icu6#ln68#par241" target="mov1#opm6#cru5.rel9#role17.ent8#att24"/>
+        <LinkParameter id="mov1#opm6#cru6#oln71#par279" name="email_PASSING" sourceLinkParameter="mov1#opm6#icu6#ln68#par278" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <PasswordUnit gr:x="295" gr:y="245" id="mov1#opm6#pwu8" name="Password8" passwordSize="8">
+      <OKLink id="mov1#opm6#pwu8#oln73" name="OKFlow73" to="mov1#opm6#cru6">
+        <LinkParameter id="mov1#opm6#pwu8#oln73#par237" name="Generated Password_password" source="password" target="mov1#opm6#cru6.password"/>
+        <LinkParameter id="mov1#opm6#pwu8#oln73#par239" name="Generated Password_PASSING" source="password" passing="true"/>
+      </OKLink>
+    </PasswordUnit>
+    <ModuleInstanceUnit gr:x="520" gr:y="340" id="mov1#opm6#miu18" action="true" moduleId="mov1#opm16">
+      <OKLink id="mov1#opm6#miu18#oln75" name="OKFlow75" to="mov1#opm6#okcu5">
+        <LinkParameter id="mov1#opm6#miu18#oln75#par244" name="oid_PASSING_ResearcherOID" sourceLinkParameter="mov1#opm6#cru5#oln74#par243" target="mov1#opm6#okcu5#ocp2"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <OKCollectorUnit gr:x="780" gr:y="215" id="mov1#opm6#okcu5" name="OK Port5">
+      <OutputCollectorParameter id="mov1#opm6#okcu5#ocp2" name="ResearcherOID"/>
     </OKCollectorUnit>
-    <QueryUnit gr:x="380" gr:y="195" id="mov1#opm6#qu4" name="Query1" mode="select" language="SQL" db="db2">
-      <QueryInput id="mov1#opm6#qu4#qi4" name="authorOID" required="true"/>
-      <QueryText xml:space="preserve">SELECT (t1 * 100) / (t2 + 1) AS reputation FROM (
-SELECT
-(SELECT COUNT(*) AS pubs FROM publication
-INNER JOIN author_publication ON publication.oid = author_publication.publication_oid
-WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t1,
-(SELECT COUNT(*) AS colecs FROM publication RIGHT JOIN collection_publication ON publication.oid = collection_publication.publication_oid WHERE publication.oid = CAST( :authorOID AS INTEGER) ) AS t2) as t3</QueryText>
-      <QueryOutput id="mov1#opm6#qu4#qo4" name="QueryOutput1" type="decimal"/>
-      <OKLink id="mov1#opm6#qu4#oln19" name="OKFlow4" to="mov1#opm6#lpu4" gr:bendpoints="41,-82,66,88">
-        <LinkParameter id="mov1#opm6#qu4#oln19#par70" name="QueryOutput1_PASSING" source="data[].queryOutput1" passing="true"/>
-      </OKLink>
-    </QueryUnit>
-    <LoopUnit gr:x="350" gr:y="25" id="mov1#opm6#lpu4" name="Loop1">
-      <OKLink id="mov1#opm6#lpu4#oln22" name="OKFlow11" to="mov1#opm6#okcu5" code="end">
-        <LinkParameter id="mov1#opm6#lpu4#oln22#par71" name="QueryOutput1" target="mov1#opm6#okcu5#ocp2" sourceLinkParameter="mov1#opm6#qu4#oln19#par70"/>
-      </OKLink>
-      <OKLink id="mov1#opm6#lpu4#oln23" name="OKFlow3" to="mov1#opm6#qu4" gr:bendpoints="-58,88,-83,-82" code="next">
-        <LinkParameter id="mov1#opm6#lpu4#oln23#par72" name="Next Element_authorOID" source="next" target="mov1#opm6#qu4.mov1#opm6#qu4#qi4"/>
-      </OKLink>
-    </LoopUnit>
   </OperationUnits>
 </OperationModule>

@@ -1,0 +1,53 @@
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="810" gr:y="135" id="wsv2#job1" name="Email about notifications">
+  <OperationUnits>
+    <InitJobUnit id="wsv2#job1#iju1" name="Init Job">
+      <OKLink id="wsv2#job1#iju1#oln53" name="OKFlow53" to="wsv2#job1#seu25" automaticCoupling="true"/>
+    </InitJobUnit>
+    <ModuleInstanceUnit gr:x="415" gr:y="170" id="wsv2#job1#miu11" action="true" moduleId="mov1#opm10">
+      <OKLink id="wsv2#job1#miu11#oln56" name="OKFlow56" to="wsv2#job1#lpu6">
+        <LinkParameter id="wsv2#job1#miu11#oln56#par195" name="Notifications_Input Array" source="mov1#opm10#okcu9#ocp3" target="wsv2#job1#lpu6.array"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <SelectorUnit gr:x="135" gr:y="90" id="wsv2#job1#seu25" name="GetResearchers" entity="ent3" distinctAttributes="ent3#att9">
+      <OKLink id="wsv2#job1#seu25#oln54" name="OKFlow54" to="wsv2#job1#lpu4">
+        <LinkParameter id="wsv2#job1#seu25#oln54#par194" name="oid_Input Array" source="ent3#att9Array" target="wsv2#job1#lpu4.array"/>
+      </OKLink>
+    </SelectorUnit>
+    <LoopUnit gr:x="430" gr:y="55" id="wsv2#job1#lpu4" name="Loop4">
+      <OKLink id="wsv2#job1#lpu4#oln55" name="OKFlow55" to="wsv2#job1#miu11" code="next">
+        <LinkParameter id="wsv2#job1#lpu4#oln55#par193" name="Next Element_ResearcherOID" source="next" target="wsv2#job1#miu11.mov1#opm10#icu10#icp28"/>
+      </OKLink>
+      <OKLink id="wsv2#job1#lpu4#oln62" name="OKFlow62" to="wsv2#job1#seu26" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <LoopUnit gr:x="365" gr:y="290" id="wsv2#job1#lpu6" name="Loop6">
+      <OKLink id="wsv2#job1#lpu6#oln58" name="OKFlow58" to="wsv2#job1#seu27" code="next" gr:bendpoints="-150,19,100,-66">
+        <LinkParameter id="wsv2#job1#lpu6#oln58#par196" name="Next Element_KeyCondition19 [oid]" source="next" target="wsv2#job1#seu27#su34#kcond19.ent2#att8"/>
+      </OKLink>
+      <OKLink id="wsv2#job1#lpu6#oln60" name="OKFlow60" to="wsv2#job1#lpu4" automaticCoupling="true" code="end" gr:bendpoints="-9,-129,-74,106"/>
+    </LoopUnit>
+    <SelectorUnit id="wsv2#job1#seu26" name="UselessSelector" gr:x="645" gr:y="35" entity="ent3"/>
+    <SelectorUnit gr:x="50" gr:y="215" id="wsv2#job1#seu27" name="GetNotification" entity="ent2" distinctAttributes="ent2#att8 ent2#att12 rel4#role7.rel1#role2.email">
+      <Selector id="wsv2#job1#seu27#su34" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="wsv2#job1#seu27#su34#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="wsv2#job1#seu27#oln63" name="OKFlow63" to="wsv2#job1#inn1">
+        <LinkParameter id="wsv2#job1#seu27#oln63#par202" name="NotificationToResearcher.ResearcherToUser.email_Input" source="rel4#role7$rel1#role2$emailArray" target="wsv2#job1#inn1.isnotnull"/>
+        <LinkParameter id="wsv2#job1#seu27#oln63#par203" name="message_PASSING" source="ent2#att12Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="45" gr:y="390" id="wsv2#job1#inn1" name="Is Not Null1">
+      <OKLink id="wsv2#job1#inn1#oln76" name="Flow57" to="wsv2#job1#miu19">
+        <LinkParameter id="wsv2#job1#inn1#oln76#par258" name="You have a new notification_Mail - Subject" target="wsv2#job1#miu19.mov1#opm16#icu4#icp50" sourceValue="You have a new notification"/>
+        <LinkParameter id="wsv2#job1#inn1#oln76#par259" name="notification_template" target="wsv2#job1#miu19.mov1#opm16#icu4#icp52" sourceValue="notification"/>
+        <LinkParameter id="wsv2#job1#inn1#oln76#par260" name="User_Placeholder1" target="wsv2#job1#miu19.mov1#opm16#icu4#icp53" sourceValue="User"/>
+        <LinkParameter id="wsv2#job1#inn1#oln76#par262" name="Input Value_Mail - To" source="inputValue" target="wsv2#job1#miu19.mov1#opm16#icu4#icp51"/>
+        <LinkParameter id="wsv2#job1#inn1#oln76#par263" name="message_PASSING_Placeholder2" sourceLinkParameter="wsv2#job1#seu27#oln63#par203" target="wsv2#job1#miu19.mov1#opm16#icu4#icp54"/>
+        <LinkParameter id="wsv2#job1#inn1#oln76#par264" name="message_PASSING_Mail - Body" sourceLinkParameter="wsv2#job1#seu27#oln63#par203" target="wsv2#job1#miu19.mov1#opm16#icu4#icp49"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <ModuleInstanceUnit gr:x="225" gr:y="525" id="wsv2#job1#miu19" action="true" moduleId="mov1#opm16">
+      <OKLink id="wsv2#job1#miu19#oln78" name="OKFlow59" to="wsv2#job1#lpu6" automaticCoupling="true" gr:bendpoints="129,-29,-121,56"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+  <Trigger id="wsv2#job1#trg2" name="Trigger2" schedulePolicy="everyDay" hours="18" minutes="16" seconds="30"/>
+</Job>

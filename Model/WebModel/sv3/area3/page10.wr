@@ -1,0 +1,129 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area3#page10" name="Publication Management" gr:x="25" gr:y="90">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#area3#page10#pwu5" name="Most recent publications" linkOrder="sv3#area3#page10#pwu5#ln66 sv3#area3#page10#pwu5#ln69" customDescriptor="false" gr:x="0" gr:y="85" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att5 ent1#att3 ent1#att4">
+      <Link id="sv3#area3#page10#pwu5#ln66" name="Delete" to="sv3#area3#miu13" type="normal" validate="true">
+        <LinkParameter id="sv3#area3#page10#pwu5#ln66#par192" name="oid_publicationID" source="data[].ent1#att1" target="sv3#area3#miu13.mov1#opm13#icu13#icp38"/>
+      </Link>
+      <Link id="sv3#area3#page10#pwu5#ln69" name="Edit" to="sv3#area3#page10#enu13" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <MultiMessageUnit id="sv3#area3#page10#mssu7" name="Feedback" gr:x="125" gr:y="0"/>
+    <EntryUnit gr:x="210" gr:y="85" id="sv3#area3#page10#enu13" name="Edit Publication" linkOrder="sv3#area3#page10#enu13#ln70" entity="ent1">
+      <Link id="sv3#area3#page10#enu13#ln70" name="Flow70" to="sv3#area3#miu12" type="normal" validate="true">
+        <LinkParameter id="sv3#area3#page10#enu13#ln70#par185" name="abstract_publicationAbstract" source="sv3#area3#page10#enu13#fld34" target="sv3#area3#miu12.mov1#opm12#icu12#icp37"/>
+        <LinkParameter id="sv3#area3#page10#enu13#ln70#par186" name="Key [oid]_publicationID" source="key.ent1#att1" target="sv3#area3#miu12.mov1#opm12#icu12#icp33"/>
+        <LinkParameter id="sv3#area3#page10#enu13#ln70#par187" name="title_publicationTitle" source="sv3#area3#page10#enu13#fld22" target="sv3#area3#miu12.mov1#opm12#icu12#icp34"/>
+        <LinkParameter id="sv3#area3#page10#enu13#ln70#par188" name="venue_publicationVenue" source="sv3#area3#page10#enu13#fld27" target="sv3#area3#miu12.mov1#opm12#icu12#icp35"/>
+        <LinkParameter id="sv3#area3#page10#enu13#ln70#par189" name="year_publicationYear" source="sv3#area3#page10#enu13#fld33" target="sv3#area3#miu12.mov1#opm12#icu12#icp36"/>
+      </Link>
+      <Field id="sv3#area3#page10#enu13#fld22" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Field id="sv3#area3#page10#enu13#fld27" name="venue" type="string" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv3#area3#page10#enu13#fld33" name="year" type="integer" modifiable="true" attribute="ent1#att4"/>
+      <Field id="sv3#area3#page10#enu13#fld34" name="abstract" type="string" modifiable="true" attribute="ent1#att5"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell rowspan="3" colspan="8">
+        <layout:Unit unitId="sv3#area3#page10#pwu5">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Link link="sv3#area3#page10#pwu5#ln66"/>
+          <layout:Link link="sv3#area3#page10#pwu5#ln69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page10#mssu7"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area3#page10#enu13">
+          <layout:Link link="sv3#area3#page10#enu13#ln70"/>
+          <layout:Field field="sv3#area3#page10#enu13#fld22"/>
+          <layout:Field field="sv3#area3#page10#enu13#fld27"/>
+          <layout:Field field="sv3#area3#page10#enu13#fld33"/>
+          <layout:Field field="sv3#area3#page10#enu13#fld34"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

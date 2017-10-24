@@ -1,16 +1,20 @@
-<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="360" gr:y="125" id="wsv2#job2" name="Calculate Reputation">
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="180" gr:y="130" id="wsv2#job2" name="Calculate Reputation">
   <OperationUnits>
     <InitJobUnit id="wsv2#job2#iju2" name="Init Job" gr:x="0" gr:y="35">
       <OKLink id="wsv2#job2#iju2#oln26" name="OKFlow26" to="wsv2#job2#seu1" automaticCoupling="true"/>
     </InitJobUnit>
     <QueryUnit id="wsv2#job2#qu5" name="Query1" gr:x="30" gr:y="205" mode="select" language="SQL" db="db2">
       <QueryInput id="wsv2#job2#qu5#qi5" name="authorOID" required="true"/>
-      <QueryText xml:space="preserve">SELECT ((t1 * 100) / (t2 + 1) + 1) AS reputation FROM (
+      <QueryText xml:space="preserve">SELECT (((t2 + 1) * 100) / (t1 + 1)) AS reputation FROM (
 SELECT
 (SELECT COUNT(*) AS pubs FROM publication
 INNER JOIN author_publication ON publication.oid = author_publication.publication_oid
 WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t1,
-(SELECT COUNT(*) AS colecs FROM publication RIGHT JOIN collection_publication ON publication.oid = collection_publication.publication_oid WHERE publication.oid = CAST( :authorOID AS INTEGER) ) AS t2) as t3</QueryText>
+(SELECT COUNT(*) FROM (
+SELECT * FROM publication
+INNER JOIN
+author_publication ON publication.oid = author_publication.publication_oid WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t4
+LEFT JOIN collection_publication ON t4.oid = collection_publication.collection_oid) AS t2) AS t3</QueryText>
       <QueryOutput id="wsv2#job2#qu5#qo5" name="QueryOutput1" type="decimal"/>
       <OKLink id="wsv2#job2#qu5#oln24" name="OKFlow4" to="wsv2#job2#mfu2">
         <LinkParameter id="wsv2#job2#qu5#oln24#par73" name="QueryOutput1_PASSING" source="data[].queryOutput1" passing="true"/>

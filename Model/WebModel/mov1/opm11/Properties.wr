@@ -1,0 +1,31 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="615" gr:y="395" id="mov1#opm11" name="CreateNotification">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm11#icu11" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm11#icu11#oln65" name="OKFlow65" to="mov1#opm11#lpu7">
+        <LinkParameter id="mov1#opm11#icu11#oln65#par201" name="message_PASSING" source="mov1#opm11#icu11#icp30" passing="true"/>
+        <LinkParameter id="mov1#opm11#icu11#oln65#par210" name="Researcher.oid(NotificationToResearcher)_Input Array" source="mov1#opm11#icu11#icp29" target="mov1#opm11#lpu7.array"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm11#icu11#icp29" name="Researcher.oid(NotificationToResearcher)"/>
+      <InputCollectorParameter id="mov1#opm11#icu11#icp30" name="message"/>
+    </InputCollectorUnit>
+    <CreateUnit id="mov1#opm11#cru10" name="CreateNotifications" gr:x="720" gr:y="230" entity="ent2">
+      <OKLink id="mov1#opm11#cru10#oln66" name="OKFlow66" to="mov1#opm11#lpu7" automaticCoupling="true"/>
+    </CreateUnit>
+    <TimeUnit gr:x="570" gr:y="325" id="mov1#opm11#tmu2" name="Time2">
+      <OKLink id="mov1#opm11#tmu2#oln22" name="Flow64" to="mov1#opm11#cru10">
+        <LinkParameter id="mov1#opm11#tmu2#oln22#par199" name="3_shown" target="mov1#opm11#cru10.ent2#att11" sourceValue="3"/>
+        <LinkParameter id="mov1#opm11#tmu2#oln22#par200" name="Current/Input Timestamp_timestamp" source="currentTimestamp" target="mov1#opm11#cru10.ent2#att14"/>
+        <LinkParameter id="mov1#opm11#tmu2#oln22#par214" name="message_PASSING_message" sourceLinkParameter="mov1#opm11#lpu7#oln23#par211" target="mov1#opm11#cru10.ent2#att12"/>
+        <LinkParameter id="mov1#opm11#tmu2#oln22#par215" name="Next Element_PASSING_Researcher.oid(NotificationToResearcher)" sourceLinkParameter="mov1#opm11#lpu7#oln23#par213" target="mov1#opm11#cru10.rel4#role7.ent3#att9"/>
+      </OKLink>
+    </TimeUnit>
+    <OKCollectorUnit gr:x="905" gr:y="175" id="mov1#opm11#okcu10" name="OK Port10"/>
+    <LoopUnit gr:x="550" gr:y="110" id="mov1#opm11#lpu7" name="Loop7">
+      <OKLink id="mov1#opm11#lpu7#oln23" name="OKFlow23" to="mov1#opm11#tmu2" code="next">
+        <LinkParameter id="mov1#opm11#lpu7#oln23#par211" name="message_PASSING" sourceLinkParameter="mov1#opm11#icu11#oln65#par201" passing="true"/>
+        <LinkParameter id="mov1#opm11#lpu7#oln23#par213" name="Next Element_PASSING" source="next" passing="true"/>
+      </OKLink>
+      <OKLink id="mov1#opm11#lpu7#oln39" name="OKFlow39" to="mov1#opm11#okcu10" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+  </OperationUnits>
+</OperationModule>

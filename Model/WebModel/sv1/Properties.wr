@@ -1,3 +1,3 @@
-<SiteView id="sv1" name="Researcher" protected="false" landmarks="sv1#area4 sv1#area1" homePage="sv1#area4#page19" customURLName="home">
+<SiteView id="sv1" name="Researcher" protected="false" landmarks="sv1#area4 sv1#area1 sv1#area5" homePage="sv1#area4#page19" customURLName="researcher">
   <OperationUnits/>
 </SiteView>

@@ -1,0 +1,51 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="915" gr:y="50" id="sv1#area4#page18" name="Search Publication" customURLName="search">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area4#page18#inu5" name="Search Results Pub" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
+      <Selector id="sv1#area4#page18#inu5#su11" defaultPolicy="fill" booleanOperator="or">
+        <AttributesCondition id="sv1#area4#page18#inu5#su11#acond2" name="Title Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att2" ignoreCase="true"/>
+        <AttributesCondition id="sv1#area4#page18#inu5#su11#acond5" name="Abstract Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att5" ignoreCase="true"/>
+        <AttributesCondition id="sv1#area4#page18#inu5#su11#acond6" name="Keywords Contains Keyword" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="rel3#role6.ent5#att16"/>
+        <RelationshipRoleCondition id="sv1#area4#page18#inu5#su11#rcond7" name="Author Contains Keyword" predicate="in" implied="true" role="rel2#role3"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page18#inu5">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

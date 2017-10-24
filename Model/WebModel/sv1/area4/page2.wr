@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="865" gr:y="575" id="sv1#area4#page2" name="Show Collections" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="625" id="sv1#area4#page2" name="Collections" landmark="true" customURLName="collections">
   <ContentUnits>
     <IndexUnit id="sv1#area4#page2#inu4" name="Collections" linkOrder="sv1#area4#page2#inu4#ln45" gr:x="295" gr:y="90" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23">
       <Link id="sv1#area4#page2#inu4#ln45" name="Show" to="sv1#area4#page14#dau3" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-497,24,533,195"/>
