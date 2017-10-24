@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="845" id="sv1#area4#page16" name="Edit Coll">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="75" gr:y="845" id="sv1#area4#page16" name="Edit Coll" customURLName="collections-edit">
   <ContentUnits>
     <EntryUnit gr:x="190" gr:y="10" id="sv1#area4#page16#enu8" name="Edit Coll" linkOrder="sv1#area4#page16#enu8#ln12" entity="ent7">
       <Link id="sv1#area4#page16#enu8#ln12" name="Update" to="sv1#area4#mfu1" type="normal" validate="true">

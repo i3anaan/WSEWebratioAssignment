@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="915" gr:y="50" id="sv1#area4#page18" name="Search Publication">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="915" gr:y="50" id="sv1#area4#page18" name="Search Publication" customURLName="search">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv1#area4#page18#inu5" name="Search Results Pub" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
       <Selector id="sv1#area4#page18#inu5#su11" defaultPolicy="fill" booleanOperator="or">

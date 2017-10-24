@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page2" name="All authors" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page2" name="All authors" landmark="true" customURLName="authors">
   <ContentUnits>
     <MultiDataUnit id="sv1#area1#page2#mdu1" entity="ent3" displayAttributes="ent3#att10 ent3#att9 ent3#att7" gr:x="0" gr:y="0" name="All authors">
       <Property id="sv1#area1#page2#mdu1#prop5" name="Reputation"/>
