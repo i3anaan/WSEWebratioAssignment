@@ -1,8 +1,55 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page8" name="Dashboard" customURLName="administrator" gr:x="769" gr:y="94">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page8" name="Administrator Dashboard" customURLName="administrator" gr:x="1010" gr:y="5">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#page8#pwu6" name="Most recent comments" customDescriptor="false" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="rel10#role19.ent3#att10 ent6#att18"/>
+    <PowerIndexUnit id="sv3#page8#pwu9" name="Most recent publications" customDescriptor="false" gr:x="185" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 countDistinct(rel2#role4.ent3#att10)"/>
+    <PowerIndexUnit id="sv3#page8#pwu10" name="Author Leaderboard" customDescriptor="false" gr:x="5" gr:y="95" sortable="false" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att10 ent3#att7"/>
+  </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#pwu6">
+          <layout:Attribute attribute="rel10#role19.ent3#att10"/>
+          <layout:Attribute attribute="ent6#att18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#pwu9">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="countDistinct(rel2#role4.ent3#att10)"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#pwu10">
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att7"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

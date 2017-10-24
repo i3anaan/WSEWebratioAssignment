@@ -1,37 +1,23 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area6#page4" name="Researcher Management" gr:x="0" gr:y="0">
   <ContentUnits>
-    <PowerIndexUnit id="sv3#area6#page4#pwu2" name="List of Researchers" linkOrder="sv3#area6#page4#pwu2#ln15" customDescriptor="false" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att10 rel1#role2.userName rel1#role2.email rel9#role17.ent8#att25 rel9#role17.ent8#att26 rel9#role17.ent8#att27">
-      <Link id="sv3#area6#page4#pwu2#ln15" name="Edit" to="sv3#area6#page4#enu6" type="normal" validate="true">
-        <LinkParameter id="sv3#area6#page4#pwu2#ln15#par24" name="oid_Key Condition [oid]" source="data[].ent3#att9" target="sv3#area6#page4#enu6.ent3#att9"/>
-        <LinkParameter id="sv3#area6#page4#pwu2#ln15#par25" name="ResearcherToUniversity.name_University - Preselection" target="sv3#area6#page4#enu6#sfld3_presel" sourceValue="$$NULL$$"/>
-        <LinkParameter id="sv3#area6#page4#pwu2#ln15#par26" name="ResearcherToUniversity.name_University [label]" source="data[].rel9#role17$ent8#att25" target="sv3#area6#page4#enu6#sfld3_label"/>
-        <LinkParameter id="sv3#area6#page4#pwu2#ln15#par27" name="ResearcherToUniversity.name_University [output]" source="data[].rel9#role17$ent8#att25" target="sv3#area6#page4#enu6#sfld3_output"/>
+    <PowerIndexUnit id="sv3#area6#page4#pwu2" name="List of Researchers" customDescriptor="false" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att10 rel1#role2.userName rel1#role2.email rel9#role17.ent8#att25 rel9#role17.ent8#att26 rel9#role17.ent8#att27" linkOrder="sv3#area6#page4#pwu2#ln80">
+      <Link id="sv3#area6#page4#pwu2#ln80" name="Flow80" to="sv3#area6#page4#miu8" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page4#pwu2#ln80#par157" name="oid_researcherID" source="data[].ent3#att9" target="sv3#area6#page4#miu8.mov1#opm4#icu16#icp43"/>
       </Link>
     </PowerIndexUnit>
-    <EntryUnit id="sv3#area6#page4#enu6" name="Edit Researcher" gr:x="275" gr:y="0" entity="ent3" fieldOrder="sv3#area6#page4#enu6#fld13 sv3#area6#page4#enu6#sfld3">
-      <Field id="sv3#area6#page4#enu6#fld13" name="name" type="string" modifiable="true" attribute="ent3#att10"/>
-      <SelectionField id="sv3#area6#page4#enu6#sfld3" name="University" type="integer" role="rel9#role17"/>
-    </EntryUnit>
-    <SelectorUnit id="sv3#area6#page4#seu15" name="Universities" gr:x="290" gr:y="165" entity="ent8" distinctAttributes="ent8#att25 ent8#att24">
-      <Link id="sv3#area6#page4#seu15#ln17" name="Flow15" to="sv3#area6#page4#enu6" type="transport" validate="true">
-        <LinkParameter id="sv3#area6#page4#seu15#ln17#par28" name="name_University [label]" source="ent8#att25Array" target="sv3#area6#page4#enu6#sfld3_label"/>
-        <LinkParameter id="sv3#area6#page4#seu15#ln17#par29" name="oid_University [output]" source="ent8#att25Array" target="sv3#area6#page4#enu6#sfld3_output"/>
-        <LinkParameter id="sv3#area6#page4#seu15#ln17#par30" name="oid_Key Condition [oid]" source="ent8#att24Array" target="sv3#area6#page4#enu6.ent3#att9"/>
-        <LinkParameter id="sv3#area6#page4#seu15#ln17#par31" name="name_University - Preselection" source="ent8#att25Array" target="sv3#area6#page4#enu6#sfld3_presel"/>
-      </Link>
-    </SelectorUnit>
+    <ModuleInstanceUnit gr:x="215" gr:y="5" id="sv3#area6#page4#miu8" action="true" name="Delete Researcher" moduleId="mov1#opm4"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell rowspan="3" colspan="8">
         <layout:Unit unitId="sv3#area6#page4#pwu2">
-          <layout:Link link="sv3#area6#page4#pwu2#ln15"/>
           <layout:Attribute attribute="ent3#att10"/>
           <layout:Attribute attribute="rel1#role2.userName"/>
           <layout:Attribute attribute="rel1#role2.email"/>
           <layout:Attribute attribute="rel9#role17.ent8#att25"/>
           <layout:Attribute attribute="rel9#role17.ent8#att26"/>
           <layout:Attribute attribute="rel9#role17.ent8#att27"/>
+          <layout:Link link="sv3#area6#page4#pwu2#ln80"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -41,12 +27,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell rowspan="3" colspan="4">
-        <layout:Unit unitId="sv3#area6#page4#enu6">
-          <layout:Field field="sv3#area6#page4#enu6#fld13"/>
-          <layout:Field field="sv3#area6#page4#enu6#sfld3"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -60,7 +41,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -74,7 +55,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

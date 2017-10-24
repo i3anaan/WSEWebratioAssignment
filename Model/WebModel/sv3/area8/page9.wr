@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area8#page9" name="Comment Management" gr:x="25" gr:y="90">
   <ContentUnits>
-    <PowerIndexUnit id="sv3#area8#page9#pwu4" name="Most recent comments" linkOrder="sv3#area8#page9#pwu4#ln64 sv3#area8#page9#pwu4#ln73" customDescriptor="false" gr:x="0" gr:y="85" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att19 ent6#att20 ent6#att18">
+    <PowerIndexUnit id="sv3#area8#page9#pwu4" name="Most recent comments" linkOrder="sv3#area8#page9#pwu4#ln64 sv3#area8#page9#pwu4#ln73" customDescriptor="false" gr:x="0" gr:y="85" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att19 ent6#att20 rel10#role19.ent3#att10 ent6#att18">
       <Link id="sv3#area8#page9#pwu4#ln64" name="Delete" to="sv3#area8#miu17" type="normal" validate="true">
         <LinkParameter id="sv3#area8#page9#pwu4#ln64#par229" name="oid_commentID" source="data[].ent6#att17" target="sv3#area8#miu17.mov1#opm15#icu15#icp9"/>
       </Link>
@@ -23,11 +23,12 @@
     <layout:Row>
       <layout:Cell rowspan="3" colspan="8">
         <layout:Unit unitId="sv3#area8#page9#pwu4">
-          <layout:Attribute attribute="ent6#att19"/>
-          <layout:Attribute attribute="ent6#att20"/>
-          <layout:Attribute attribute="ent6#att18"/>
           <layout:Link link="sv3#area8#page9#pwu4#ln64"/>
           <layout:Link link="sv3#area8#page9#pwu4#ln73"/>
+          <layout:Attribute attribute="ent6#att19"/>
+          <layout:Attribute attribute="ent6#att20"/>
+          <layout:Attribute attribute="rel10#role19.ent3#att10"/>
+          <layout:Attribute attribute="ent6#att18"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
