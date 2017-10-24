@@ -58,7 +58,6 @@
     <Attribute id="ent3#att9" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att10" name="name" type="string" db:column="name"/>
     <Attribute id="ent3#att7" name="reputation" type="float" db:column="reputation"/>
-    <Attribute id="ent3#att13" name="university" db:column="university" type="string" key="false"/>
   </Entity>
   <Relationship id="rel1" name="User_Researcher" sourceEntity="User" targetEntity="ent3" db:database="db2" db:table="researcher">
     <RelationshipRole1 id="rel1#role1" name="UserToResearcher" maxCard="1">

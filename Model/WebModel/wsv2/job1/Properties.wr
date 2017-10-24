@@ -8,9 +8,6 @@
         <LinkParameter id="wsv2#job1#miu11#oln56#par195" name="Notifications_Input Array" source="mov1#opm10#okcu9#ocp3" target="wsv2#job1#lpu6.array"/>
       </OKLink>
     </ModuleInstanceUnit>
-    <MailUnit gr:x="245" gr:y="440" id="wsv2#job1#mlu1" name="Mail1" format="plainText">
-      <OKLink id="wsv2#job1#mlu1#oln59" name="OKFlow59" to="wsv2#job1#lpu6" automaticCoupling="true" gr:bendpoints="129,-29,-121,56"/>
-    </MailUnit>
     <SelectorUnit gr:x="135" gr:y="90" id="wsv2#job1#seu25" name="GetResearchers" entity="ent3" distinctAttributes="ent3#att9">
       <OKLink id="wsv2#job1#seu25#oln54" name="OKFlow54" to="wsv2#job1#lpu4">
         <LinkParameter id="wsv2#job1#seu25#oln54#par194" name="oid_Input Array" source="ent3#att9Array" target="wsv2#job1#lpu4.array"/>
@@ -38,13 +35,18 @@
         <LinkParameter id="wsv2#job1#seu27#oln63#par203" name="message_PASSING" source="ent2#att12Array" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="45" gr:y="390" id="wsv2#job1#inn1" name="Is Not Null1">
-      <OKLink id="wsv2#job1#inn1#oln64" name="OKFlow64" to="wsv2#job1#mlu1">
-        <LinkParameter id="wsv2#job1#inn1#oln64#par204" name="message_PASSING_Mail - Body" sourceLinkParameter="wsv2#job1#seu27#oln63#par203" target="wsv2#job1#mlu1.body"/>
-        <LinkParameter id="wsv2#job1#inn1#oln64#par205" name="You have a new notification_Mail - Subject" sourceValue="You have a new notification" target="wsv2#job1#mlu1.subject"/>
-        <LinkParameter id="wsv2#job1#inn1#oln64#par206" name="Input Value_Mail - To" source="inputValue" target="wsv2#job1#mlu1.to"/>
+    <IsNotNullUnit gr:x="30" gr:y="380" id="wsv2#job1#inn1" name="Is Not Null1">
+      <OKLink id="wsv2#job1#inn1#oln64" name="OKFlow64" to="wsv2#job1#miu19">
+        <LinkParameter id="wsv2#job1#inn1#oln64#par249" name="You have new notifications_Mail - Subject" sourceValue="You have new notifications" target="wsv2#job1#miu19.mov1#opm15#icu15#icp44"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par250" name="Input Value_Mail - To" source="inputValue" target="wsv2#job1#miu19.mov1#opm15#icu15#icp45"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par271" name="message_PASSING_Placeholder2" sourceLinkParameter="wsv2#job1#seu27#oln63#par203" target="wsv2#job1#miu19.mov1#opm15#icu15#icp48"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par272" name="notifications_template" sourceValue="notification" target="wsv2#job1#miu19.mov1#opm15#icu15#icp46"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par273" name="User_Placeholder1" sourceValue="User" target="wsv2#job1#miu19.mov1#opm15#icu15#icp47"/>
       </OKLink>
     </IsNotNullUnit>
+    <ModuleInstanceUnit gr:x="165" gr:y="455" id="wsv2#job1#miu19" action="true" moduleId="mov1#opm15">
+      <OKLink id="wsv2#job1#miu19#oln78" name="OKFlow59" to="wsv2#job1#lpu6" automaticCoupling="true" gr:bendpoints="129,-29,-121,56"/>
+    </ModuleInstanceUnit>
   </OperationUnits>
   <Trigger id="wsv2#job1#trg2" name="Trigger2" schedulePolicy="everyDay" hours="9" minutes="0" seconds="0"/>
 </Job>

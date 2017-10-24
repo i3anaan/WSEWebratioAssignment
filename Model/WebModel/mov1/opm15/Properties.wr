@@ -1,0 +1,77 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="115" gr:y="510" id="mov1#opm15" name="SendEmail">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm15#icu15" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm15#icu15#oln76" name="OKFlow76" to="mov1#opm15#switch1">
+        <LinkParameter id="mov1#opm15#icu15#oln76#par251" name="Mail - Body_PASSING" source="mov1#opm15#icu15#icp43" passing="true"/>
+        <LinkParameter id="mov1#opm15#icu15#oln76#par252" name="Mail - Subject_PASSING" source="mov1#opm15#icu15#icp44" passing="true"/>
+        <LinkParameter id="mov1#opm15#icu15#oln76#par253" name="Mail - To_PASSING" source="mov1#opm15#icu15#icp45" passing="true"/>
+        <LinkParameter id="mov1#opm15#icu15#oln76#par254" name="Placeholder1_PASSING" source="mov1#opm15#icu15#icp47" passing="true"/>
+        <LinkParameter id="mov1#opm15#icu15#oln76#par255" name="Placeholder2_PASSING" source="mov1#opm15#icu15#icp48" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm15#icu15#icp43" name="Mail - Body"/>
+      <InputCollectorParameter id="mov1#opm15#icu15#icp44" name="Mail - Subject"/>
+      <InputCollectorParameter id="mov1#opm15#icu15#icp45" name="Mail - To"/>
+      <InputCollectorParameter id="mov1#opm15#icu15#icp46" name="template"/>
+      <InputCollectorParameter id="mov1#opm15#icu15#icp47" name="Placeholder1"/>
+      <InputCollectorParameter id="mov1#opm15#icu15#icp48" name="Placeholder2"/>
+    </InputCollectorUnit>
+    <MailUnit id="mov1#opm15#mlu2" name="Mail1" gr:x="495" gr:y="285" format="plainText">
+      <OKLink id="mov1#opm15#mlu2#oln77" name="OKFlow77" to="mov1#opm15#okcu14" automaticCoupling="true"/>
+      <BodyTemplate xml:space="preserve">Dear $$Placeholder1$$,
+
+You have been added as an Author to our platform.
+
+Your username is:
+$$Placeholder1$$
+
+Your password is:
+$$Placeholder2$$
+
+Cheers.</BodyTemplate>
+      <Placeholder id="mov1#opm15#mlu2#ph2" name="Placeholder1"/>
+      <Placeholder id="mov1#opm15#mlu2#ph3" name="Placeholder2"/>
+    </MailUnit>
+    <OKCollectorUnit gr:x="590" gr:y="100" id="mov1#opm15#okcu14" name="OK Port14"/>
+    <SwitchUnit gr:x="290" gr:y="260" id="mov1#opm15#switch1" name="Switch1">
+      <OKLink id="mov1#opm15#switch1#oln79" name="OKFlow79" to="mov1#opm15#mlu2" code="password">
+        <LinkParameter id="mov1#opm15#switch1#oln79#par257" name="Mail - Subject_PASSING_Mail - Subject" sourceLinkParameter="mov1#opm15#icu15#oln76#par252" target="mov1#opm15#mlu2.subject"/>
+        <LinkParameter id="mov1#opm15#switch1#oln79#par258" name="Mail - To_PASSING_Mail - To" sourceLinkParameter="mov1#opm15#icu15#oln76#par253" target="mov1#opm15#mlu2.to"/>
+        <LinkParameter id="mov1#opm15#switch1#oln79#par259" name="Placeholder1_PASSING_Placeholder1" sourceLinkParameter="mov1#opm15#icu15#oln76#par254" target="mov1#opm15#mlu2.Placeholder1"/>
+        <LinkParameter id="mov1#opm15#switch1#oln79#par260" name="Placeholder2_PASSING_Placeholder2" sourceLinkParameter="mov1#opm15#icu15#oln76#par255" target="mov1#opm15#mlu2.Placeholder2"/>
+      </OKLink>
+      <OKLink id="mov1#opm15#switch1#oln81" name="OKFlow79" to="mov1#opm15#mlu3" code="notification">
+        <LinkParameter id="mov1#opm15#switch1#oln81#par262" name="Mail - Subject_PASSING_Mail - Subject" sourceLinkParameter="mov1#opm15#icu15#oln76#par252" target="mov1#opm15#mlu3.subject"/>
+        <LinkParameter id="mov1#opm15#switch1#oln81#par263" name="Mail - To_PASSING_Mail - To" sourceLinkParameter="mov1#opm15#icu15#oln76#par253" target="mov1#opm15#mlu3.to"/>
+        <LinkParameter id="mov1#opm15#switch1#oln81#par264" name="Placeholder1_PASSING_Placeholder1" sourceLinkParameter="mov1#opm15#icu15#oln76#par254" target="mov1#opm15#mlu3.Placeholder1"/>
+        <LinkParameter id="mov1#opm15#switch1#oln81#par265" name="Placeholder2_PASSING_Placeholder2" sourceLinkParameter="mov1#opm15#icu15#oln76#par255" target="mov1#opm15#mlu3.Placeholder2"/>
+      </OKLink>
+      <OKLink id="mov1#opm15#switch1#oln83" name="OKFlow79" to="mov1#opm15#mlu4" code="body">
+        <LinkParameter id="mov1#opm15#switch1#oln83#par266" name="Mail - Body_PASSING_Mail - Body" sourceLinkParameter="mov1#opm15#icu15#oln76#par251" target="mov1#opm15#mlu4.body"/>
+        <LinkParameter id="mov1#opm15#switch1#oln83#par267" name="Mail - Subject_PASSING_Mail - Subject" sourceLinkParameter="mov1#opm15#icu15#oln76#par252" target="mov1#opm15#mlu4.subject"/>
+        <LinkParameter id="mov1#opm15#switch1#oln83#par268" name="Mail - To_PASSING_Mail - To" sourceLinkParameter="mov1#opm15#icu15#oln76#par253" target="mov1#opm15#mlu4.to"/>
+        <LinkParameter id="mov1#opm15#switch1#oln83#par269" name="Placeholder1_PASSING_Placeholder1" sourceLinkParameter="mov1#opm15#icu15#oln76#par254" target="mov1#opm15#mlu4.Placeholder1"/>
+        <LinkParameter id="mov1#opm15#switch1#oln83#par270" name="Placeholder2_PASSING_Placeholder2" sourceLinkParameter="mov1#opm15#icu15#oln76#par255" target="mov1#opm15#mlu4.Placeholder2"/>
+      </OKLink>
+      <Case value="password"/>
+      <Case value="notification"/>
+      <Case value="body"/>
+    </SwitchUnit>
+    <MailUnit id="mov1#opm15#mlu3" name="Mail1" gr:x="460" gr:y="395" format="plainText">
+      <OKLink id="mov1#opm15#mlu3#oln80" name="OKFlow77" to="mov1#opm15#okcu14" automaticCoupling="true" gr:bendpoints="130,-105,-125,195"/>
+      <BodyTemplate xml:space="preserve">Dear $$Placeholder1$$,
+
+You have a new notification on our platform.
+
+$$Placeholder2$$
+
+Cheers</BodyTemplate>
+      <Placeholder id="mov1#opm15#mlu3#ph4" name="Placeholder1"/>
+      <Placeholder id="mov1#opm15#mlu3#ph5" name="Placeholder2"/>
+    </MailUnit>
+    <MailUnit id="mov1#opm15#mlu4" name="Mail1" gr:x="440" gr:y="145" format="plainText">
+      <OKLink id="mov1#opm15#mlu4#oln82" name="OKFlow77" to="mov1#opm15#okcu14" automaticCoupling="true"/>
+      <Placeholder id="mov1#opm15#mlu4#ph6" name="Placeholder1"/>
+      <Placeholder id="mov1#opm15#mlu4#ph7" name="Placeholder2"/>
+    </MailUnit>
+  </OperationUnits>
+</OperationModule>
