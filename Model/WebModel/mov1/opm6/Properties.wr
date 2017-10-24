@@ -2,26 +2,33 @@
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm6#icu6" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm6#icu6#icp9" name="AuthorOID"/>
-      <OKLink id="mov1#opm6#icu6#oln9" name="OKFlow9" to="mov1#opm6#qu1">
-        <LinkParameter id="mov1#opm6#icu6#oln9#par38" name="AuthorOID_authorOID" source="mov1#opm6#icu6#icp9" target="mov1#opm6#qu1.mov1#opm6#qu1#qi1"/>
+      <OKLink id="mov1#opm6#icu6#oln9" name="OKFlow9" to="mov1#opm6#lpu4">
+        <LinkParameter id="mov1#opm6#icu6#oln9#par38" name="AuthorOID_Input Array" source="mov1#opm6#icu6#icp9" target="mov1#opm6#lpu4.array"/>
       </OKLink>
     </InputCollectorUnit>
-    <QueryUnit gr:x="375" gr:y="95" id="mov1#opm6#qu1" name="Query1" mode="select" language="SQL" db="db2">
-      <QueryInput id="mov1#opm6#qu1#qi1" name="authorOID" required="true"/>
+    <OKCollectorUnit gr:x="580" gr:y="90" id="mov1#opm6#okcu5" name="OK Port5">
+      <OutputCollectorParameter id="mov1#opm6#okcu5#ocp2" name="Reputation"/>
+    </OKCollectorUnit>
+    <QueryUnit gr:x="380" gr:y="195" id="mov1#opm6#qu4" name="Query1" mode="select" language="SQL" db="db2">
+      <QueryInput id="mov1#opm6#qu4#qi4" name="authorOID" required="true"/>
       <QueryText xml:space="preserve">SELECT (t1 * 100) / (t2 + 1) AS reputation FROM (
 SELECT
 (SELECT COUNT(*) AS pubs FROM publication
 INNER JOIN author_publication ON publication.oid = author_publication.publication_oid
 WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t1,
 (SELECT COUNT(*) AS colecs FROM publication RIGHT JOIN collection_publication ON publication.oid = collection_publication.publication_oid WHERE publication.oid = CAST( :authorOID AS INTEGER) ) AS t2) as t3</QueryText>
-      <OKLink id="mov1#opm6#qu1#oln11" name="OKFlow11" to="mov1#opm6#okcu5" automaticCoupling="false">
-        <LinkParameter id="mov1#opm6#qu1#oln11#par39" name="QueryOutput1_PASSING" source="data[].queryOutput1" passing="true"/>
-        <LinkParameter id="mov1#opm6#qu1#oln11#par58" name="QueryOutput1" source="data[].queryOutput1" target="mov1#opm6#okcu5#ocp2"/>
+      <QueryOutput id="mov1#opm6#qu4#qo4" name="QueryOutput1" type="decimal"/>
+      <OKLink id="mov1#opm6#qu4#oln19" name="OKFlow4" to="mov1#opm6#lpu4" gr:bendpoints="41,-82,66,88">
+        <LinkParameter id="mov1#opm6#qu4#oln19#par70" name="QueryOutput1_PASSING" source="data[].queryOutput1" passing="true"/>
       </OKLink>
-      <QueryOutput id="mov1#opm6#qu1#qo1" name="QueryOutput1" type="decimal"/>
     </QueryUnit>
-    <OKCollectorUnit gr:x="580" gr:y="90" id="mov1#opm6#okcu5" name="OK Port5">
-      <OutputCollectorParameter id="mov1#opm6#okcu5#ocp2" name="Reputation"/>
-    </OKCollectorUnit>
+    <LoopUnit gr:x="350" gr:y="25" id="mov1#opm6#lpu4" name="Loop1">
+      <OKLink id="mov1#opm6#lpu4#oln22" name="OKFlow11" to="mov1#opm6#okcu5" code="end">
+        <LinkParameter id="mov1#opm6#lpu4#oln22#par71" name="QueryOutput1" target="mov1#opm6#okcu5#ocp2" sourceLinkParameter="mov1#opm6#qu4#oln19#par70"/>
+      </OKLink>
+      <OKLink id="mov1#opm6#lpu4#oln23" name="OKFlow3" to="mov1#opm6#qu4" gr:bendpoints="-58,88,-83,-82" code="next">
+        <LinkParameter id="mov1#opm6#lpu4#oln23#par72" name="Next Element_authorOID" source="next" target="mov1#opm6#qu4.mov1#opm6#qu4#qi4"/>
+      </OKLink>
+    </LoopUnit>
   </OperationUnits>
 </OperationModule>

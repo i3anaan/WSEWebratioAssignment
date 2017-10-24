@@ -1,0 +1,40 @@
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="360" gr:y="125" id="wsv2#job2" name="Calculate Reputation">
+  <OperationUnits>
+    <InitJobUnit id="wsv2#job2#iju2" name="Init Job" gr:x="0" gr:y="35">
+      <OKLink id="wsv2#job2#iju2#oln26" name="OKFlow26" to="wsv2#job2#seu1" automaticCoupling="true"/>
+    </InitJobUnit>
+    <QueryUnit id="wsv2#job2#qu5" name="Query1" gr:x="30" gr:y="205" mode="select" language="SQL" db="db2">
+      <QueryInput id="wsv2#job2#qu5#qi5" name="authorOID" required="true"/>
+      <QueryText xml:space="preserve">SELECT ((t1 * 100) / (t2 + 1) + 1) AS reputation FROM (
+SELECT
+(SELECT COUNT(*) AS pubs FROM publication
+INNER JOIN author_publication ON publication.oid = author_publication.publication_oid
+WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t1,
+(SELECT COUNT(*) AS colecs FROM publication RIGHT JOIN collection_publication ON publication.oid = collection_publication.publication_oid WHERE publication.oid = CAST( :authorOID AS INTEGER) ) AS t2) as t3</QueryText>
+      <QueryOutput id="wsv2#job2#qu5#qo5" name="QueryOutput1" type="decimal"/>
+      <OKLink id="wsv2#job2#qu5#oln24" name="OKFlow4" to="wsv2#job2#mfu2">
+        <LinkParameter id="wsv2#job2#qu5#oln24#par73" name="QueryOutput1_PASSING" source="data[].queryOutput1" passing="true"/>
+        <LinkParameter id="wsv2#job2#qu5#oln24#par75" name="QueryOutput1_reputation" source="data[].queryOutput1" target="wsv2#job2#mfu2.ent3#att7"/>
+        <LinkParameter id="wsv2#job2#qu5#oln24#par78" name="Next Element_PASSING_KeyCondition1 [oid]" sourceLinkParameter="wsv2#job2#lpu5#oln25#par77" target="wsv2#job2#mfu2#su2#kcond1.ent3#att9"/>
+      </OKLink>
+    </QueryUnit>
+    <LoopUnit id="wsv2#job2#lpu5" name="Loop1" gr:x="295" gr:y="95">
+      <OKLink id="wsv2#job2#lpu5#oln25" name="OKFlow3" to="wsv2#job2#qu5" code="next" gr:bendpoints="-58,88,-83,-82">
+        <LinkParameter id="wsv2#job2#lpu5#oln25#par74" name="Next Element_authorOID" source="next" target="wsv2#job2#qu5.wsv2#job2#qu5#qi5"/>
+        <LinkParameter id="wsv2#job2#lpu5#oln25#par77" name="Next Element_PASSING" source="next" passing="true"/>
+      </OKLink>
+    </LoopUnit>
+    <ModifyUnit gr:x="225" gr:y="175" id="wsv2#job2#mfu2" name="Update2" entity="ent3">
+      <Selector id="wsv2#job2#mfu2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="wsv2#job2#mfu2#su2#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="wsv2#job2#mfu2#oln27" name="OKFlow27" to="wsv2#job2#lpu5" automaticCoupling="true"/>
+    </ModifyUnit>
+    <SelectorUnit gr:x="130" gr:y="0" id="wsv2#job2#seu1" name="GetResearchers" entity="ent3" distinctAttributes="ent3#att9">
+      <OKLink id="wsv2#job2#seu1#oln2" name="Flow26" to="wsv2#job2#lpu5">
+        <LinkParameter id="wsv2#job2#seu1#oln2#par36" name="oid_Input Array" source="ent3#att9Array" target="wsv2#job2#lpu5.array"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+  <Trigger id="wsv2#job2#trg1" name="Trigger1" schedulePolicy="everyXSeconds" seconds="30"/>
+</Job>
