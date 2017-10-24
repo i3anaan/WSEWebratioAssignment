@@ -1,0 +1,20 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area8" name="Comments" defaultPage="sv3#area8#page9" landmark="true" gr:x="25" gr:y="-115">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv3#area8#miu9" name="Edit Comment" gr:x="415" gr:y="120" action="true" moduleId="mov1#opm14">
+      <OKLink id="sv3#area8#miu9#oln70" name="OKFlow40" to="sv3#area8#page9#mssu3">
+        <LinkParameter id="sv3#area8#miu9#oln70#par151" name="Message_Shown Messages" source="mov1#opm14#okcu13#ocp11" target="sv3#area8#page9#mssu3.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv3#area8#miu9#kln14" name="KOFlow17" to="sv3#area8#page9#mssu3" gr:bendpoints="0,-75,305,-75;-238,-77,67,-77">
+        <LinkParameter id="sv3#area8#miu9#kln14#par152" name="Message_Shown Messages" source="mov1#opm14#kocu11#ocp12" target="sv3#area8#page9#mssu3.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv3#area8#miu17" name="Delete Comment" gr:x="0" gr:y="0" action="true" moduleId="mov1#opm15">
+      <OKLink id="sv3#area8#miu17#oln71" name="OKFlow43" to="sv3#area8#page9#mssu3" gr:bendpoints="85,57,0,-108">
+        <LinkParameter id="sv3#area8#miu17#oln71#par153" name="Message_Shown Messages" source="mov1#opm15#okcu5#ocp4" target="sv3#area8#page9#mssu3.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv3#area8#miu17#kln17" name="KOFlow19" to="sv3#area8#page9#mssu3" gr:bendpoints="129,47,44,-118">
+        <LinkParameter id="sv3#area8#miu17#kln17#par198" name="Message_Shown Messages" source="mov1#opm15#kocu7#ocp2" target="sv3#area8#page9#mssu3.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

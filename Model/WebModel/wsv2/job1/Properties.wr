@@ -8,8 +8,9 @@
         <LinkParameter id="wsv2#job1#miu11#oln56#par195" name="Notifications_Input Array" source="mov1#opm10#okcu9#ocp3" target="wsv2#job1#lpu6.array"/>
       </OKLink>
     </ModuleInstanceUnit>
-    <MailUnit gr:x="245" gr:y="440" id="wsv2#job1#mlu1" name="Mail1" format="plainText">
+    <MailUnit gr:x="245" gr:y="440" id="wsv2#job1#mlu1" name="Mail1" format="html">
       <OKLink id="wsv2#job1#mlu1#oln59" name="OKFlow59" to="wsv2#job1#lpu6" automaticCoupling="true" gr:bendpoints="129,-29,-121,56"/>
+      <Property id="wsv2#job1#mlu1#prop1" name="Property 1"/>
     </MailUnit>
     <SelectorUnit gr:x="135" gr:y="90" id="wsv2#job1#seu25" name="GetResearchers" entity="ent3" distinctAttributes="ent3#att9">
       <OKLink id="wsv2#job1#seu25#oln54" name="OKFlow54" to="wsv2#job1#lpu4">
@@ -43,8 +44,16 @@
         <LinkParameter id="wsv2#job1#inn1#oln64#par204" name="message_PASSING_Mail - Body" sourceLinkParameter="wsv2#job1#seu27#oln63#par203" target="wsv2#job1#mlu1.body"/>
         <LinkParameter id="wsv2#job1#inn1#oln64#par205" name="You have a new notification_Mail - Subject" sourceValue="You have a new notification" target="wsv2#job1#mlu1.subject"/>
         <LinkParameter id="wsv2#job1#inn1#oln64#par206" name="Input Value_Mail - To" source="inputValue" target="wsv2#job1#mlu1.to"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par135" name="_Mail - Cc" blank="true" target="wsv2#job1#mlu1.cc"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par136" name="wse.webratio@gmail.com_Mail - From" sourceValue="wse.webratio@gmail.com" target="wsv2#job1#mlu1.from"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par137" name="smtp.gmail.com_SMTP Server - Host" sourceValue="smtp.gmail.com" target="wsv2#job1#mlu1.serverHost"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par154" name="webratio1_SMTP Server - Password" sourceValue="webratio1" target="wsv2#job1#mlu1.serverPassword"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par155" name="587_SMTP Server - Port" sourceValue="587" target="wsv2#job1#mlu1.serverPort"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par156" name="TLS_SMTP Server - Protocol" sourceValue="TLS" target="wsv2#job1#mlu1.serverProtocol"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par157" name="1_SMTP Server - Use SSL" sourceValue="1" target="wsv2#job1#mlu1.serverUseSsl"/>
+        <LinkParameter id="wsv2#job1#inn1#oln64#par162" name="wse.webratio@gmail.com_SMTP Server - Username" sourceValue="wse.webratio@gmail.com" target="wsv2#job1#mlu1.serverUsername"/>
       </OKLink>
     </IsNotNullUnit>
   </OperationUnits>
-  <Trigger id="wsv2#job1#trg2" name="Trigger2" schedulePolicy="everyDay" hours="9" minutes="0" seconds="0"/>
+  <Trigger id="wsv2#job1#trg2" name="Trigger2" schedulePolicy="everyDay" hours="18" minutes="16" seconds="30"/>
 </Job>
