@@ -1,0 +1,23 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-5" gr:y="125" id="mov1#opm13" name="Delete Publication">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm13#icu13" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm13#icu13#oln49" name="OKFlow49" to="mov1#opm13#dlu6">
+        <LinkParameter id="mov1#opm13#icu13#oln49#par184" name="publicationID_KeyCondition13 [oid]" source="mov1#opm13#icu13#icp38" target="mov1#opm13#dlu6#su30#kcond15.ent1#att1"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm13#icu13#icp38" name="publicationID"/>
+    </InputCollectorUnit>
+    <DeleteUnit id="mov1#opm13#dlu6" name="Delete Publication" gr:x="360" gr:y="55" entity="ent1">
+      <Selector id="mov1#opm13#dlu6#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm13#dlu6#su30#kcond15" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm13#dlu6#oln48" name="OKFlow42" to="mov1#opm13#okcu12" automaticCoupling="true"/>
+      <KOLink id="mov1#opm13#dlu6#kln23" name="KOFlow18" to="mov1#opm13#kocu10" automaticCoupling="true"/>
+    </DeleteUnit>
+    <KOCollectorUnit id="mov1#opm13#kocu10" name="KO Port8" gr:x="575" gr:y="130">
+      <OutputCollectorParameter id="mov1#opm13#kocu10#ocp9" name="Message" value="Comment removal failed"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit id="mov1#opm13#okcu12" name="OK Port10" gr:x="575" gr:y="0">
+      <OutputCollectorParameter id="mov1#opm13#okcu12#ocp10" name="Message" value="Publication deletion succesful"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>

@@ -5,7 +5,7 @@
       <InputCollectorParameter id="mov1#opm9#icu8#icp14" name="modules"/>
       <InputCollectorParameter id="mov1#opm9#icu8#icp15" name="groupName"/>
       <InputCollectorParameter id="mov1#opm9#icu8#icp16" name="defaultModule"/>
-      <OKLink id="mov1#opm9#icu8#oln32" name="OKFlow30" to="mov1#opm9#mfu3" gr:bendpoints="256,-87,-189,-87">
+      <OKLink id="mov1#opm9#icu8#oln32" name="OKFlow30" to="mov1#opm9#mfu3">
         <LinkParameter id="mov1#opm9#icu8#oln32#par131" name="groupName_groupName" source="mov1#opm9#icu8#icp15" target="mov1#opm9#mfu3.groupName"/>
         <LinkParameter id="mov1#opm9#icu8#oln32#par132" name="oidGroup_KeyCondition1 [oid]" source="mov1#opm9#icu8#icp13" target="mov1#opm9#mfu3#su22#kcond3.groupOID"/>
         <LinkParameter id="mov1#opm9#icu8#oln32#par133" name="defaultModule_Module.oid(defaultModule)" source="mov1#opm9#icu8#icp16" target="mov1#opm9#mfu3.Group2DefaultModule.moduleOID"/>
@@ -21,29 +21,5 @@
     </ModifyUnit>
     <OKCollectorUnit id="mov1#opm9#okcu7" name="OK" gr:x="715" gr:y="-25"/>
     <KOCollectorUnit id="mov1#opm9#kocu6" name="KO" gr:x="715" gr:y="195"/>
-    <SelectorUnit id="mov1#opm9#seu20" name="Associated Modules" gr:x="290" gr:y="230" entity="Module" distinctAttributes="moduleID moduleName moduleOID">
-      <Selector id="mov1#opm9#seu20#su23" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="mov1#opm9#seu20#su23#rcond15" name="RoleCondition8" predicate="in" implied="false" role="Group2Module"/>
-      </Selector>
-      <Link id="mov1#opm9#seu20#ln60" name="Flow57" to="mov1#opm9#lpu1" type="transport" validate="true">
-        <LinkParameter id="mov1#opm9#seu20#ln60#par135" name="moduleID_Input Array" source="moduleIDArray" target="mov1#opm9#lpu1.array"/>
-        <LinkParameter id="mov1#opm9#seu20#ln60#par136" name="Data Size_Iteration Count" source="dataSize" target="mov1#opm9#lpu1.iterationCount"/>
-      </Link>
-    </SelectorUnit>
-    <LoopUnit id="mov1#opm9#lpu1" name="Disconnect All" gr:x="350" gr:y="90">
-      <OKLink id="mov1#opm9#lpu1#oln34" name="OKFlow28" to="mov1#opm9#dcnu1" code="next" gr:bendpoints="97,52,-73,-103">
-        <LinkParameter id="mov1#opm9#lpu1#oln34#par137" name="Next Element_KeyCondition4 [oid] [Module] [Target]" source="next" target="mov1#opm9#dcnu1#su25#kcond5.moduleOID"/>
-      </OKLink>
-    </LoopUnit>
-    <DisconnectUnit id="mov1#opm9#dcnu1" name="Disconnect" gr:x="525" gr:y="225" relationship="Group2Module">
-      <SourceSelector id="mov1#opm9#dcnu1#su24" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm9#dcnu1#su24#kcond4" name="KeyCondition3" predicate="in" implied="false"/>
-      </SourceSelector>
-      <TargetSelector id="mov1#opm9#dcnu1#su25" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm9#dcnu1#su25#kcond5" name="KeyCondition4" predicate="in" implied="false"/>
-      </TargetSelector>
-      <OKLink id="mov1#opm9#dcnu1#oln35" name="OKFlow29" to="mov1#opm9#lpu1" automaticCoupling="true" gr:bendpoints="-105,-66,65,89"/>
-    </DisconnectUnit>
-    <SelectorUnit gr:x="205" gr:y="-50" id="mov1#opm9#seu21" name="UselessSelector2"/>
   </OperationUnits>
 </OperationModule>

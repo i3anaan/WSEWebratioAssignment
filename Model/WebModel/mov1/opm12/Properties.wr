@@ -1,0 +1,31 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="5" gr:y="0" id="mov1#opm12" name="Edit Publication">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm12#icu12" gr:x="30" gr:y="75">
+      <OKLink id="mov1#opm12#icu12#oln47" name="OKFlow47" to="mov1#opm12#mfu6">
+        <LinkParameter id="mov1#opm12#icu12#oln47#par177" name="publicationAbstract_abstract" source="mov1#opm12#icu12#icp37" target="mov1#opm12#mfu6.ent1#att5"/>
+        <LinkParameter id="mov1#opm12#icu12#oln47#par179" name="publicationID_KeyCondition1 [oid]" source="mov1#opm12#icu12#icp33" target="mov1#opm12#mfu6#su29#kcond14.ent1#att1"/>
+        <LinkParameter id="mov1#opm12#icu12#oln47#par180" name="publicationTitle_title" source="mov1#opm12#icu12#icp34" target="mov1#opm12#mfu6.ent1#att2"/>
+        <LinkParameter id="mov1#opm12#icu12#oln47#par181" name="publicationVenue_venue" source="mov1#opm12#icu12#icp35" target="mov1#opm12#mfu6.ent1#att3"/>
+        <LinkParameter id="mov1#opm12#icu12#oln47#par182" name="publicationYear_year" source="mov1#opm12#icu12#icp36" target="mov1#opm12#mfu6.ent1#att4"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm12#icu12#icp37" name="publicationAbstract"/>
+      <InputCollectorParameter id="mov1#opm12#icu12#icp36" name="publicationYear"/>
+      <InputCollectorParameter id="mov1#opm12#icu12#icp35" name="publicationVenue"/>
+      <InputCollectorParameter id="mov1#opm12#icu12#icp34" name="publicationTitle"/>
+      <InputCollectorParameter id="mov1#opm12#icu12#icp33" name="publicationID"/>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov1#opm12#mfu6" name="Update publication" customDescriptor="false" gr:x="330" gr:y="105" entity="ent1" bulk="false">
+      <Selector id="mov1#opm12#mfu6#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm12#mfu6#su29#kcond14" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm12#mfu6#oln46" name="OKFlow6" to="mov1#opm12#okcu11" automaticCoupling="true"/>
+      <KOLink id="mov1#opm12#mfu6#kln22" name="KOFlow10" to="mov1#opm12#kocu9" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov1#opm12#okcu11" name="OK" gr:x="515" gr:y="5">
+      <OutputCollectorParameter id="mov1#opm12#okcu11#ocp7" name="Message" value="Publication update successful"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm12#kocu9" name="KO" gr:x="515" gr:y="225">
+      <OutputCollectorParameter id="mov1#opm12#kocu9#ocp8" name="Message" value="Publication update failed"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>
