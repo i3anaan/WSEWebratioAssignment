@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="450" gr:y="625" id="sv1#area4#page2" name="Collections" landmark="true" customURLName="collections">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="580" gr:y="650" id="sv1#area4#page2" name="Collections" landmark="true" customURLName="collections">
   <ContentUnits>
     <IndexUnit id="sv1#area4#page2#inu4" name="Collections" linkOrder="sv1#area4#page2#inu4#ln45" gr:x="295" gr:y="90" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23">
       <Link id="sv1#area4#page2#inu4#ln45" name="Show" to="sv1#area4#page14#dau3" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-376,42,240,282"/>
@@ -7,7 +7,7 @@
         <AttributesCondition id="sv1#area4#page2#inu4#su16#acond12" name="Title Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent7#att22" ignoreCase="true"/>
       </Selector>
     </IndexUnit>
-    <EntryUnit gr:x="295" gr:y="0" id="sv1#area4#page2#enu4" name="Search Colls" linkOrder="sv1#area4#page2#enu4#ln47">
+    <EntryUnit gr:x="295" gr:y="0" id="sv1#area4#page2#enu4" name="Search Collections" linkOrder="sv1#area4#page2#enu4#ln47">
       <Field id="sv1#area4#page2#enu4#fld4" name="keyword" type="string" modifiable="true"/>
       <Link id="sv1#area4#page2#enu4#ln47" name="Flow47" to="sv1#area4#page2#seu10" type="normal" validate="true">
         <LinkParameter id="sv1#area4#page2#enu4#ln47#par93" name="keyword_Abstract Contains Keyword" source="sv1#area4#page2#enu4#fld4" target="sv1#area4#page2#seu10#su14#acond8"/>

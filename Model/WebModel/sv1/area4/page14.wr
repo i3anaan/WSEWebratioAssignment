@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="480" id="sv1#area4#page14" name="View Collection" customURLName="collections-detail">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="445" id="sv1#area4#page14" name="View Collection" customURLName="collections-detail">
   <ContentUnits>
-    <DataUnit gr:x="175" gr:y="0" id="sv1#area4#page14#dau3" name="View Coll" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#area4#page14#dau3#ln9 sv1#area4#page14#dau3#ln22">
+    <DataUnit gr:x="175" gr:y="0" id="sv1#area4#page14#dau3" name="Collection" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23" linkOrder="sv1#area4#page14#dau3#ln9 sv1#area4#page14#dau3#ln22">
       <Selector id="sv1#area4#page14#dau3#su9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#page14#dau3#su9#kcond8" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -10,6 +10,8 @@
         <LinkParameter id="sv1#area4#page14#dau3#ln22#par119" name="oid_PASSING_RoleCondition7 [oid]" sourceLinkParameter="sv1#area4#page14#seu7#ln26#par71" target="sv1#area4#dlu3#su1#rcond7.ent3#att9"/>
         <LinkParameter id="sv1#area4#page14#dau3#ln22#par120" name="Key [oid]_oid" source="data.ent7#att21" target="sv1#area4#dlu3#su1#acond14"/>
       </Link>
+      <Link id="sv1#area4#page14#dau3#ln58" name="Flow58" to="sv1#area4#page14#inu14" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#area4#page14#dau3#ln79" name="Flow58" to="sv1#area4#page14#inu15" type="transport" automaticCoupling="true" validate="true"/>
     </DataUnit>
     <GetUnit gr:x="0" gr:y="0" id="sv1#area4#page14#gtu3" name="GetUser" contextParameters="UserCtxParam">
       <Link id="sv1#area4#page14#gtu3#ln25" name="Flow25" to="sv1#area4#page14#seu7" type="transport" validate="true">
@@ -24,9 +26,19 @@
         <LinkParameter id="sv1#area4#page14#seu7#ln26#par71" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
       </Link>
     </SelectorUnit>
-    <IndexUnit gr:x="170" gr:y="150" id="sv1#area4#page14#inu6" name="Pubs From Coll" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
+    <IndexUnit gr:x="170" gr:y="150" id="sv1#area4#page14#inu6" name="Publications inside this Collection" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
       <Selector id="sv1#area4#page14#inu6#su17" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area4#page14#inu6#su17#rcond12" name="In Collection" predicate="in" implied="false" role="rel5#role9"/>
+      </Selector>
+    </IndexUnit>
+    <IndexUnit gr:x="325" gr:y="0" id="sv1#area4#page14#inu14" name="Authors" entity="ent3" displayAttributes="ent3#att10 ent3#att7">
+      <Selector id="sv1#area4#page14#inu14#su44" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page14#inu14#su44#rcond27" name="RoleCondition27" predicate="in" implied="false" role="rel5#role9.rel2#role4"/>
+      </Selector>
+    </IndexUnit>
+    <IndexUnit id="sv1#area4#page14#inu15" name="Keywords" gr:x="395" gr:y="105" entity="ent5">
+      <Selector id="sv1#area4#page14#inu15#su45" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page14#inu15#su45#rcond28" name="RoleCondition27" predicate="in" implied="false" role="rel7#role13"/>
       </Selector>
     </IndexUnit>
   </ContentUnits>
@@ -64,6 +76,41 @@
           <layout:Attribute attribute="ent1#att6"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#area4#page14#inu15"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#area4#page14#inu14">
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -300,7 +300,6 @@ INSERT INTO collection VALUES (2, 'Better than collection 1', 'Collection 2', 3)
 --
 
 
-
 --
 -- Data for Name: collection_publication; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -315,6 +314,12 @@ INSERT INTO collection_publication VALUES (2, 2);
 -- Data for Name: comment; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+
+INSERT INTO comment VALUES (1, NULL, 'Absolutely amazing paper, what a time to be alive', 'Changed my life', 3, 1);
+INSERT INTO comment VALUES (2, NULL, 'The concept is amazing, but you did not prove that the created subspace is actually infinite, what is the length of this subspace toilet paper? And if we reach that length, does the subspace not collapse and cause a very shitty explosion?', 'Cool idea, some questions remain though', 2, 2);
+INSERT INTO comment VALUES (3, NULL, 'Poopadiepoppedie', 'Poopadiepoppedie', 3, 3);
+INSERT INTO comment VALUES (4, NULL, 'Poopadiepoppedie Poopadiepoppedie', 'Poopadiepoppedie', 2, 3);
+INSERT INTO comment VALUES (5, NULL, 'Poopadiepoppedie Poopadiepoppedie Poopadiepoppedie', 'Poopadiepoppedie', 1, 3);
 
 
 --
@@ -336,12 +341,29 @@ INSERT INTO group_module VALUES (2, 1);
 -- Data for Name: keyword; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-
+INSERT INTO keyword VALUES (1, 'Computers');
+INSERT INTO keyword VALUES (2, 'Internet');
+INSERT INTO keyword VALUES (3, 'Graphs');
+INSERT INTO keyword VALUES (4, 'Quantum');
+INSERT INTO keyword VALUES (5, 'Science fiction');
+INSERT INTO keyword VALUES (6, 'Toilet');
+INSERT INTO keyword VALUES (7, 'Serious');
+INSERT INTO keyword VALUES (8, 'Web Science');
+INSERT INTO keyword VALUES (9, 'Database');
+INSERT INTO keyword VALUES (10, 'Semantic Web');
 
 --
 -- Data for Name: keyword_publication; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO keyword_publication VALUES (4, 1);
+INSERT INTO keyword_publication VALUES (5, 1);
+INSERT INTO keyword_publication VALUES (6, 1);
+INSERT INTO keyword_publication VALUES (6, 2);
+INSERT INTO keyword_publication VALUES (7, 2);
+INSERT INTO keyword_publication VALUES (1, 2);
+INSERT INTO keyword_publication VALUES (10, 3);
+INSERT INTO keyword_publication VALUES (8, 3);
 
 
 --
@@ -396,13 +418,16 @@ INSERT INTO researcher VALUES (3, 'tudelft', 'Derk Snijders', 0, 3);
 --
 
 
+INSERT INTO university VALUES (1, 'The Netherlands', 'Delft', 'Technical University Delft');
+INSERT INTO university VALUES (2, 'The Netherlands', 'Enschede', 'University of Twente');
+INSERT INTO university VALUES (3, 'Oezbekistan', 'Mountaintop 3', 'Monastery of Swag');
 
 --
 -- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO "user" VALUES (2, 'admin', 'admin', 'wse.webratio@gmail.com', 1);
 INSERT INTO "user" VALUES (1, 'researcher', 'researcher', 'wse.webratio@gmail.com', 2);
+INSERT INTO "user" VALUES (2, 'admin', 'admin', 'wse.webratio@gmail.com', 1);
 INSERT INTO "user" VALUES (3, 'i3anaan', 'i3anaan', 'i3anaan@gmail.com', 2);
 
 
