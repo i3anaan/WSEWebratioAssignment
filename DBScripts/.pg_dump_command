@@ -1,0 +1,3 @@
+pg_dump --file=/projects/Masters/Web\ Science\ \&\ Engineering/Homework/WebRatio/WSE_Webrati
+o_assignment/DBScripts/db_backup.sql --inserts --clean --create --dbname=WSE --host=localhost --port=5432 --username=postgres
+
