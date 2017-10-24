@@ -12,6 +12,7 @@
         <LinkParameter id="mov1#opm2#icu2#oln10#par54" name="userName" source="mov1#opm2#icu2#icp6" target="mov1#opm2#cru1.userName"/>
         <LinkParameter id="mov1#opm2#icu2#oln10#par55" name="password" source="mov1#opm2#icu2#icp5" target="mov1#opm2#cru1.password"/>
         <LinkParameter id="mov1#opm2#icu2#oln10#par56" name="email" source="mov1#opm2#icu2#icp4" target="mov1#opm2#cru1.email"/>
+        <LinkParameter id="mov1#opm2#icu2#oln10#par42" name="2_Group.oid(defaultGroup)" sourceValue="2" target="mov1#opm2#cru1.User2DefaultGroup.groupOID"/>
       </OKLink>
     </InputCollectorUnit>
     <CreateUnit gr:x="300" gr:y="105" id="mov1#opm2#cru1" name="Create User" entity="User">
