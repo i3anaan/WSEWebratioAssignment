@@ -64,6 +64,7 @@
     <Generalization superEntity="ent3">
       <db:JoinColumn attribute="ent3#att9" name="researcher_oid"/>
     </Generalization>
+    <Attribute id="ent4#att7" name="oid" db:column="oid" type="integer" key="false"/>
   </Entity>
   <Relationship id="rel1" name="User_Researcher" sourceEntity="User" targetEntity="ent3" db:database="db2" db:table="researcher">
     <RelationshipRole1 id="rel1#role1" name="UserToResearcher" maxCard="1">
@@ -158,5 +159,29 @@
       <db:JoinColumn attribute="ent8#att24" name="university_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="QmVya2VsMjY1Mg==" schema="public" cryptedPassword="true"/>
+  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="YmFrZmlldHM=" schema="public" cryptedPassword="true"/>
+  <Relationship id="rel10" name="PublicationAuthor" db:database="db2" db:table="publication" sourceEntity="ent1" targetEntity="ent4">
+    <RelationshipRole1 id="rel10#role19" name="PublicationToAuthor_2" maxCard="1">
+      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="AuthorToPublication_2" maxCard="N">
+      <db:JoinColumn attribute="ent3#att9" name="author_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel11" name="PublicationComment" db:database="db2" db:table="publication" sourceEntity="ent1" targetEntity="ent6">
+    <RelationshipRole1 id="rel11#role21" name="PublicationToComment_2" maxCard="1">
+      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel11#role22" name="CommentToPublication_2" maxCard="N">
+      <db:JoinColumn attribute="ent6#att17" name="comment_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel12" name="PublicationKeyword" db:database="db2" db:table="publication" sourceEntity="ent1" targetEntity="ent5">
+    <RelationshipRole1 id="rel12#role23" name="PublicationToKeyword_2" maxCard="1">
+      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="KeywordToPublication_2" maxCard="N">
+      <db:JoinColumn attribute="ent5#att15" name="keyword_oid"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>
