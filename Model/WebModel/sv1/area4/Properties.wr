@@ -86,8 +86,5 @@
         <RelationshipRoleCondition id="sv1#area4#seu22#su28#rcond6" name="PubToKey" predicate="in" implied="false" role="rel3#role6"/>
       </Selector>
     </SelectorUnit>
-    <ModuleInstanceUnit gr:x="2080" gr:y="835" id="sv1#area4#miu8" action="true" moduleId="mov1#opm10">
-      <OKLink id="sv1#area4#miu8#oln47" name="OKFlow47" to="sv1#area4#page1" automaticCoupling="true"/>
-    </ModuleInstanceUnit>
   </OperationUnits>
 </Area>

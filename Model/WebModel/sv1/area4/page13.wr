@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1555" gr:y="960" id="sv1#area4#page13" name="Edit Publication">
   <ContentUnits>
-    <EntryUnit id="sv1#area4#page13#enu1" entity="ent1" gr:x="320" gr:y="0" name="Edit Pub" linkOrder="sv1#area4#page13#enu1#ln18 sv1#area4#page13#enu1#ln67">
+    <EntryUnit id="sv1#area4#page13#enu1" entity="ent1" gr:x="320" gr:y="0" name="Edit Pub" linkOrder="sv1#area4#page13#enu1#ln18">
       <Field id="sv1#area4#page13#enu1#fld8" attribute="ent1#att2" type="string" modifiable="true" name="title"/>
       <Field id="sv1#area4#page13#enu1#fld9" attribute="ent1#att3" type="string" modifiable="true" name="venue"/>
       <Field id="sv1#area4#page13#enu1#fld10" attribute="ent1#att4" type="integer" modifiable="true" name="year"/>
@@ -21,18 +21,6 @@
         <LinkParameter id="sv1#area4#page13#enu1#ln18#par162" name="year_PASSING" source="sv1#area4#page13#enu1#fld10" passing="true"/>
         <LinkParameter id="sv1#area4#page13#enu1#ln18#par183" name="Key [oid]_RoleCondition6 [oid]" source="key.ent1#att1" target="sv1#area4#seu22#su28#rcond6.ent1#att1"/>
         <LinkParameter id="sv1#area4#page13#enu1#ln18#par288" name="oid_PASSING" sourceLinkParameter="sv1#area4#page13#seu25#ln69#par285" passing="true"/>
-      </Link>
-      <Link id="sv1#area4#page13#enu1#ln67" name="Update_2" to="sv1#area4#miu8" type="normal" validate="true">
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par271" name="abstract_Abstract" source="sv1#area4#page13#enu1#fld11" target="sv1#area4#miu8.mov1#opm10#icu10#icp32"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par272" name="Authors_Authors" source="sv1#area4#page13#enu1#msfld11" target="sv1#area4#miu8.mov1#opm10#icu10#icp37"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par273" name="file_File" source="sv1#area4#page13#enu1#fld12" target="sv1#area4#miu8.mov1#opm10#icu10#icp33"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par274" name="Keywords_Keywords" source="sv1#area4#page13#enu1#msfld2" target="sv1#area4#miu8.mov1#opm10#icu10#icp35"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par276" name="Publication Object_PubObj" source="entityBean" target="sv1#area4#miu8.mov1#opm10#icu10#icp36"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par277" name="title_Title" source="sv1#area4#page13#enu1#fld8" target="sv1#area4#miu8.mov1#opm10#icu10#icp39"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par278" name="venue_Venue" source="sv1#area4#page13#enu1#fld9" target="sv1#area4#miu8.mov1#opm10#icu10#icp40"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par279" name="year_Year" source="sv1#area4#page13#enu1#fld10" target="sv1#area4#miu8.mov1#opm10#icu10#icp38"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par280" name="Key [oid]_Pub [oid]" source="key.ent1#att1" target="sv1#area4#miu8.mov1#opm10#icu10#icp31"/>
-        <LinkParameter id="sv1#area4#page13#enu1#ln67#par287" name="oid_PASSING_UserID" sourceLinkParameter="sv1#area4#page13#seu25#ln69#par285" target="sv1#area4#miu8.mov1#opm10#icu10#icp41"/>
       </Link>
     </EntryUnit>
     <SelectorUnit id="sv1#area4#page13#seu4" name="Authors" gr:x="330" gr:y="200" entity="ent3">
@@ -81,7 +69,6 @@
           <layout:Field field="sv1#area4#page13#enu1#msfld2"/>
           <layout:Field field="sv1#area4#page13#enu1#msfld11"/>
           <layout:Link link="sv1#area4#page13#enu1#ln18"/>
-          <layout:Link link="sv1#area4#page13#enu1#ln67"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
