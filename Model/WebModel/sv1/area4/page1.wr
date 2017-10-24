@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1050" gr:y="475" id="sv1#area4#page1" name="Show Publications" landmark="true">
   <ContentUnits>
-    <IndexUnit id="sv1#area4#page1#inu2" name="Search Results Pub" gr:x="0" gr:y="80" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page1#inu2#ln41">
+    <IndexUnit id="sv1#area4#page1#inu2" name="Search Results Pub" gr:x="0" gr:y="80" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 rel2#role4.ent3#att10" linkOrder="sv1#area4#page1#inu2#ln41">
       <Selector id="sv1#area4#page1#inu2#su13" defaultPolicy="fill" booleanOperator="or">
         <AttributesCondition id="sv1#area4#page1#inu2#su13#acond1" name="Title Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att2" ignoreCase="true"/>
         <AttributesCondition id="sv1#area4#page1#inu2#su13#acond3" name="Abstract Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att5" ignoreCase="true"/>
@@ -42,13 +42,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area4#page1#inu2">
+          <layout:Link link="sv1#area4#page1#inu2#ln41"/>
           <layout:Attribute attribute="ent1#att1"/>
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att4"/>
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att6"/>
-          <layout:Link link="sv1#area4#page1#inu2#ln41"/>
+          <layout:Attribute attribute="rel2#role4.ent3#att10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,14 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area6#page26" name="Home" linkOrder="sv1#area6#page26#ln28 sv1#area6#page26#ln42" landmark="true" gr:x="370" gr:y="145" ajaxEnabled="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page26" name="Home" linkOrder="sv2#area2#page26#ln93 sv2#area2#page26#ln94" landmark="true" ajaxEnabled="false" gr:x="370" gr:y="145">
   <ContentUnits>
-    <MultiMessageUnit id="sv1#area6#page26#mssu7" name="Welcome message" gr:x="0" gr:y="0">
+    <MultiMessageUnit id="sv2#area2#page26#mssu5" name="Welcome message" gr:x="0" gr:y="0">
       <Message xml:space="preserve">Welcome to our crib mah bru, here is some info you are not supposed to see yet</Message>
     </MultiMessageUnit>
-    <IndexUnit id="sv1#area6#page26#inu9" name="Users" gr:x="30" gr:y="70" entity="User" displayAttributes="userName"/>
+    <IndexUnit id="sv2#area2#page26#inu12" name="Users" gr:x="30" gr:y="70" entity="User" displayAttributes="userName"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area6#page26#mssu7"/>
+        <layout:Unit unitId="sv2#area2#page26#mssu5"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -24,7 +24,7 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area6#page26#inu9">
+        <layout:Unit unitId="sv2#area2#page26#inu12">
           <layout:Attribute attribute="userName"/>
         </layout:Unit>
       </layout:Cell>
@@ -55,6 +55,6 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv1#area6#page26#ln28" name="Register instead" to="sv1#area6#page28" type="normal" customDescriptor="false" automaticCoupling="true" validate="true"/>
-  <Link id="sv1#area6#page26#ln42" name="Login" to="sv1#area6#page27" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv2#area2#page26#ln93" name="Register instead" to="sv2#area2#page23" type="normal" customDescriptor="false" automaticCoupling="true" validate="true"/>
+  <Link id="sv2#area2#page26#ln94" name="Login" to="sv2#area2#page25" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

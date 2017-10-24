@@ -1,13 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="105" gr:y="430" id="sv1#area6#page31" name="Error">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#page27" name="Error" gr:x="105" gr:y="430">
   <ContentUnits>
-    <MultiMessageUnit gr:x="35" gr:y="10" id="sv1#area6#page31#mssu10" name="Error">
+    <MultiMessageUnit id="sv2#area2#page27#mssu6" name="Error" gr:x="35" gr:y="10">
       <Message xml:space="preserve">An error occured</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area6#page31#mssu10"/>
+        <layout:Unit unitId="sv2#area2#page27#mssu6"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

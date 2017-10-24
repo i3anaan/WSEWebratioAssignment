@@ -1,0 +1,17 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2#area2" name="Login" defaultPage="sv2#area2#page26" landmarks="sv2#area2#page26 sv2#area2#page25 sv2#area2#page23 sv2#area2#lou1" landmark="true" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv2#area2#miu1" customURLName="login" gr:x="445" gr:y="0" action="true" moduleId="mov1#opm1">
+      <OKLink id="sv2#area2#miu1#oln30" name="OKFlow17" to="sv2#area2#miu3" automaticCoupling="true"/>
+      <KOLink id="sv2#area2#miu1#kln15" name="KOFlow5" to="sv2#area2#page25" automaticCoupling="true" gr:bendpoints="123,-4,-107,-54"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv2#area2#miu2" gr:x="925" gr:y="315" action="true" moduleId="mov1#opm2">
+      <OKLink id="sv2#area2#miu2#oln31" name="OKFlow9" to="sv2#area2#page24#dau7">
+        <LinkParameter id="sv2#area2#miu2#oln31#par169" name="Source oid [User]_KeyCondition4 [oid]" source="mov1#opm2#okcu1#ocp1" target="sv2#area2#page24#dau7#su40#kcond11.userOID"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv2#area2#miu3" gr:x="560" gr:y="390" action="true" moduleId="mov1#opm3">
+      <KOLink id="sv2#area2#miu3#kln16" name="KOFlow3" to="sv2#area2#page27" automaticCoupling="true" gr:bendpoints="-8,160,257,10"/>
+    </ModuleInstanceUnit>
+    <LogoutUnit id="sv2#area2#lou1" name="Logout" landmark="true" gr:x="25" gr:y="335" siteView="sv1" invalidateSession="true"/>
+  </OperationUnits>
+</Area>
