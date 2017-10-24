@@ -1,0 +1,146 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="20" gr:y="85" id="sv1#area5#page11" name="My Account" landmark="true" customURLName="myaccount">
+  <ContentUnits>
+    <DataUnit gr:x="5" gr:y="10" id="sv1#area5#page11#dau1" name="My Details" entity="ent3" displayAttributes="ent3#att10 ent3#att7 rel1#role2.userName rel1#role2.email count(rel2#role3.ent1#att1)">
+      <Selector id="sv1#area5#page11#dau1#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area5#page11#dau1#su23#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit gr:x="205" gr:y="0" id="sv1#area5#page11#gtu5" name="Get5" contextParameters="UserCtxParam">
+      <Link id="sv1#area5#page11#gtu5#ln59" name="Flow59" to="sv1#area5#page11#seu20" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <IndexUnit gr:x="0" gr:y="145" id="sv1#area5#page11#inu7" name="My Universities" entity="ent8" displayAttributes="ent8#att25 ent8#att26 ent8#att27">
+      <Selector id="sv1#area5#page11#inu7#su24" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area5#page11#inu7#su24#rcond15" name="RoleCondition15" role="rel9#role17" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+    <SelectorUnit gr:x="240" gr:y="165" id="sv1#area5#page11#seu20" name="Selector20" entity="ent3" distinctAttributes="ent3#att9">
+      <Selector id="sv1#area5#page11#seu20#su25" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area5#page11#seu20#su25#rcond20" name="RoleCondition20" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <Link id="sv1#area5#page11#seu20#ln60" name="Flow60" to="sv1#area5#page11#dau1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#area5#page11#seu20#ln75" name="Flow75" to="sv1#area5#page11#inu7" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#area5#page11#seu20#ln76" name="Flow76" to="sv1#area5#page11#inu8" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#area5#page11#seu20#ln77" name="Flow77" to="sv1#area5#page11#inu9" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#area5#page11#seu20#ln78" name="Flow77" to="sv1#area5#page11#inu10" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+    <IndexUnit gr:x="25" gr:y="260" id="sv1#area5#page11#inu8" name="My Publications" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6">
+      <Selector id="sv1#area5#page11#inu8#su38" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area5#page11#inu8#su38#rcond21" name="RoleCondition21" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+    </IndexUnit>
+    <IndexUnit gr:x="60" gr:y="375" id="sv1#area5#page11#inu9" name="My Collections" entity="ent7" displayAttributes="ent7#att22 ent7#att23">
+      <Selector id="sv1#area5#page11#inu9#su41" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area5#page11#inu9#su41#rcond22" name="RoleCondition22" predicate="in" implied="false" role="rel6#role12"/>
+      </Selector>
+    </IndexUnit>
+    <IndexUnit id="sv1#area5#page11#inu10" name="Shared Collections" gr:x="230" gr:y="410" entity="ent7" displayAttributes="ent7#att22 ent7#att23">
+      <Selector id="sv1#area5#page11#inu10#su42" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area5#page11#inu10#su42#rcond23" name="RoleCondition22" predicate="in" implied="false" role="rel8#role16"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#dau1">
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att7"/>
+          <layout:Attribute attribute="rel1#role2.userName"/>
+          <layout:Attribute attribute="rel1#role2.email"/>
+          <layout:Attribute attribute="count(rel2#role3.ent1#att1)"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#inu7">
+          <layout:Attribute attribute="ent8#att25"/>
+          <layout:Attribute attribute="ent8#att26"/>
+          <layout:Attribute attribute="ent8#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#inu8">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#inu9">
+          <layout:Attribute attribute="ent7#att22"/>
+          <layout:Attribute attribute="ent7#att23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area5#page11#inu10">
+          <layout:Attribute attribute="ent7#att22"/>
+          <layout:Attribute attribute="ent7#att23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

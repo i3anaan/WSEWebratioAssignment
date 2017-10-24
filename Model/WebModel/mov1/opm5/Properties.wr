@@ -39,7 +39,7 @@
         <LinkParameter id="mov1#opm5#lpu2#oln38#par183" name="You have been added as an author for a new publication._message" sourceValue="You have been added as an author for a new publication." target="mov1#opm5#miu4.mov1#opm11#icu11#icp30"/>
         <LinkParameter id="mov1#opm5#lpu2#oln38#par197" name="Next Element_Researcher.oid(NotificationToResearcher)" source="next" target="mov1#opm5#miu4.mov1#opm11#icu11#icp29"/>
       </OKLink>
-      <OKLink id="mov1#opm5#lpu2#oln40" name="OKFlow40" to="mov1#opm5#okcu8">
+      <OKLink id="mov1#opm5#lpu2#oln40" name="OKFlow40" to="mov1#opm5#okcu8" code="end">
         <LinkParameter id="mov1#opm5#lpu2#oln40#par155" name="oid_PASSING" sourceLinkParameter="mov1#opm5#cru8#oln37#par154" passing="true"/>
       </OKLink>
     </LoopUnit>

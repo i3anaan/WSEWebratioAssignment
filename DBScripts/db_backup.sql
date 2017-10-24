@@ -282,13 +282,9 @@ ALTER TABLE user_group OWNER TO postgres;
 -- Data for Name: author_publication; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO author_publication VALUES (3, 2);
+INSERT INTO author_publication VALUES (3, 1);
+INSERT INTO author_publication VALUES (2, 2);
 INSERT INTO author_publication VALUES (3, 3);
-INSERT INTO author_publication VALUES (3, 4);
-INSERT INTO author_publication VALUES (3, 5);
-INSERT INTO author_publication VALUES (3, 6);
-INSERT INTO author_publication VALUES (3, 8);
-INSERT INTO author_publication VALUES (3, 9);
 
 
 --
@@ -312,9 +308,7 @@ INSERT INTO collection VALUES (2, 'Better than collection 1', 'Collection 2', 3)
 INSERT INTO collection_publication VALUES (1, 1);
 INSERT INTO collection_publication VALUES (1, 2);
 INSERT INTO collection_publication VALUES (1, 3);
-INSERT INTO collection_publication VALUES (1, 4);
 INSERT INTO collection_publication VALUES (2, 2);
-INSERT INTO collection_publication VALUES (2, 4);
 
 
 --
@@ -362,38 +356,27 @@ INSERT INTO module VALUES (2, 'sv1area4page19', 'Home');
 -- Data for Name: notification; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO notification VALUES (4, NULL, 'You have been added as an author for a new publication.', 3, NULL);
-INSERT INTO notification VALUES (3, -30, 'You have been added as an Author for a newly uploaded publication!', 3, NULL);
-INSERT INTO notification VALUES (1, -32, 'You have been added as an Author for a newly uploaded publication!', 3, NULL);
-INSERT INTO notification VALUES (2, -31, 'You have been added as an Author for a newly uploaded publication!', 3, NULL);
-INSERT INTO notification VALUES (5, 0, 'You have been added as an author for a new publication.', 3, NULL);
-INSERT INTO notification VALUES (6, 3, 'You have been added as an author for a new publication.', NULL, NULL);
-INSERT INTO notification VALUES (7, 0, 'You have been added as an author for a new publication.', 3, NULL);
-INSERT INTO notification VALUES (8, 0, 'You have been added as an author for a new publication.', 3, '2017-10-24 16:56:53.992');
+INSERT INTO notification VALUES (1, 3, 'Welcome to the portal, new user!', 1, NULL);
+INSERT INTO notification VALUES (2, 3, 'Welcome to the portal, new user!', 2, NULL);
+INSERT INTO notification VALUES (3, 3, 'Welcome to the portal, new user!', 3, NULL);
 
 
 --
 -- Data for Name: publication; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO publication VALUES (1, '1', 'Delft Unviersity', 2034, 'Quantum Toilet pooping allows you to be at 2 places at the same time, giving oppertunity to keep working while pooping on the toilet.', '');
+INSERT INTO publication VALUES (1, 'Quantum Toilet Pooping', 'Delft Unviersity', 2034, 'Quantum Toilet pooping allows you to be at 2 places at the same time, giving oppertunity to keep working while pooping on the toilet.', '');
 INSERT INTO publication VALUES (2, 'Subspace toilet paper', 'Mens toilet #3', 2036, 'Following up on the Quantum pooping, a new technology has been developed that efficitvely wraps the subspace of a piece of toilet paper to be infite, efficitvely allowing the usage of infinite toilet paper.', 'yes');
-INSERT INTO publication VALUES (3, 'Yes', '2089', 2045, 'cool', '');
-INSERT INTO publication VALUES (4, 'Poopadiepoppedie', 'Outside', 2028, 'The new premier song to sing on the toilet', '');
-INSERT INTO publication VALUES (5, 'KJHKLASDJFKL', 'yes', 2, 'No', '');
-INSERT INTO publication VALUES (6, 'asdfasdf', 'asdfsdff', 1234, '454545', '');
-INSERT INTO publication VALUES (7, 'asdfasdf', '23423', 34, 'sdfg', '');
-INSERT INTO publication VALUES (8, 'asdfasdf', 'asdfsdff', 34, 'dfgh', '');
-INSERT INTO publication VALUES (9, '235', 'asfgsdfg', 234, 'asdfasdf', '');
+INSERT INTO publication VALUES (3, 'Poopadiepoppedie', 'Outside', 2028, 'The new premier song to sing on the toilet', '');
 
 
 --
 -- Data for Name: researcher; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO researcher VALUES (1, 'tudelft', 'louis', 100, 1);
-INSERT INTO researcher VALUES (2, 'tudelft', 'louisadmin', 100, 2);
-INSERT INTO researcher VALUES (3, NULL, 'Derk Snijders', 112, 3);
+INSERT INTO researcher VALUES (1, 'tudelft', 'researcher', 0, 1);
+INSERT INTO researcher VALUES (2, 'tudelft', 'admin', 0, 2);
+INSERT INTO researcher VALUES (3, 'tudelft', 'Derk Snijders', 0, 3);
 
 
 --
@@ -418,8 +401,8 @@ INSERT INTO researcher VALUES (3, NULL, 'Derk Snijders', 112, 3);
 -- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO "user" VALUES (2, 'louisadmin', 'louisadmin', 'louis@admin.nl', 1);
-INSERT INTO "user" VALUES (1, 'louis', 'louis', 'louis@live.nl', 2);
+INSERT INTO "user" VALUES (2, 'admin', 'admin', 'wse.webratio@gmail.com', 1);
+INSERT INTO "user" VALUES (1, 'researcher', 'researcher', 'wse.webratio@gmail.com', 2);
 INSERT INTO "user" VALUES (3, 'i3anaan', 'i3anaan', 'i3anaan@gmail.com', 2);
 
 

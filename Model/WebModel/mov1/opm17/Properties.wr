@@ -1,0 +1,38 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm17" name="Delete Publication" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm17#icu17" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm17#icu17#oln94" name="OKFlow49" to="mov1#opm17#dlu12">
+        <LinkParameter id="mov1#opm17#icu17#oln94#par256" name="publicationID_KeyCondition13 [oid]" source="mov1#opm17#icu17#icp43" target="mov1#opm17#dlu12#su51#kcond28.ent1#att1"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm17#icu17#icp43" name="publicationID"/>
+      <Link id="mov1#opm17#icu17#ln77" name="Flow65" to="mov1#opm17#seu33" type="transport" validate="true">
+        <LinkParameter id="mov1#opm17#icu17#ln77#par257" name="publicationID_RoleCondition17 [oid]" source="mov1#opm17#icu17#icp43" target="mov1#opm17#seu33#su52#rcond22.ent1#att1"/>
+      </Link>
+    </InputCollectorUnit>
+    <DeleteUnit id="mov1#opm17#dlu12" name="Delete Publication" gr:x="360" gr:y="55" entity="ent1">
+      <Selector id="mov1#opm17#dlu12#su51" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm17#dlu12#su51#kcond28" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm17#dlu12#oln95" name="OKFlow42" to="mov1#opm17#seu33" automaticCoupling="true"/>
+      <KOLink id="mov1#opm17#dlu12#kln31" name="KOFlow18" to="mov1#opm17#kocu13" automaticCoupling="true"/>
+    </DeleteUnit>
+    <KOCollectorUnit id="mov1#opm17#kocu13" name="KO Port8" gr:x="575" gr:y="130">
+      <OutputCollectorParameter id="mov1#opm17#kocu13#ocp5" name="Message" value="Comment removal failed"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit id="mov1#opm17#okcu16" name="OK Port10" gr:x="575" gr:y="0">
+      <OutputCollectorParameter id="mov1#opm17#okcu16#ocp6" name="Message" value="Publication deletion succesful"/>
+    </OKCollectorUnit>
+    <ModuleInstanceUnit id="mov1#opm17#miu23" gr:x="385" gr:y="255" action="true" moduleId="mov1#opm11">
+      <OKLink id="mov1#opm17#miu23#oln96" name="OKFlow67" to="mov1#opm17#okcu16" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <SelectorUnit id="mov1#opm17#seu33" name="Selector28" gr:x="230" gr:y="190" entity="ent3">
+      <Selector id="mov1#opm17#seu33#su52" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm17#seu33#su52#rcond22" name="RoleCondition17" predicate="in" implied="false" role="rel2#role4"/>
+      </Selector>
+      <OKLink id="mov1#opm17#seu33#oln97" name="OKFlow61" to="mov1#opm17#miu23">
+        <LinkParameter id="mov1#opm17#seu33#oln97#par258" name="Your publication has been deleted_message" target="mov1#opm17#miu23.mov1#opm11#icu11#icp30" sourceValue="Your publication has been deleted"/>
+        <LinkParameter id="mov1#opm17#seu33#oln97#par259" name="oid_Researcher.oid(NotificationToResearcher)" source="ent3#att9Array" target="mov1#opm17#miu23.mov1#opm11#icu11#icp29"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>
