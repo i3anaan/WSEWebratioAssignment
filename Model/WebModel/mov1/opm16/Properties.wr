@@ -28,7 +28,7 @@
       </OKLink>
     </DeleteUnit>
     <OKCollectorUnit id="mov1#opm16#okcu15" name="OK Port14" gr:x="785" gr:y="315"/>
-    <KOCollectorUnit id="mov1#opm16#kocu12" name="KO Port8" gr:x="785" gr:y="155"/>
+    <KOCollectorUnit id="mov1#opm16#kocu12" name="KO Port8" gr:x="785" gr:y="170"/>
     <DeleteUnit id="mov1#opm16#dlu11" name="Delete" gr:x="560" gr:y="390" entity="ent3">
       <Selector id="mov1#opm16#dlu11#su50" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm16#dlu11#su50#kcond27" name="KeyCondition21" predicate="in" implied="false"/>
