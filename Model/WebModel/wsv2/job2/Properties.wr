@@ -1,4 +1,4 @@
-<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="360" gr:y="125" id="wsv2#job2" name="Calculate Reputation">
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="180" gr:y="130" id="wsv2#job2" name="Calculate Reputation">
   <OperationUnits>
     <InitJobUnit id="wsv2#job2#iju2" name="Init Job" gr:x="0" gr:y="35">
       <OKLink id="wsv2#job2#iju2#oln26" name="OKFlow26" to="wsv2#job2#seu1" automaticCoupling="true"/>
