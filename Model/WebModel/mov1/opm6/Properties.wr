@@ -16,11 +16,11 @@
     <CreateUnit id="mov1#opm6#cru5" name="Create Researcher" gr:x="590" gr:y="120" entity="ent3">
       <OKLink id="mov1#opm6#cru5#oln74" name="OKFlow74" to="mov1#opm6#miu18">
         <LinkParameter id="mov1#opm6#cru5#oln74#par243" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
-        <LinkParameter id="mov1#opm6#cru5#oln74#par274" name="You have been added as an author to our platform_Mail - Subject" sourceValue="You have been added as an author to our platform" target="mov1#opm6#miu18.mov1#opm15#icu15#icp44"/>
-        <LinkParameter id="mov1#opm6#cru5#oln74#par275" name="userName_PASSING_Placeholder1" sourceLinkParameter="mov1#opm6#cru6#oln71#par234" target="mov1#opm6#miu18.mov1#opm15#icu15#icp47"/>
-        <LinkParameter id="mov1#opm6#cru5#oln74#par276" name="password_PASSING_Placeholder2" sourceLinkParameter="mov1#opm6#cru6#oln71#par233" target="mov1#opm6#miu18.mov1#opm15#icu15#icp48"/>
-        <LinkParameter id="mov1#opm6#cru5#oln74#par277" name="password_template" sourceValue="password" target="mov1#opm6#miu18.mov1#opm15#icu15#icp46"/>
-        <LinkParameter id="mov1#opm6#cru5#oln74#par280" name="email_PASSING_Mail - To" sourceLinkParameter="mov1#opm6#cru6#oln71#par279" target="mov1#opm6#miu18.mov1#opm15#icu15#icp45"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par274" name="You have been added as an author to our platform_Mail - Subject" sourceValue="You have been added as an author to our platform" target="mov1#opm6#miu18.mov1#opm16#icu4#icp50"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par275" name="userName_PASSING_Placeholder1" sourceLinkParameter="mov1#opm6#cru6#oln71#par234" target="mov1#opm6#miu18.mov1#opm16#icu4#icp53"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par276" name="password_PASSING_Placeholder2" sourceLinkParameter="mov1#opm6#cru6#oln71#par233" target="mov1#opm6#miu18.mov1#opm16#icu4#icp54"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par277" name="password_template" sourceValue="password" target="mov1#opm6#miu18.mov1#opm16#icu4#icp52"/>
+        <LinkParameter id="mov1#opm6#cru5#oln74#par280" name="email_PASSING_Mail - To" sourceLinkParameter="mov1#opm6#cru6#oln71#par279" target="mov1#opm6#miu18.mov1#opm16#icu4#icp51"/>
       </OKLink>
     </CreateUnit>
     <CreateUnit id="mov1#opm6#cru6" name="Create User" gr:x="385" gr:y="100" entity="User">
@@ -40,7 +40,7 @@
         <LinkParameter id="mov1#opm6#pwu8#oln73#par239" name="Generated Password_PASSING" source="password" passing="true"/>
       </OKLink>
     </PasswordUnit>
-    <ModuleInstanceUnit gr:x="520" gr:y="340" id="mov1#opm6#miu18" action="true" moduleId="mov1#opm15">
+    <ModuleInstanceUnit gr:x="520" gr:y="340" id="mov1#opm6#miu18" action="true" moduleId="mov1#opm16">
       <OKLink id="mov1#opm6#miu18#oln75" name="OKFlow75" to="mov1#opm6#okcu5">
         <LinkParameter id="mov1#opm6#miu18#oln75#par244" name="oid_PASSING_ResearcherOID" sourceLinkParameter="mov1#opm6#cru5#oln74#par243" target="mov1#opm6#okcu5#ocp2"/>
       </OKLink>
