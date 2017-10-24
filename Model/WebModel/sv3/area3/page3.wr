@@ -1,8 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="100" gr:y="385" id="sv3#area3#page3" name="Edit Group">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="100" gr:y="380" id="sv3#area3#page3" name="Edit Group">
   <ContentUnits>
-    <EntryUnit id="sv3#area3#page3#enu5" name="Group Details" linkOrder="sv3#area3#page3#enu5#ln55" gr:x="205" gr:y="0" entity="Group" fieldOrder="sv3#area3#page3#enu5#sfld4 sv3#area3#page3#enu5#msfld7 sv3#area3#page3#enu5#fld4 sv3#area3#page3#enu5#fld6">
+    <EntryUnit id="sv3#area3#page3#enu5" name="Group Details" linkOrder="sv3#area3#page3#enu5#ln55" gr:x="205" gr:y="5" entity="Group" fieldOrder="sv3#area3#page3#enu5#sfld4 sv3#area3#page3#enu5#msfld7 sv3#area3#page3#enu5#fld4 sv3#area3#page3#enu5#fld6">
       <SelectionField id="sv3#area3#page3#enu5#sfld4" name="Default Module" type="string" role="Group2DefaultModule"/>
-      <MultiSelectionField id="sv3#area3#page3#enu5#msfld7" name="Modules" type="string" role="Group2Module"/>
+      <MultiSelectionField id="sv3#area3#page3#enu5#msfld7" name="Modules" type="string" role="Group2Module" splitOutput="false"/>
       <Field id="sv3#area3#page3#enu5#fld4" name="groupName" type="string" modifiable="true" attribute="groupName"/>
       <Field id="sv3#area3#page3#enu5#fld6" name="oid" type="integer" attribute="groupOID"/>
       <Link id="sv3#area3#page3#enu5#ln55" name="Save" to="sv3#area3#miu4" type="normal" validate="true">
@@ -11,24 +11,25 @@
         <LinkParameter id="sv3#area3#page3#enu5#ln55#par151" name="Modules_modules" source="sv3#area3#page3#enu5#msfld7" target="sv3#area3#miu4.mov1#opm4#icu4#icp13"/>
         <LinkParameter id="sv3#area3#page3#enu5#ln55#par152" name="Key [oid]_oidGroup" source="sv3#area3#page3#enu5#fld6" target="sv3#area3#miu4.mov1#opm4#icu4#icp14"/>
       </Link>
+      <Link id="sv3#area3#page3#enu5#ln54" name="Flow54" to="sv3#area3#page3#seu9" type="transport" validate="true" gr:bendpoints="-80,48,105,48">
+        <LinkParameter id="sv3#area3#page3#enu5#ln54#par178" name="oid_PASSING_RoleCondition6 [oid]" sourceLinkParameter="sv3#area3#page2#pwu3#ln37#par139" target="sv3#area3#page3#seu9#su14#rcond6.groupOID"/>
+      </Link>
     </EntryUnit>
     <SelectorUnit id="sv3#area3#page3#seu9" name="Associated Modules" customDescriptor="false" gr:x="0" gr:y="0" entity="Module" distinctAttributes="moduleID moduleName moduleOID" distinct="false">
       <Link id="sv3#area3#page3#seu9#ln47" name="Flow16" to="sv3#area3#page3#enu5" type="transport" validate="true">
-        <LinkParameter id="sv3#area3#page3#seu9#ln47#par117" name="oid_Default Module - Preselection" source="moduleOIDArray" target="sv3#area3#page3#enu5#sfld4_presel"/>
         <LinkParameter id="sv3#area3#page3#seu9#ln47#par118" name="oid_Modules - Preselection" source="moduleOIDArray" target="sv3#area3#page3#enu5#msfld7_presel"/>
       </Link>
+      <Selector id="sv3#area3#page3#seu9#su14" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area3#page3#seu9#su14#rcond6" name="RoleCondition6" predicate="in" implied="false" role="Group2Module"/>
+      </Selector>
     </SelectorUnit>
-    <SelectorUnit id="sv3#area3#page3#seu10" name="All Modules" gr:x="210" gr:y="145" entity="Module">
+    <SelectorUnit id="sv3#area3#page3#seu10" name="All Modules" gr:x="210" gr:y="150" entity="Module" distinctAttributes="moduleID moduleName moduleOID">
       <Link id="sv3#area3#page3#seu10#ln50" name="Flow8" to="sv3#area3#page3#enu5" type="transport" validate="true">
-        <LinkParameter id="sv3#area3#page3#seu10#ln50#par122" name="moduleID_PASSING" source="moduleIDArray" passing="true"/>
-        <LinkParameter id="sv3#area3#page3#seu10#ln50#par123" name="moduleName_PASSING" source="moduleNameArray" passing="true"/>
         <LinkParameter id="sv3#area3#page3#seu10#ln50#par125" name="moduleName_Default Module [label]" source="moduleNameArray" target="sv3#area3#page3#enu5#sfld4_label"/>
-        <LinkParameter id="sv3#area3#page3#seu10#ln50#par126" name="moduleID_Default Module [output]" source="moduleIDArray" target="sv3#area3#page3#enu5#sfld4_output"/>
+        <LinkParameter id="sv3#area3#page3#seu10#ln50#par126" name="moduleID_Default Module [output]" source="moduleOIDArray" target="sv3#area3#page3#enu5#sfld4_output"/>
         <LinkParameter id="sv3#area3#page3#seu10#ln50#par127" name="moduleName_Modules [label]" source="moduleNameArray" target="sv3#area3#page3#enu5#msfld7_label"/>
-        <LinkParameter id="sv3#area3#page3#seu10#ln50#par128" name="moduleID_Modules [output]" source="moduleIDArray" target="sv3#area3#page3#enu5#msfld7_output"/>
-        <LinkParameter id="sv3#area3#page3#seu10#ln50#par133" name="moduleName_Default Module - Preselection" source="moduleNameArray" target="sv3#area3#page3#enu5#sfld4_presel"/>
+        <LinkParameter id="sv3#area3#page3#seu10#ln50#par128" name="moduleID_Modules [output]" source="moduleOIDArray" target="sv3#area3#page3#enu5#msfld7_output"/>
         <LinkParameter id="sv3#area3#page3#seu10#ln50#par134" name="oid_Key Condition [oid]" source="moduleOIDArray" target="sv3#area3#page3#enu5.groupOID"/>
-        <LinkParameter id="sv3#area3#page3#seu10#ln50#par135" name="moduleName_Modules - Preselection" source="moduleNameArray" target="sv3#area3#page3#enu5#msfld7_presel"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>

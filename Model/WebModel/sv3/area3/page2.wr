@@ -16,14 +16,18 @@
       <Link id="sv3#area3#page2#pwu3#ln37" name="Edit" to="sv3#area3#page3#enu5" type="normal" validate="true" gr:bendpoints="41,70,-49,-95">
         <LinkParameter id="sv3#area3#page2#pwu3#ln37#par137" name="oid_Key Condition [oid]" source="data[].groupOID" target="sv3#area3#page3#enu5.groupOID"/>
         <LinkParameter id="sv3#area3#page2#pwu3#ln37#par139" name="oid_PASSING" source="data[].groupOID" passing="true"/>
+        <LinkParameter id="sv3#area3#page2#pwu3#ln37#par165" name="defaultModule.oid_Default Module - Preselection" source="data[].Group2DefaultModule_moduleOID" target="sv3#area3#page3#enu5#sfld4_presel"/>
       </Link>
     </PowerIndexUnit>
-    <SelectorUnit gr:x="160" gr:y="210" id="sv3#area3#page2#seu6" name="Associated Modules" entity="Module" customDescriptor="false">
+    <SelectorUnit gr:x="160" gr:y="140" id="sv3#area3#page2#seu6" name="Associated Modules" entity="Module" customDescriptor="false">
       <Link id="sv3#area3#page2#seu6#ln43" name="Flow43" to="sv3#area3#page2#enu12" type="transport" validate="true">
         <LinkParameter id="sv3#area3#page2#seu6#ln43#par99" name="oid_defaultModule - Preselection" source="moduleOIDArray" target="sv3#area3#page2#enu12#sfld5_presel"/>
         <LinkParameter id="sv3#area3#page2#seu6#ln43#par100" name="oid_modules - Preselection" source="moduleOIDArray" target="sv3#area3#page2#enu12#msfld5_presel"/>
         <LinkParameter id="sv3#area3#page2#seu6#ln43#par105" name="oid_Key Condition [oid]" source="moduleOIDArray" target="sv3#area3#page2#enu12.groupOID"/>
       </Link>
+      <Selector id="sv3#area3#page2#seu6#su16" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area3#page2#seu6#su16#rcond7" name="RoleCondition7" predicate="in" implied="false" role="Group2Module"/>
+      </Selector>
     </SelectorUnit>
     <EntryUnit gr:x="165" gr:y="0" id="sv3#area3#page2#enu12" name="Add New Group" linkOrder="sv3#area3#page2#enu12#ln40" entity="Group">
       <Link id="sv3#area3#page2#enu12#ln40" name="Create" to="sv3#area3#miu3" type="normal" validate="true">
