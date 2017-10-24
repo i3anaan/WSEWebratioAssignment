@@ -36,7 +36,7 @@ WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t1,
         <LinkParameter id="wsv2#job2#seu1#oln2#par36" name="oid_Input Array" source="ent3#att9Array" target="wsv2#job2#lpu5.array"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit gr:x="410" gr:y="220" id="wsv2#job2#seu14" name="Selector14" entity="ent3"/>
+    <SelectorUnit gr:x="410" gr:y="220" id="wsv2#job2#seu14" name="UselessSelector" entity="ent3"/>
   </OperationUnits>
   <Trigger id="wsv2#job2#trg1" name="Trigger1" schedulePolicy="everyXSeconds" seconds="30"/>
 </Job>

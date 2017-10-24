@@ -1,8 +1,9 @@
-<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#mpage2" name="MasterPage" layout:pageLayout="WebRatio/Basic" layout:layoutManager="grid" layout:frameLayout="WebRatio/Basic" layout:cellLayout="WRDefault/Frame" layout:attributeLayout="WRDefault/Simple" layout:fieldLayout="WRDefault/FieldValue" layout:linkLayout="WRDefault/Simple" gr:x="0" gr:y="35">
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#mpage2" name="MasterPage" layout:pageLayout="WebRatio/Basic" layout:layoutManager="grid" layout:frameLayout="WebRatio/Basic" layout:cellLayout="WRDefault/Frame" layout:attributeLayout="WRDefault/Simple" layout:fieldLayout="WRDefault/FieldValue" layout:linkLayout="WRDefault/Simple" gr:x="0" gr:y="0">
   <ContentUnits>
     <DataUnit id="sv2#area2#mpage2#dau6" name="You are logged in as:" customDescriptor="false" gr:showAllParts="false" gr:x="75" gr:y="0" entity="User" displayAttributes="rel1#role1.ent3#att10">
       <Selector id="sv2#area2#mpage2#dau6#su39" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area2#mpage2#dau6#su39#kcond10" name="KeyCondition1" predicate="in" implied="false"/>
+        <AttributesCondition id="sv2#area2#mpage2#dau6#su39#acond9" name="AttCondition9" predicate="notNull" booleanOperator="or" implied="false" attributes="userOID"/>
       </Selector>
     </DataUnit>
     <GetUnit id="sv2#area2#mpage2#gtu14" name="CurrentUser" gr:x="0" gr:y="135" contextParameters="UserCtxParam">

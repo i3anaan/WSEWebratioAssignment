@@ -44,5 +44,6 @@
       </TargetSelector>
       <OKLink id="mov1#opm9#dcnu1#oln35" name="OKFlow29" to="mov1#opm9#lpu1" automaticCoupling="true" gr:bendpoints="-105,-66,65,89"/>
     </DisconnectUnit>
+    <SelectorUnit gr:x="205" gr:y="-50" id="mov1#opm9#seu21" name="UselessSelector2"/>
   </OperationUnits>
 </OperationModule>

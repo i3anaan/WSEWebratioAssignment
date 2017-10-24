@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area6#page4" name="Researcher Management" gr:x="0" gr:y="0">
   <ContentUnits>
-    <PowerIndexUnit id="sv3#area6#page4#pwu2" name="List of Researchers" linkOrder="sv3#area6#page4#pwu2#ln15" customDescriptor="false" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att10 ent3#att11 rel1#role2.userName rel1#role2.email rel9#role17.ent8#att25 rel9#role17.ent8#att26 rel9#role17.ent8#att27">
+    <PowerIndexUnit id="sv3#area6#page4#pwu2" name="List of Researchers" linkOrder="sv3#area6#page4#pwu2#ln15" customDescriptor="false" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att10 rel1#role2.userName rel1#role2.email rel9#role17.ent8#att25 rel9#role17.ent8#att26 rel9#role17.ent8#att27">
       <Link id="sv3#area6#page4#pwu2#ln15" name="Edit" to="sv3#area6#page4#enu6" type="normal" validate="true">
         <LinkParameter id="sv3#area6#page4#pwu2#ln15#par24" name="oid_Key Condition [oid]" source="data[].ent3#att9" target="sv3#area6#page4#enu6.ent3#att9"/>
         <LinkParameter id="sv3#area6#page4#pwu2#ln15#par25" name="ResearcherToUniversity.name_University - Preselection" target="sv3#area6#page4#enu6#sfld3_presel" sourceValue="$$NULL$$"/>
@@ -25,14 +25,13 @@
     <layout:Row>
       <layout:Cell rowspan="3" colspan="8">
         <layout:Unit unitId="sv3#area6#page4#pwu2">
+          <layout:Link link="sv3#area6#page4#pwu2#ln15"/>
           <layout:Attribute attribute="ent3#att10"/>
-          <layout:Attribute attribute="ent3#att11"/>
           <layout:Attribute attribute="rel1#role2.userName"/>
           <layout:Attribute attribute="rel1#role2.email"/>
           <layout:Attribute attribute="rel9#role17.ent8#att25"/>
           <layout:Attribute attribute="rel9#role17.ent8#att26"/>
           <layout:Attribute attribute="rel9#role17.ent8#att27"/>
-          <layout:Link link="sv3#area6#page4#pwu2#ln15"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

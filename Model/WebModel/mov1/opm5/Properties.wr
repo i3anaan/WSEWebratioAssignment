@@ -1,0 +1,39 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="905" gr:y="280" id="mov1#opm5" name="CreatePublication">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu9" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm5#icu9#oln36" name="OKFlow36" to="mov1#opm5#cru8">
+        <LinkParameter id="mov1#opm5#icu9#oln36#par138" name="Collection.oid(PublicationToCollection)" source="mov1#opm5#icu9#icp17" target="mov1#opm5#cru8.rel5#role10.ent7#att21"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par139" name="Comment.oid(PublicationToComment)" source="mov1#opm5#icu9#icp18" target="mov1#opm5#cru8.rel11#role22.ent6#att17"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par140" name="Keyword.oid(PublicationToKeyword)" source="mov1#opm5#icu9#icp19" target="mov1#opm5#cru8.rel3#role6.ent5#att15"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par141" name="Publication Object" source="mov1#opm5#icu9#icp20" target="mov1#opm5#cru8.entityBeans"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par142" name="Researcher.oid(PublicationToAuthor)" source="mov1#opm5#icu9#icp21" target="mov1#opm5#cru8.rel2#role4.ent3#att9"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par143" name="abstract" source="mov1#opm5#icu9#icp22" target="mov1#opm5#cru8.ent1#att5"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par144" name="file" source="mov1#opm5#icu9#icp23" target="mov1#opm5#cru8.ent1#att6"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par145" name="oid" source="mov1#opm5#icu9#icp24" target="mov1#opm5#cru8.ent1#att1"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par146" name="title" source="mov1#opm5#icu9#icp25" target="mov1#opm5#cru8.ent1#att2"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par147" name="venue" source="mov1#opm5#icu9#icp26" target="mov1#opm5#cru8.ent1#att3"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par148" name="year" source="mov1#opm5#icu9#icp27" target="mov1#opm5#cru8.ent1#att4"/>
+        <LinkParameter id="mov1#opm5#icu9#oln36#par149" name="Researcher.oid(PublicationToAuthor)_PASSING" source="mov1#opm5#icu9#icp21" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp17" name="Collection.oid(PublicationToCollection)"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp18" name="Comment.oid(PublicationToComment)"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp19" name="Keyword.oid(PublicationToKeyword)"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp20" name="Publication Object"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp21" name="Researcher.oid(PublicationToAuthor)"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp22" name="abstract"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp23" name="file"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp24" name="oid"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp25" name="title"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp26" name="venue"/>
+      <InputCollectorParameter id="mov1#opm5#icu9#icp27" name="year"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1060" gr:y="95" id="mov1#opm5#okcu8" name="OK Port8"/>
+    <CreateUnit id="mov1#opm5#cru8" name="Create Pub" gr:x="465" gr:y="250" entity="ent1">
+      <OKLink id="mov1#opm5#cru8#oln37" name="OKFlow37" to="mov1#opm5#lpu2">
+        <LinkParameter id="mov1#opm5#cru8#oln37#par150" name="Researcher.oid(PublicationToAuthor)_PASSING_Input Array" sourceLinkParameter="mov1#opm5#icu9#oln36#par149" target="mov1#opm5#lpu2.array"/>
+      </OKLink>
+    </CreateUnit>
+    <LoopUnit gr:x="555" gr:y="105" id="mov1#opm5#lpu2" name="Notifications"/>
+    <CreateUnit gr:x="600" gr:y="-20" id="mov1#opm5#cru9" name="CreateNotifications"/>
+  </OperationUnits>
+</OperationModule>

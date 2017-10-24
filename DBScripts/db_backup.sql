@@ -1,5 +1,4 @@
-bplist00—_WebMainResource’	
-_WebResourceMIMEType_WebResourceTextEncodingName_WebResourceFrameName^WebResourceURL_WebResourceDataZtext/plainUUTF-8P__https://raw.githubusercontent.com/i3anaan/WSEWebratioAssignment/public2/DBScripts/db_backup.sqlO=√<html><head><style type="text/css"></style></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">--
+--
 -- PostgreSQL database dump
 --
 
@@ -701,4 +700,3 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
-</pre></body></html>    ( > \ s Ç î ü • ¶                           >œ
