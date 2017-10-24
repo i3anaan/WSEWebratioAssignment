@@ -1,3 +1,5 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area6" name="Users" defaultPage="sv3#area6#page4" landmark="true" gr:x="1344" gr:y="349">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area6" name="Users" defaultPage="sv3#area6#page4" landmark="true" gr:x="1450" gr:y="355">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv3#area6#miu22" name="Delete Researcher" gr:x="0" gr:y="320" action="true"/>
+  </OperationUnits>
 </Area>

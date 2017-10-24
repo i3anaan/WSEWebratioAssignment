@@ -1,0 +1,40 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm16" name="Delete Researcher" gr:x="695" gr:y="235">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm16#icu16" gr:x="70" gr:y="175">
+      <InputCollectorParameter id="mov1#opm16#icu16#icp32" name="researcherID"/>
+      <OKLink id="mov1#opm16#icu16#oln90" name="OKFlow85" to="mov1#opm16#seu32">
+        <LinkParameter id="mov1#opm16#icu16#oln90#par250" name="researcherID_RoleCondition20 [oid]" source="mov1#opm16#icu16#icp32" target="mov1#opm16#seu32#su48#rcond21.ent3#att9"/>
+        <LinkParameter id="mov1#opm16#icu16#oln90#par251" name="researcherID_PASSING" source="mov1#opm16#icu16#icp32" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <SelectorUnit id="mov1#opm16#seu32" name="Find User" gr:x="365" gr:y="170" entity="User" distinctAttributes="userOID">
+      <Selector id="mov1#opm16#seu32#su48" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm16#seu32#su48#rcond21" name="RoleCondition20" predicate="in" implied="false" role="rel1#role2"/>
+      </Selector>
+      <OKLink id="mov1#opm16#seu32#oln91" name="OKFlow77" to="mov1#opm16#dlu10">
+        <LinkParameter id="mov1#opm16#seu32#oln91#par252" name="oid_KeyCondition13 [oid]" source="userOIDArray" target="mov1#opm16#dlu10#su49#kcond26.userOID"/>
+        <LinkParameter id="mov1#opm16#seu32#oln91#par253" name="oid_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov1#opm16#seu32#oln91#par254" name="researcherID_PASSING" sourceLinkParameter="mov1#opm16#icu16#oln90#par251" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#opm16#seu32#kln28" name="KOFlow26" to="mov1#opm16#kocu12" automaticCoupling="true"/>
+    </SelectorUnit>
+    <DeleteUnit id="mov1#opm16#dlu10" name="Delete User" gr:x="375" gr:y="310" entity="User">
+      <Selector id="mov1#opm16#dlu10#su49" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm16#dlu10#su49#kcond26" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm16#dlu10#kln29" name="KOFlow25" to="mov1#opm16#kocu12" automaticCoupling="true"/>
+      <OKLink id="mov1#opm16#dlu10#oln92" name="OKFlow86" to="mov1#opm16#dlu11">
+        <LinkParameter id="mov1#opm16#dlu10#oln92#par255" name="researcherID_PASSING_KeyCondition21 [oid]" sourceLinkParameter="mov1#opm16#seu32#oln91#par254" target="mov1#opm16#dlu11#su50#kcond27.ent3#att9"/>
+      </OKLink>
+    </DeleteUnit>
+    <OKCollectorUnit id="mov1#opm16#okcu15" name="OK Port14" gr:x="785" gr:y="315"/>
+    <KOCollectorUnit id="mov1#opm16#kocu12" name="KO Port8" gr:x="785" gr:y="155"/>
+    <DeleteUnit id="mov1#opm16#dlu11" name="Delete" gr:x="560" gr:y="390" entity="ent3">
+      <Selector id="mov1#opm16#dlu11#su50" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm16#dlu11#su50#kcond27" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm16#dlu11#kln30" name="KOFlow27" to="mov1#opm16#kocu12" automaticCoupling="true"/>
+      <OKLink id="mov1#opm16#dlu11#oln93" name="OKFlow87" to="mov1#opm16#okcu15" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationModule>
