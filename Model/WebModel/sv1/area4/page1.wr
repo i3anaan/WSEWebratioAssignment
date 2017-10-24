@@ -1,0 +1,83 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1050" gr:y="460" id="sv1#area4#page1" name="Show Publications" landmark="true">
+  <ContentUnits>
+    <IndexUnit id="sv1#area4#page1#inu2" name="Search Results Pub" gr:x="0" gr:y="80" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6 rel2#role4.ent3#att10" linkOrder="sv1#area4#page1#inu2#ln41">
+      <Selector id="sv1#area4#page1#inu2#su13" defaultPolicy="fill" booleanOperator="or">
+        <AttributesCondition id="sv1#area4#page1#inu2#su13#acond1" name="Title Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att2" ignoreCase="true"/>
+        <AttributesCondition id="sv1#area4#page1#inu2#su13#acond3" name="Abstract Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att5" ignoreCase="true"/>
+        <AttributesCondition id="sv1#area4#page1#inu2#su13#acond4" name="Keywords Contains Keyword" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="rel3#role6.ent5#att16"/>
+        <RelationshipRoleCondition id="sv1#area4#page1#inu2#su13#rcond9" name="Author Contains Keyword" predicate="in" implied="true" role="rel2#role3"/>
+      </Selector>
+      <Link id="sv1#area4#page1#inu2#ln41" name="Show" to="sv1#area4#page17#dau4" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <EntryUnit id="sv1#area4#page1#enu3" name="Search Pub" linkOrder="sv1#area4#page1#enu3#ln40" gr:x="5" gr:y="0">
+      <Field id="sv1#area4#page1#enu3#fld3" name="keyword" type="string" modifiable="true"/>
+      <Link id="sv1#area4#page1#enu3#ln40" name="Search" to="sv1#area4#page1#inu2" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page1#enu3#ln40#par89" name="keyword_Contains Keyword" source="sv1#area4#page1#enu3#fld3" target="sv1#area4#page1#inu2#su13#acond1"/>
+        <LinkParameter id="sv1#area4#page1#enu3#ln40#par90" name="keyword_Abstract Contains Keyword" source="sv1#area4#page1#enu3#fld3" target="sv1#area4#page1#inu2#su13#acond3"/>
+        <LinkParameter id="sv1#area4#page1#enu3#ln40#par91" name="keyword_Keywords Contains Keyword" source="sv1#area4#page1#enu3#fld3" target="sv1#area4#page1#inu2#su13#acond4"/>
+        <LinkParameter id="sv1#area4#page1#enu3#ln40#par92" name="keyword_Author Contains Keyword [oid]" source="sv1#area4#page1#enu3#fld3" target="sv1#area4#page1#inu2#su13#rcond9.ent3#att9"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page1#enu3">
+          <layout:Field field="sv1#area4#page1#enu3#fld3"/>
+          <layout:Link link="sv1#area4#page1#enu3#ln40"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page1#inu2">
+          <layout:Link link="sv1#area4#page1#inu2#ln41"/>
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att6"/>
+          <layout:Attribute attribute="rel2#role4.ent3#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#area4#page1#ln43" name="Create Publication" to="sv1#area4#page20" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

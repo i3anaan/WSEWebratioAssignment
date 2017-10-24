@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1265" gr:y="620" id="sv1#area4#page13" name="Edit Publication">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1900" gr:y="870" id="sv1#area4#page13" name="Edit Publication">
   <ContentUnits>
     <EntryUnit id="sv1#area4#page13#enu1" entity="ent1" gr:x="0" gr:y="0" name="Edit Pub" linkOrder="sv1#area4#page13#enu1#ln4">
       <Field id="sv1#area4#page13#enu1#fld8" attribute="ent1#att2" type="string" modifiable="true" name="title"/>
@@ -13,9 +13,9 @@
         <LinkParameter id="sv1#area4#page13#enu1#ln4#par34" name="Publication Object_Publication Object" source="entityBean" target="sv1#area4#mfu4.entityBeans"/>
       </Link>
       <MultiSelectionField id="sv1#area4#page13#enu1#msfld2" name="Keywords" type="string"/>
-      <MultiSelectionField id="sv1#area4#page13#enu1#msfld3" name="Authors" type="string"/>
+      <MultiSelectionField id="sv1#area4#page13#enu1#msfld3" name="Authors" type="string" role="rel2#role4"/>
     </EntryUnit>
-    <SelectorUnit id="sv1#area4#page13#seu4" name="Authors" gr:x="10" gr:y="200">
+    <SelectorUnit id="sv1#area4#page13#seu4" name="Authors" gr:x="10" gr:y="200" entity="ent3">
       <Link id="sv1#area4#page13#seu4#ln6" name="Flow6" to="sv1#area4#page13#enu1" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page13#seu4#ln6#par18" name="name_Authors [label]" source="ent3#att10Array" target="sv1#area4#page13#enu1#msfld3_label"/>
         <LinkParameter id="sv1#area4#page13#seu4#ln6#par19" name="oid_Authors [output]" source="ent3#att9Array" target="sv1#area4#page13#enu1#msfld3_output"/>

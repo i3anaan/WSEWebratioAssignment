@@ -23,6 +23,7 @@ WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t1,
         <LinkParameter id="wsv2#job2#lpu5#oln25#par74" name="Next Element_authorOID" source="next" target="wsv2#job2#qu5.wsv2#job2#qu5#qi5"/>
         <LinkParameter id="wsv2#job2#lpu5#oln25#par77" name="Next Element_PASSING" source="next" passing="true"/>
       </OKLink>
+      <OKLink id="wsv2#job2#lpu5#oln16" name="OKFlow16" to="wsv2#job2#seu14" automaticCoupling="true" code="end"/>
     </LoopUnit>
     <ModifyUnit gr:x="225" gr:y="175" id="wsv2#job2#mfu2" name="Update2" entity="ent3">
       <Selector id="wsv2#job2#mfu2#su2" defaultPolicy="fill" booleanOperator="and">
@@ -35,6 +36,7 @@ WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t1,
         <LinkParameter id="wsv2#job2#seu1#oln2#par36" name="oid_Input Array" source="ent3#att9Array" target="wsv2#job2#lpu5.array"/>
       </OKLink>
     </SelectorUnit>
+    <SelectorUnit gr:x="410" gr:y="220" id="wsv2#job2#seu14" name="Selector14" entity="ent3"/>
   </OperationUnits>
   <Trigger id="wsv2#job2#trg1" name="Trigger1" schedulePolicy="everyXSeconds" seconds="30"/>
 </Job>

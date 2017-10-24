@@ -1,0 +1,25 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area2#mpage2" name="MasterPage" layout:pageLayout="WebRatio/Basic" layout:layoutManager="grid" layout:frameLayout="WebRatio/Basic" layout:cellLayout="WRDefault/Frame" layout:attributeLayout="WRDefault/Simple" layout:fieldLayout="WRDefault/FieldValue" layout:linkLayout="WRDefault/Simple" gr:x="0" gr:y="35">
+  <ContentUnits>
+    <DataUnit id="sv2#area2#mpage2#dau6" name="You are logged in as:" customDescriptor="false" gr:showAllParts="false" gr:x="75" gr:y="0" entity="User" displayAttributes="rel1#role1.ent3#att10">
+      <Selector id="sv2#area2#mpage2#dau6#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#mpage2#dau6#su39#kcond10" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit id="sv2#area2#mpage2#gtu14" name="CurrentUser" gr:x="0" gr:y="135" contextParameters="UserCtxParam">
+      <Link id="sv2#area2#mpage2#gtu14#ln91" name="Flow7" to="sv2#area2#mpage2#dau6" type="transport" validate="true">
+        <LinkParameter id="sv2#area2#mpage2#gtu14#ln91#par175" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv2#area2#mpage2#gtu14.UserCtxParam" target="sv2#area2#mpage2#dau6#su39#kcond10.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:CustomLocation name="Top">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="sv2#area2#mpage2#dau6">
+            <layout:Attribute attribute="rel1#role1.ent3#att10"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</MasterPage>
