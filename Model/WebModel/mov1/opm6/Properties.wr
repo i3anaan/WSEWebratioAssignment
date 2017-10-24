@@ -12,8 +12,8 @@
 SELECT
 (SELECT COUNT(*) AS pubs FROM publication
 INNER JOIN author_publication ON publication.oid = author_publication.publication_oid
-WHERE author_publication.author_oid = :authorOID ) AS t1,
-(SELECT COUNT(*) AS colecs FROM publication RIGHT JOIN collection_publication ON publication.oid = collection_publication.publication_oid WHERE publication.oid = :authorOID ) AS t2) as t3</QueryText>
+WHERE author_publication.author_oid = CAST( :authorOID AS INTEGER) ) AS t1,
+(SELECT COUNT(*) AS colecs FROM publication RIGHT JOIN collection_publication ON publication.oid = collection_publication.publication_oid WHERE publication.oid = CAST( :authorOID AS INTEGER) ) AS t2) as t3</QueryText>
       <OKLink id="mov1#opm6#qu1#oln11" name="OKFlow11" to="mov1#opm6#okcu5" automaticCoupling="false">
         <LinkParameter id="mov1#opm6#qu1#oln11#par39" name="QueryOutput1_PASSING" source="data[].queryOutput1" passing="true"/>
         <LinkParameter id="mov1#opm6#qu1#oln11#par58" name="QueryOutput1" source="data[].queryOutput1" target="mov1#opm6#okcu5#ocp2"/>

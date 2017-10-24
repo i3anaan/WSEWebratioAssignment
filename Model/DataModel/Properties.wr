@@ -152,6 +152,5 @@
       <db:JoinColumn attribute="ent8#att24" name="university_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true">
-  </db:Database>
+  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="cG9zdGdyZXM=" schema="public" cryptedPassword="true"/>
 </DataModel>
