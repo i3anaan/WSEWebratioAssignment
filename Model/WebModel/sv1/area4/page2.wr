@@ -1,0 +1,90 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="375" gr:y="475" id="sv1#area4#page2" name="Show Collections" landmark="true">
+  <ContentUnits>
+    <IndexUnit id="sv1#area4#page2#inu4" name="Collections" linkOrder="sv1#area4#page2#inu4#ln45" gr:x="295" gr:y="90" entity="ent7" displayAttributes="ent7#att21 ent7#att22 ent7#att23">
+      <Link id="sv1#area4#page2#inu4#ln45" name="Show" to="sv1#area4#page14#dau3" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-270,40,310,100"/>
+      <Selector id="sv1#area4#page2#inu4#su16" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page2#inu4#su16#rcond11" name="Contains Pub" predicate="in" implied="true" role="rel5#role10"/>
+        <AttributesCondition id="sv1#area4#page2#inu4#su16#acond12" name="Title Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent7#att22" ignoreCase="true"/>
+      </Selector>
+    </IndexUnit>
+    <EntryUnit gr:x="295" gr:y="0" id="sv1#area4#page2#enu4" name="Search Colls" linkOrder="sv1#area4#page2#enu4#ln47">
+      <Field id="sv1#area4#page2#enu4#fld4" name="keyword" type="string" modifiable="true"/>
+      <Link id="sv1#area4#page2#enu4#ln47" name="Flow47" to="sv1#area4#page2#seu10" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page2#enu4#ln47#par93" name="keyword_Abstract Contains Keyword" source="sv1#area4#page2#enu4#fld4" target="sv1#area4#page2#seu10#su14#acond8"/>
+        <LinkParameter id="sv1#area4#page2#enu4#ln47#par94" name="keyword_Author Contains Keyword" source="sv1#area4#page2#enu4#fld4" target="sv1#area4#page2#seu10#su14#acond11"/>
+        <LinkParameter id="sv1#area4#page2#enu4#ln47#par95" name="keyword_Keywords Contains Keyword" source="sv1#area4#page2#enu4#fld4" target="sv1#area4#page2#seu10#su14#acond10"/>
+        <LinkParameter id="sv1#area4#page2#enu4#ln47#par96" name="keyword_Title Contains Keyword" source="sv1#area4#page2#enu4#fld4" target="sv1#area4#page2#seu10#su14#acond7"/>
+        <LinkParameter id="sv1#area4#page2#enu4#ln47#par116" name="keyword_PASSING" source="sv1#area4#page2#enu4#fld4" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="5" id="sv1#area4#page2#seu10" name="GetCollsByPubKeyword" entity="ent1">
+      <Selector id="sv1#area4#page2#seu10#su14" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area4#page2#seu10#su14#acond7" name="Title Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att2" ignoreCase="true"/>
+        <AttributesCondition id="sv1#area4#page2#seu10#su14#acond8" name="Abstract Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att5" ignoreCase="true"/>
+        <AttributesCondition id="sv1#area4#page2#seu10#su14#acond10" name="Keywords Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="rel3#role6.ent5#att16" ignoreCase="true"/>
+        <AttributesCondition id="sv1#area4#page2#seu10#su14#acond11" name="Author Contains Keyword" predicate="contains" booleanOperator="or" implied="true" attributes="rel2#role4.ent3#att10" ignoreCase="true"/>
+      </Selector>
+      <Link id="sv1#area4#page2#seu10#ln48" name="Flow48" to="sv1#area4#page2#inu4" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page2#seu10#ln48#par117" name="oid_Contains Pub [oid]" source="ent1#att1Array" target="sv1#area4#page2#inu4#su16#rcond11.ent1#att1"/>
+        <LinkParameter id="sv1#area4#page2#seu10#ln48#par118" name="keyword_PASSING_Title Contains Keyword" sourceLinkParameter="sv1#area4#page2#enu4#ln47#par116" target="sv1#area4#page2#inu4#su16#acond12"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page2#inu4">
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Attribute attribute="ent7#att22"/>
+          <layout:Attribute attribute="ent7#att23"/>
+          <layout:Link link="sv1#area4#page2#inu4#ln45"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page2#enu4">
+          <layout:Field field="sv1#area4#page2#enu4#fld4"/>
+          <layout:Link link="sv1#area4#page2#enu4#ln47"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#area4#page2#ln49" name="Create Collection" to="sv1#area4#page15" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

@@ -93,20 +93,12 @@
       <db:JoinColumn attribute="ent1#att1" name="publication_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="555" gr:y="620" id="ent6" name="Comment" duration="persistent" attributeOrder="ent6#att17 ent6#att18 ent6#att19 ent6#att20" db:database="db2" db:table="comment">
+  <Entity gr:x="540" gr:y="580" id="ent6" name="Comment" duration="persistent" attributeOrder="ent6#att17 ent6#att18 ent6#att19 ent6#att20" db:database="db2" db:table="comment">
     <Attribute id="ent6#att17" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent6#att20" name="timestamp" type="timestamp" db:column="timestamp"/>
     <Attribute id="ent6#att19" name="textualContent" type="string" db:column="textualcontent"/>
     <Attribute id="ent6#att18" name="title" type="string" db:column="title"/>
   </Entity>
-  <Relationship id="rel4" name="Comment_Publication" sourceEntity="ent6" targetEntity="ent1" db:database="db2" db:table="comment">
-    <RelationshipRole1 id="rel4#role7" name="CommentToPublication" maxCard="1">
-      <db:JoinColumn attribute="ent6#att17" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="PublicationToComment" maxCard="N">
-      <db:JoinColumn attribute="ent1#att1" name="publication_oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Entity gr:x="400" gr:y="160" id="ent7" name="Collection" duration="persistent" attributeOrder="ent7#att21 ent7#att22 ent7#att23" db:database="db2" db:table="collection">
     <Attribute id="ent7#att21" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent7#att23" name="description" type="string" db:column="description"/>
@@ -159,4 +151,20 @@
     </RelationshipRole2>
   </Relationship>
   <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="QmVya2VsMjY1Mg==" schema="public" cryptedPassword="true"/>
+  <Relationship id="rel10" name="Comment_Researcher" sourceEntity="ent6" targetEntity="ent3" db:database="db2" db:table="comment">
+    <RelationshipRole1 id="rel10#role19" name="CommentToResearcher" maxCard="1">
+      <db:JoinColumn attribute="ent6#att17" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="ResearcherToComment" maxCard="N">
+      <db:JoinColumn attribute="ent3#att9" name="researcher_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel11" name="CommentPublication" db:database="db2" db:table="comment" sourceEntity="ent6" targetEntity="ent1">
+    <RelationshipRole1 id="rel11#role21" name="CommentToPublication" maxCard="1">
+      <db:JoinColumn attribute="ent6#att17" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel11#role22" name="PublicationToComment" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="publication_oid"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>

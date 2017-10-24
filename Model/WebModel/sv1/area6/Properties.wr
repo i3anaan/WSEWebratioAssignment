@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-800" gr:y="660" id="sv1#area6" name="Login" landmark="true" landmarks="sv1#area6#page26 sv1#area6#page27 sv1#area6#page28 sv1#area6#lou2" defaultPage="sv1#area6#page26">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-1170" gr:y="650" id="sv1#area6" name="Login" landmark="true" landmarks="sv1#area6#page26 sv1#area6#page27 sv1#area6#page28 sv1#area6#lou2" defaultPage="sv1#area6#page26">
   <OperationUnits>
     <ModuleInstanceUnit id="sv1#area6#miu6" customURLName="login" gr:x="445" gr:y="0" action="true" moduleId="mov1#opm1">
       <OKLink id="sv1#area6#miu6#oln17" name="OKFlow17" to="sv1#area6#miu8" automaticCoupling="true"/>
@@ -10,7 +10,7 @@
       </OKLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="560" gr:y="390" id="sv1#area6#miu8" action="true" moduleId="mov1#opm3">
-      <OKLink id="sv1#area6#miu8#oln13" name="OKFlow13" to="sv1#area4#page19" automaticCoupling="true" gr:bendpoints="1228,62,-237,367"/>
+      <OKLink id="sv1#area6#miu8#oln13" name="OKFlow13" to="sv1#area4#page19" automaticCoupling="true" gr:bendpoints="1446,676,-400,956"/>
       <KOLink id="sv1#area6#miu8#kln3" name="KOFlow3" to="sv1#area6#page31" automaticCoupling="true" gr:bendpoints="-8,160,257,10"/>
     </ModuleInstanceUnit>
     <LogoutUnit gr:x="25" gr:y="335" id="sv1#area6#lou2" name="Logout" siteView="sv1" landmark="true" invalidateSession="true"/>

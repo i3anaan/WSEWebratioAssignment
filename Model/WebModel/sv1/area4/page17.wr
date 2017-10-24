@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="965" gr:y="370" id="sv1#area4#page17" name="View Publication">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1460" gr:y="410" id="sv1#area4#page17" name="View Publication">
   <ContentUnits>
     <DataUnit gr:x="10" gr:y="40" id="sv1#area4#page17#dau4" name="View Pub" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att4 ent1#att5 ent1#att6" linkOrder="sv1#area4#page17#dau4#ln13 sv1#area4#page17#dau4#ln16">
       <Selector id="sv1#area4#page17#dau4#su10" defaultPolicy="fill" booleanOperator="and">
@@ -10,27 +10,31 @@
       </Link>
       <Link id="sv1#area4#page17#dau4#ln5" name="Flow5" to="sv1#area4#page17#inu3" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page17#dau4#ln5#par39" name="oid_RoleCondition1 [oid]" source="data.ent1#att1" target="sv1#area4#page17#inu3#su2#rcond1.ent1#att1"/>
+        <LinkParameter id="sv1#area4#page17#dau4#ln5#par8" name="oid_PASSING" sourceLinkParameter="sv1#area4#page17#seu6#ln24#par67" passing="true"/>
       </Link>
       <Link id="sv1#area4#page17#dau4#ln16" name="Delete" to="sv1#area4#dlu1" type="normal" validate="true">
         <LinkParameter id="sv1#area4#page17#dau4#ln16#par68" name="oid_PASSING_AuthorToPublication [oid]" sourceLinkParameter="sv1#area4#page17#seu6#ln24#par67" target="sv1#area4#dlu1#su3#rcond2.ent3#att9"/>
       </Link>
     </DataUnit>
-    <EntryUnit gr:x="260" gr:y="150" id="sv1#area4#page17#enu2" name="Add Comment" entity="ent6" linkOrder="sv1#area4#page17#enu2#ln3">
+    <EntryUnit gr:x="300" gr:y="170" id="sv1#area4#page17#enu2" name="Add Comment" entity="ent6" linkOrder="sv1#area4#page17#enu2#ln3">
       <Field id="sv1#area4#page17#enu2#fld1" name="title" type="string" modifiable="true" attribute="ent6#att18"/>
       <Field id="sv1#area4#page17#enu2#fld2" name="textualContent" type="string" modifiable="true" attribute="ent6#att19"/>
       <Link id="sv1#area4#page17#enu2#ln3" name="Add" to="sv1#area4#cru2" type="normal" validate="true">
         <LinkParameter id="sv1#area4#page17#enu2#ln3#par58" name="Comment Object_Comment Object" source="entityBean" target="sv1#area4#cru2.entityBeans"/>
         <LinkParameter id="sv1#area4#page17#enu2#ln3#par59" name="Key [oid]_oid" source="key.ent6#att17" target="sv1#area4#cru2.ent6#att17"/>
-        <LinkParameter id="sv1#area4#page17#enu2#ln3#par60" name="oid_PASSING_Publication.oid(CommentToPublication)" sourceLinkParameter="sv1#area4#page17#dau4#ln8#par51" target="sv1#area4#cru2.rel4#role7.ent1#att1"/>
         <LinkParameter id="sv1#area4#page17#enu2#ln3#par61" name="textualContent_textualContent" source="sv1#area4#page17#enu2#fld2" target="sv1#area4#cru2.ent6#att19"/>
         <LinkParameter id="sv1#area4#page17#enu2#ln3#par62" name="timestamp_timestamp" target="sv1#area4#cru2.ent6#att20" sourceLinkParameter="sv1#area4#page17#tmu1#ln10#par64"/>
         <LinkParameter id="sv1#area4#page17#enu2#ln3#par63" name="timestamp_title" source="sv1#area4#page17#enu2#fld1" target="sv1#area4#cru2.ent6#att18"/>
+        <LinkParameter id="sv1#area4#page17#enu2#ln3#par37" name="oid_PASSING_Researcher.oid(CommentToResearcher)" sourceLinkParameter="sv1#area4#page17#seu6#ln32#par36" target="sv1#area4#cru2.rel10#role19.ent3#att9"/>
       </Link>
     </EntryUnit>
-    <IndexUnit gr:x="0" gr:y="245" id="sv1#area4#page17#inu3" name="Comments" entity="ent6" displayAttributes="ent6#att17 ent6#att18 ent6#att19 ent6#att20 rel4#role7.ent1#att1">
+    <IndexUnit gr:x="0" gr:y="245" id="sv1#area4#page17#inu3" name="Comments" entity="ent6" displayAttributes="ent6#att17 ent6#att18 ent6#att19 ent6#att20" linkOrder="sv1#area4#page17#inu3#ln18">
       <Selector id="sv1#area4#page17#inu3#su2" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv1#area4#page17#inu3#su2#rcond1" name="RoleCondition1" role="rel4#role8" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv1#area4#page17#inu3#su2#rcond1" name="RoleCondition1" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv1#area4#page17#inu3#ln18" name="Flow18" to="sv1#area4#dlu3" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page17#inu3#ln18#par10" name="oid_PASSING_RoleCondition6 [oid]" sourceLinkParameter="sv1#area4#page17#dau4#ln5#par8" target="sv1#area4#dlu3#su1#rcond6.ent1#att1"/>
+      </Link>
     </IndexUnit>
     <TimeUnit gr:x="200" gr:y="270" id="sv1#area4#page17#tmu1" name="Current Time">
       <Link id="sv1#area4#page17#tmu1#ln10" name="Flow10" to="sv1#area4#page17#enu2" type="transport" validate="true">
@@ -48,6 +52,9 @@
       </Selector>
       <Link id="sv1#area4#page17#seu6#ln24" name="Flow24" to="sv1#area4#page17#dau4" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page17#seu6#ln24#par67" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
+      </Link>
+      <Link id="sv1#area4#page17#seu6#ln32" name="Flow32" to="sv1#area4#page17#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page17#seu6#ln32#par36" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>
@@ -100,11 +107,11 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area4#page17#inu3">
+          <layout:Link link="sv1#area4#page17#inu3#ln18"/>
           <layout:Attribute attribute="ent6#att17"/>
           <layout:Attribute attribute="ent6#att18"/>
           <layout:Attribute attribute="ent6#att19"/>
           <layout:Attribute attribute="ent6#att20"/>
-          <layout:Attribute attribute="rel4#role7.ent1#att1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

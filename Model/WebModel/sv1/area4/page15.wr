@@ -1,10 +1,45 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="305" gr:y="135" id="sv1#area4#page15" name="Create Collection">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="460" gr:y="0" id="sv1#area4#page15" name="Create Collection">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#area4#page15#enu7" name="Create Coll" entity="ent7" linkOrder="sv1#area4#page15#enu7#ln11">
-      <Link id="sv1#area4#page15#enu7#ln11" name="Create" to="sv1#area4#cru4" automaticCoupling="true" type="normal" validate="true"/>
+    <EntryUnit gr:x="195" gr:y="0" id="sv1#area4#page15#enu7" name="Create Coll" entity="ent7" linkOrder="sv1#area4#page15#enu7#ln11">
+      <Link id="sv1#area4#page15#enu7#ln11" name="Create" to="sv1#area4#cru4" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page15#enu7#ln11#par38" name="Collection Object_Collection Object" source="entityBean" target="sv1#area4#cru4.entityBeans"/>
+        <LinkParameter id="sv1#area4#page15#enu7#ln11#par65" name="description_description" source="sv1#area4#page15#enu7#fld24" target="sv1#area4#cru4.ent7#att23"/>
+        <LinkParameter id="sv1#area4#page15#enu7#ln11#par69" name="Key [oid]_oid" source="key.ent7#att21" target="sv1#area4#cru4.ent7#att21"/>
+        <LinkParameter id="sv1#area4#page15#enu7#ln11#par73" name="oid_PASSING_Researcher.oid(CollectionToResearcher)" sourceLinkParameter="sv1#area4#page15#seu1#ln20#par15" target="sv1#area4#cru4.rel6#role11.ent3#att9"/>
+        <LinkParameter id="sv1#area4#page15#enu7#ln11#par74" name="title_title" source="sv1#area4#page15#enu7#fld23" target="sv1#area4#cru4.ent7#att22"/>
+        <LinkParameter id="sv1#area4#page15#enu7#ln11#par75" name="CollectionToKeyword_Keyword.oid(CollectionToKeyword)" source="sv1#area4#page15#enu7#msfld4" target="sv1#area4#cru4.rel7#role13.ent5#att15"/>
+        <LinkParameter id="sv1#area4#page15#enu7#ln11#par76" name="CollectionToPublication_Publication.oid(CollectionToPublication)" source="sv1#area4#page15#enu7#msfld5" target="sv1#area4#cru4.rel5#role9.ent1#att1"/>
+      </Link>
       <Field id="sv1#area4#page15#enu7#fld23" name="title" type="string" modifiable="true" attribute="ent7#att22"/>
       <Field id="sv1#area4#page15#enu7#fld24" name="description" type="string" modifiable="true" attribute="ent7#att23"/>
+      <MultiSelectionField id="sv1#area4#page15#enu7#msfld4" name="CollectionToKeyword" type="string" role="rel7#role13"/>
+      <MultiSelectionField id="sv1#area4#page15#enu7#msfld5" name="CollectionToPublication" type="string" role="rel5#role9"/>
     </EntryUnit>
+    <SelectorUnit id="sv1#area4#page15#seu1" name="GetResearcherByUser" gr:x="0" gr:y="120" entity="ent3">
+      <Selector id="sv1#area4#page15#seu1#su12" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page15#seu1#su12#rcond8" name="UserToResearcher" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <Link id="sv1#area4#page15#seu1#ln20" name="Flow26" to="sv1#area4#page15#enu7" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page15#seu1#ln20#par15" name="oid_PASSING" source="ent3#att9Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit id="sv1#area4#page15#gtu1" name="GetUser" gr:x="5" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv1#area4#page15#gtu1#ln30" name="Flow25" to="sv1#area4#page15#seu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page15#gtu1#ln30#par35" name="UserCtxParam.oid_UserToResearcher [oid]" source="sv1#area4#page15#gtu1.UserCtxParam" target="sv1#area4#page15#seu1#su12#rcond8.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="75" gr:y="230" id="sv1#area4#page15#seu8" name="Publications" entity="ent1">
+      <Link id="sv1#area4#page15#seu8#ln33" name="Flow33" to="sv1#area4#page15#enu7" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page15#seu8#ln33#par77" name="title_CollectionToPublication [label]" source="ent1#att2Array" target="sv1#area4#page15#enu7#msfld5_label"/>
+        <LinkParameter id="sv1#area4#page15#seu8#ln33#par78" name="oid_CollectionToPublication [output]" source="ent1#att1Array" target="sv1#area4#page15#enu7#msfld5_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="205" gr:y="230" id="sv1#area4#page15#seu9" name="Keywords" entity="ent5">
+      <Link id="sv1#area4#page15#seu9#ln37" name="Flow37" to="sv1#area4#page15#enu7" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page15#seu9#ln37#par79" name="word_CollectionToKeyword [label]" source="ent5#att16Array" target="sv1#area4#page15#enu7#msfld4_label"/>
+        <LinkParameter id="sv1#area4#page15#seu9#ln37#par80" name="oid_CollectionToKeyword [output]" source="ent5#att15Array" target="sv1#area4#page15#enu7#msfld4_output"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -13,8 +48,24 @@
           <layout:Link link="sv1#area4#page15#enu7#ln11"/>
           <layout:Field field="sv1#area4#page15#enu7#fld23"/>
           <layout:Field field="sv1#area4#page15#enu7#fld24"/>
+          <layout:Field field="sv1#area4#page15#enu7#msfld4"/>
+          <layout:Field field="sv1#area4#page15#enu7#msfld5"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

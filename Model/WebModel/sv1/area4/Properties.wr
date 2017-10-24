@@ -1,39 +1,46 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="550" gr:y="295" id="sv1#area4" name="Researcher" landmark="true" landmarks="sv1#area4#page19" protected="false" defaultPage="sv1#area4#page19" customURLName="researcher">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="355" gr:y="265" id="sv1#area4" name="Researcher" landmark="true" landmarks="sv1#area4#page19 sv1#area4#page2 sv1#area4#page1" protected="false" defaultPage="sv1#area4#page19" customURLName="researcher">
   <OperationUnits>
-    <ModifyUnit gr:x="465" gr:y="730" id="sv1#area4#mfu1" name="Update Coll" entity="ent7">
+    <ModifyUnit gr:x="595" gr:y="955" id="sv1#area4#mfu1" name="Update Coll" entity="ent7">
       <Selector id="sv1#area4#mfu1#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#mfu1#su7#kcond6" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv1#area4#mfu1#oln4" name="OKFlow4" to="sv1#area4#page19" automaticCoupling="true"/>
+      <OKLink id="sv1#area4#mfu1#oln4" name="OKFlow4" to="sv1#area4#page2" automaticCoupling="true"/>
     </ModifyUnit>
-    <CreateUnit gr:x="535" gr:y="170" id="sv1#area4#cru4" name="Create Coll" entity="ent7">
-      <OKLink id="sv1#area4#cru4#oln3" name="OKFlow3" to="sv1#area4#page19" automaticCoupling="true"/>
+    <CreateUnit gr:x="855" gr:y="270" id="sv1#area4#cru4" name="Create Coll" entity="ent7">
+      <OKLink id="sv1#area4#cru4#oln3" name="OKFlow3" to="sv1#area4#page2" automaticCoupling="true"/>
     </CreateUnit>
-    <CreateUnit gr:x="1365" gr:y="115" id="sv1#area4#cru5" name="Create Pub" entity="ent1">
-      <OKLink id="sv1#area4#cru5#oln2" name="OKFlow2" to="sv1#area4#page19" automaticCoupling="true"/>
+    <CreateUnit gr:x="1560" gr:y="145" id="sv1#area4#cru5" name="Create Pub" entity="ent1">
+      <OKLink id="sv1#area4#cru5#oln2" name="OKFlow2" to="sv1#area4#page1" automaticCoupling="true"/>
     </CreateUnit>
-    <ModifyUnit gr:x="1490" gr:y="595" id="sv1#area4#mfu4" name="Update Pub" entity="ent1">
+    <ModifyUnit gr:x="2085" gr:y="635" id="sv1#area4#mfu4" name="Update Pub" entity="ent1">
       <Selector id="sv1#area4#mfu4#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area4#mfu4#su8#kcond7" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv1#area4#mfu4#oln9" name="OKFlow9" to="sv1#area4#page19" automaticCoupling="true"/>
+      <OKLink id="sv1#area4#mfu4#oln9" name="OKFlow9" to="sv1#area4#page1" automaticCoupling="true"/>
     </ModifyUnit>
-    <CreateUnit gr:x="1500" gr:y="405" id="sv1#area4#cru2" name="Create Comment" entity="ent6">
+    <CreateUnit gr:x="2085" gr:y="435" id="sv1#area4#cru2" name="Create Comment" entity="ent6">
       <OKLink id="sv1#area4#cru2#oln6" name="OKFlow6" to="sv1#area4#page17" automaticCoupling="true"/>
     </CreateUnit>
-    <DeleteUnit gr:x="805" gr:y="885" id="sv1#area4#dlu1" name="Delete Pub" entity="ent1">
+    <DeleteUnit gr:x="1155" gr:y="910" id="sv1#area4#dlu1" name="Delete Pub" entity="ent1">
       <Selector id="sv1#area4#dlu1#su3" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area4#dlu1#su3#rcond2" name="AuthorToPublication" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
-      <OKLink id="sv1#area4#dlu1#oln11" name="OKFlow11" to="sv1#area4#page19" automaticCoupling="true"/>
+      <OKLink id="sv1#area4#dlu1#oln11" name="OKFlow11" to="sv1#area4#page1" automaticCoupling="true"/>
       <KOLink id="sv1#area4#dlu1#kln4" name="KOFlow4" to="sv1#area4#page17" automaticCoupling="true"/>
     </DeleteUnit>
-    <DeleteUnit gr:x="240" gr:y="330" id="sv1#area4#dlu2" name="Delete Coll" entity="ent7">
+    <DeleteUnit gr:x="80" gr:y="365" id="sv1#area4#dlu2" name="Delete Coll" entity="ent7">
       <Selector id="sv1#area4#dlu2#su5" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area4#dlu2#su5#rcond5" name="ResearcherToCollection" predicate="in" implied="false" role="rel6#role12"/>
       </Selector>
-      <OKLink id="sv1#area4#dlu2#oln15" name="OKFlow15" to="sv1#area4#page19" automaticCoupling="true"/>
+      <OKLink id="sv1#area4#dlu2#oln15" name="OKFlow15" to="sv1#area4#page2" automaticCoupling="true"/>
       <KOLink id="sv1#area4#dlu2#kln9" name="KOFlow9" to="sv1#area4#page14" automaticCoupling="true"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="1415" gr:y="995" id="sv1#area4#dlu3" name="Delete Comm" entity="ent6">
+      <Selector id="sv1#area4#dlu3#su1" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#dlu3#su1#rcond6" name="PublicationToComment" role="rel11#role22" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area4#dlu3#oln14" name="OKFlow14" to="sv1#area4#page17" automaticCoupling="true" gr:bendpoints="-17,-111,-12,259"/>
+      <KOLink id="sv1#area4#dlu3#kln10" name="KOFlow10" to="sv1#area4#page17" automaticCoupling="true"/>
     </DeleteUnit>
   </OperationUnits>
 </Area>
