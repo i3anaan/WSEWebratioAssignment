@@ -6,8 +6,6 @@
       </Selector>
       <Link id="sv1#area4#page17#dau4#ln13" name="Edit" to="sv1#area4#page13#enu1" type="normal" validate="true">
         <LinkParameter id="sv1#area4#page17#dau4#ln13#par81" name="oid_Key Condition [oid]" source="data.ent1#att1" target="sv1#area4#page13#enu1.ent1#att1"/>
-        <LinkParameter id="sv1#area4#page17#dau4#ln13#par82" name="oid_PASSING" source="data.ent1#att1" passing="true"/>
-        <LinkParameter id="sv1#area4#page17#dau4#ln13#par4" name="oid_PASSING" sourceLinkParameter="sv1#area4#page17#seu6#ln24#par67" passing="true"/>
       </Link>
       <Link id="sv1#area4#page17#dau4#ln8" name="Flow8" to="sv1#area4#page17#enu2" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page17#dau4#ln8#par51" name="oid_PASSING" source="data.ent1#att1" passing="true"/>
@@ -21,7 +19,7 @@
         <LinkParameter id="sv1#area4#page17#dau4#ln16#par84" name="oid_PASSING_AuthorToPub [oid]" sourceLinkParameter="sv1#area4#page17#seu6#ln24#par67" target="sv1#area4#dlu1#su3#rcond17.ent3#att9"/>
       </Link>
     </DataUnit>
-    <EntryUnit gr:x="300" gr:y="170" id="sv1#area4#page17#enu2" name="Add Comment" entity="ent6" linkOrder="sv1#area4#page17#enu2#ln3">
+    <EntryUnit gr:x="300" gr:y="260" id="sv1#area4#page17#enu2" name="Add Comment" entity="ent6" linkOrder="sv1#area4#page17#enu2#ln3">
       <Field id="sv1#area4#page17#enu2#fld1" name="title" type="string" modifiable="true" attribute="ent6#att18"/>
       <Field id="sv1#area4#page17#enu2#fld2" name="textualContent" type="string" modifiable="true" attribute="ent6#att19"/>
       <Link id="sv1#area4#page17#enu2#ln3" name="Add" to="sv1#area4#cru2" type="normal" validate="true">
@@ -43,7 +41,7 @@
         <LinkParameter id="sv1#area4#page17#inu3#ln31#par86" name="oid_oid" source="data[].ent6#att17" target="sv1#area4#dlu4#su23#acond13"/>
       </Link>
     </IndexUnit>
-    <TimeUnit gr:x="200" gr:y="270" id="sv1#area4#page17#tmu1" name="Current Time">
+    <TimeUnit gr:x="170" gr:y="270" id="sv1#area4#page17#tmu1" name="Current Time">
       <Link id="sv1#area4#page17#tmu1#ln10" name="Flow10" to="sv1#area4#page17#enu2" type="transport" validate="true">
         <LinkParameter id="sv1#area4#page17#tmu1#ln10#par64" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
