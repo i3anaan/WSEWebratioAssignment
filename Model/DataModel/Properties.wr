@@ -145,7 +145,7 @@
       <db:JoinColumn attribute="ent8#att24" name="university_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="QmVya2VsMjY1Mg==" schema="public" cryptedPassword="true">
+  <db:Database id="db2" name="WSE" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/WSE" username="postgres" password="YmFrZmlldHM=" schema="public" cryptedPassword="true">
   </db:Database>
   <Relationship id="rel10" name="Comment_Researcher" sourceEntity="ent6" targetEntity="ent3" db:database="db2" db:table="comment">
     <RelationshipRole1 id="rel10#role19" name="CommentToResearcher" maxCard="1">
