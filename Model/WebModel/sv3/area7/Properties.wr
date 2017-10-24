@@ -1,0 +1,12 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3#area7" name="Groups" defaultPage="sv3#area7#page5" landmark="true" gr:x="314" gr:y="409">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv3#area7#miu5" name="Create Group" gr:x="635" gr:y="40" action="true" moduleId="mov1#opm8">
+      <KOLink id="sv3#area7#miu5#kln3" name="KOFlow12" to="sv3#area7#page7#mssu2" automaticCoupling="true" gr:bendpoints="70,116,100,-94"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv3#area7#miu6" gr:x="0" gr:y="190" action="true" name="Delete Group" moduleId="mov1#opm7"/>
+    <ModuleInstanceUnit id="sv3#area7#miu7" name="Edit Group" gr:x="505" gr:y="425" action="true" moduleId="mov1#opm9">
+      <OKLink id="sv3#area7#miu7#oln5" name="OKFlow19" to="sv3#area7#page5" automaticCoupling="true" gr:bendpoints="0,-83,185,162"/>
+      <KOLink id="sv3#area7#miu7#kln5" name="KOFlow14" to="sv3#area7#page7#mssu2" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>
