@@ -31,8 +31,11 @@ $$Placeholder2$$
 Cheers.</BodyTemplate>
       <Placeholder id="mov1#opm16#mlu5#ph1" name="Placeholder1"/>
       <Placeholder id="mov1#opm16#mlu5#ph8" name="Placeholder2"/>
+      <KOLink id="mov1#opm16#mlu5#kln30" name="KOFlow30" to="mov1#opm16#kocu12" automaticCoupling="true"/>
     </MailUnit>
-    <OKCollectorUnit gr:x="590" gr:y="100" id="mov1#opm16#okcu15" name="OK Port14"/>
+    <OKCollectorUnit gr:x="590" gr:y="100" id="mov1#opm16#okcu15" name="OK Port14">
+      <OutputCollectorParameter id="mov1#opm16#okcu15#ocp13" name="message" value="Email sent!"/>
+    </OKCollectorUnit>
     <SwitchUnit gr:x="290" gr:y="260" id="mov1#opm16#switch2" name="Switch1">
       <OKLink id="mov1#opm16#switch2#oln84" name="OKFlow79" to="mov1#opm16#mlu5" code="password">
         <LinkParameter id="mov1#opm16#switch2#oln84#par224" name="Mail - Subject_PASSING_Mail - Subject" sourceLinkParameter="mov1#opm16#icu4#oln34#par207" target="mov1#opm16#mlu5.subject"/>
@@ -89,11 +92,16 @@ $$Placeholder2$$
 Cheers</BodyTemplate>
       <Placeholder id="mov1#opm16#mlu6#ph9" name="Placeholder1"/>
       <Placeholder id="mov1#opm16#mlu6#ph10" name="Placeholder2"/>
+      <KOLink id="mov1#opm16#mlu6#kln31" name="KOFlow31" to="mov1#opm16#kocu12" automaticCoupling="true"/>
     </MailUnit>
     <MailUnit id="mov1#opm16#mlu7" name="Mail1" gr:x="440" gr:y="145" format="plainText">
       <OKLink id="mov1#opm16#mlu7#oln88" name="OKFlow77" to="mov1#opm16#okcu15" automaticCoupling="true"/>
       <Placeholder id="mov1#opm16#mlu7#ph11" name="Placeholder1"/>
       <Placeholder id="mov1#opm16#mlu7#ph12" name="Placeholder2"/>
+      <KOLink id="mov1#opm16#mlu7#kln29" name="KOFlow29" to="mov1#opm16#kocu12" automaticCoupling="true"/>
     </MailUnit>
+    <KOCollectorUnit gr:x="635" gr:y="385" id="mov1#opm16#kocu12" name="KO Port12">
+      <OutputCollectorParameter id="mov1#opm16#kocu12#ocp14" name="message" value="An error has occured, the email has not been send"/>
+    </KOCollectorUnit>
   </OperationUnits>
 </OperationModule>

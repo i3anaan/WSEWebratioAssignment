@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="355" gr:y="280" id="sv1#area4" name="Researcher" landmark="true" landmarks="sv1#area4#page19 sv1#area4#page1 sv1#area4#page2" protected="false" defaultPage="sv1#area4#page19" customURLName="area-researcher">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="355" gr:y="280" id="sv1#area4" name="Researcher" landmark="true" landmarks="sv1#area4#page19 sv1#area4#page1 sv1#area4#page2" protected="true" defaultPage="sv1#area4#page19" customURLName="area-researcher">
   <OperationUnits>
     <ModifyUnit gr:x="595" gr:y="940" id="sv1#area4#mfu1" name="Update Coll" entity="ent7">
       <Selector id="sv1#area4#mfu1#su7" defaultPolicy="fill" booleanOperator="and">

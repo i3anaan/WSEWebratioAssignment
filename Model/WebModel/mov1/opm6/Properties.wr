@@ -22,6 +22,7 @@
         <LinkParameter id="mov1#opm6#cru5#oln74#par277" name="password_template" sourceValue="password" target="mov1#opm6#miu18.mov1#opm16#icu4#icp52"/>
         <LinkParameter id="mov1#opm6#cru5#oln74#par280" name="email_PASSING_Mail - To" sourceLinkParameter="mov1#opm6#cru6#oln71#par279" target="mov1#opm6#miu18.mov1#opm16#icu4#icp51"/>
       </OKLink>
+      <KOLink id="mov1#opm6#cru5#kln26" name="KOFlow26" to="mov1#opm6#kocu8" automaticCoupling="true"/>
     </CreateUnit>
     <CreateUnit id="mov1#opm6#cru6" name="Create User" gr:x="385" gr:y="100" entity="User">
       <OKLink id="mov1#opm6#cru6#oln71" name="Flow9" to="mov1#opm6#cru5">
@@ -33,20 +34,29 @@
         <LinkParameter id="mov1#opm6#cru6#oln71#par242" name="universities_PASSING_University.oid(ResearcherToUniversity)" sourceLinkParameter="mov1#opm6#icu6#ln68#par241" target="mov1#opm6#cru5.rel9#role17.ent8#att24"/>
         <LinkParameter id="mov1#opm6#cru6#oln71#par279" name="email_PASSING" sourceLinkParameter="mov1#opm6#icu6#ln68#par278" passing="true"/>
       </OKLink>
+      <KOLink id="mov1#opm6#cru6#kln27" name="KOFlow27" to="mov1#opm6#kocu8" automaticCoupling="true"/>
     </CreateUnit>
     <PasswordUnit gr:x="295" gr:y="245" id="mov1#opm6#pwu8" name="Password8" passwordSize="8">
       <OKLink id="mov1#opm6#pwu8#oln73" name="OKFlow73" to="mov1#opm6#cru6">
         <LinkParameter id="mov1#opm6#pwu8#oln73#par237" name="Generated Password_password" source="password" target="mov1#opm6#cru6.password"/>
         <LinkParameter id="mov1#opm6#pwu8#oln73#par239" name="Generated Password_PASSING" source="password" passing="true"/>
       </OKLink>
+      <KOLink id="mov1#opm6#pwu8#kln28" name="KOFlow28" to="mov1#opm6#kocu8" automaticCoupling="true"/>
     </PasswordUnit>
-    <ModuleInstanceUnit gr:x="520" gr:y="340" id="mov1#opm6#miu18" action="true" moduleId="mov1#opm16">
+    <ModuleInstanceUnit gr:x="425" gr:y="370" id="mov1#opm6#miu18" action="true" moduleId="mov1#opm16">
       <OKLink id="mov1#opm6#miu18#oln75" name="OKFlow75" to="mov1#opm6#okcu5">
         <LinkParameter id="mov1#opm6#miu18#oln75#par244" name="oid_PASSING_ResearcherOID" sourceLinkParameter="mov1#opm6#cru5#oln74#par243" target="mov1#opm6#okcu5#ocp2"/>
       </OKLink>
+      <KOLink id="mov1#opm6#miu18#kln25" name="KOFlow25" to="mov1#opm6#kocu8">
+        <LinkParameter id="mov1#opm6#miu18#kln25#par205" name="message_message" source="mov1#opm16#kocu12#ocp14" target="mov1#opm6#kocu8#ocp6"/>
+      </KOLink>
     </ModuleInstanceUnit>
     <OKCollectorUnit gr:x="780" gr:y="215" id="mov1#opm6#okcu5" name="OK Port5">
       <OutputCollectorParameter id="mov1#opm6#okcu5#ocp2" name="ResearcherOID"/>
+      <OutputCollectorParameter id="mov1#opm6#okcu5#ocp5" name="message" value="Author added and email sent!"/>
     </OKCollectorUnit>
+    <KOCollectorUnit gr:x="820" gr:y="375" id="mov1#opm6#kocu8" name="KO Port8">
+      <OutputCollectorParameter id="mov1#opm6#kocu8#ocp6" name="message" value="An error has occured, please try again later"/>
+    </KOCollectorUnit>
   </OperationUnits>
 </OperationModule>
