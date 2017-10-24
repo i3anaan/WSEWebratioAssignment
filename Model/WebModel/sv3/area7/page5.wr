@@ -31,9 +31,9 @@
     </SelectorUnit>
     <EntryUnit id="sv3#area7#page5#enu9" name="Add New Group" linkOrder="sv3#area7#page5#enu9#ln35" gr:x="165" gr:y="0" entity="Group">
       <Link id="sv3#area7#page5#enu9#ln35" name="Create" to="sv3#area7#miu5" type="normal" validate="true">
-        <LinkParameter id="sv3#area7#page5#enu9#ln35#par98" name="defaultModule_defaultModule" source="sv3#area7#page5#enu9#sfld4" target="sv3#area7#miu5.mov1#opm6#icu6#icp16"/>
-        <LinkParameter id="sv3#area7#page5#enu9#ln35#par99" name="groupName_groupName" source="sv3#area7#page5#enu9#fld14" target="sv3#area7#miu5.mov1#opm6#icu6#icp15"/>
-        <LinkParameter id="sv3#area7#page5#enu9#ln35#par100" name="modules_modules" source="sv3#area7#page5#enu9#msfld8" target="sv3#area7#miu5.mov1#opm6#icu6#icp10"/>
+        <LinkParameter id="sv3#area7#page5#enu9#ln35#par254" name="defaultModule_defaultModule" source="sv3#area7#page5#enu9#sfld4" target="sv3#area7#miu5.mov1#opm8#icu7#icp12"/>
+        <LinkParameter id="sv3#area7#page5#enu9#ln35#par255" name="groupName_groupName" source="sv3#area7#page5#enu9#fld14" target="sv3#area7#miu5.mov1#opm8#icu7#icp11"/>
+        <LinkParameter id="sv3#area7#page5#enu9#ln35#par300" name="modules_modules" source="sv3#area7#page5#enu9#msfld8" target="sv3#area7#miu5.mov1#opm8#icu7#icp10"/>
       </Link>
       <Field id="sv3#area7#page5#enu9#fld14" name="groupName" type="string" modifiable="true" attribute="groupName"/>
       <SelectionField id="sv3#area7#page5#enu9#sfld4" name="defaultModule" type="string" role="Group2DefaultModule"/>

@@ -10,11 +10,20 @@
         <LinkParameter id="mov1#opm8#icu7#oln28#par130" name="modules_Module.oid(modules)" source="mov1#opm8#icu7#icp10" target="mov1#opm8#cru7.Group2Module.moduleOID"/>
       </OKLink>
     </InputCollectorUnit>
-    <CreateUnit id="mov1#opm8#cru7" name="Create group" gr:x="285" gr:y="80" entity="Group">
+    <CreateUnit id="mov1#opm8#cru7" name="Create group" gr:x="280" gr:y="160" entity="Group">
       <OKLink id="mov1#opm8#cru7#oln29" name="OKFlow4" to="mov1#opm8#okcu6" automaticCoupling="true"/>
       <KOLink id="mov1#opm8#cru7#kln12" name="KOFlow9" to="mov1#opm8#kocu5" automaticCoupling="true"/>
     </CreateUnit>
     <OKCollectorUnit id="mov1#opm8#okcu6" name="OK" gr:x="475" gr:y="-10"/>
     <KOCollectorUnit id="mov1#opm8#kocu5" name="KO" gr:x="475" gr:y="195"/>
+    <LoopUnit gr:x="290" gr:y="50" id="mov1#opm8#lpu8" name="Loop8"/>
+    <ConnectUnit gr:x="370" gr:y="-35" id="mov1#opm8#cnu2" name="Connect2">
+      <SourceSelector id="mov1#opm8#cnu2#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm8#cnu2#su48#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="mov1#opm8#cnu2#su49" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm8#cnu2#su49#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
   </OperationUnits>
 </OperationModule>
